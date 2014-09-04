@@ -7,7 +7,7 @@ Going for a hike? Hit TrekTrakker before you set off. TrekTrakker offers vital i
 
 ## Tech
 
-TrekTrakker is a Rails app using a PostrgeSQL backend. Map functionality via Google Maps API with trail data via of TrailAPI. Front end frameworks TBD.
+TrekTrakker is a Rails app using a PostrgeSQL backend. Map functionality via Google Maps API with trail data via TrailAPI. Front end frameworks TBD.
 
 ##Contributors
 
