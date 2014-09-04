@@ -29,9 +29,14 @@ gem 'spring',        group: :development
 #simple cov
 gem 'simplecov', :require => false, :group => :test
 
+gem 'rails_12factor', group: :production
 #rspec-rails
 group :development, :test do
-  gem 'rspec-rails', '~> 3.0.0'
+  gem 'rspec-rails', '~> 2.14.1'
+  gem 'shoulda-matchers', require: false
+  gem 'capybara', '~> 2.2.1'
+  gem 'database_cleaner', '~> 1.2.0'
+  gem 'capybara-webkit'
 end
 
 # Use ActiveModel has_secure_password
