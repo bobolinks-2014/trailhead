@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require popup
 //= require_tree .
 
 $(document).ready(function() {

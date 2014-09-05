@@ -2,9 +2,36 @@
     <%= link_to image_tag("nav_logo.jpg", :size => "75x75"), '/', id: "logo" %>
     <nav>
       <ul class="nav_right">
-        <li class="login-button"><%= link_to "Sign In", root_path %></li>
+        <li class="signin-button"><%= link_to "Sign In", root_path %></li>
         <li class="signup-button"><%= link_to "Sign Up", root_path %></li>
         <li class="logout-button"><%= link_to "Log Out", root_path %></li>
       </ul>
     </nav>
 </header>
+
+<div class="signin-form">
+  <h3>Sign In</h3>
+
+  <div class="center">
+    <p class="error"></p>
+    <input type="text" placeholder="Email" name="email" required></input>
+    <input type="password" placeholder="Password" name="password" required></input>
+  </div>
+  <button type="submit" value="Sign In" name="signin">Sign In</button>
+
+</div>
+
+<div class="signup-form">
+  <h3>Sign Up</h3>
+
+  <div class="center">
+    <p class="error"></p>
+    <input type="text" placeholder="Username" name="username" required></input>
+    <input type="text" placeholder="Email" name="email" required></input>
+    <input type="password" placeholder="Password" name="password" required></input>
+    <input type="password" placeholder="Password Confirmation" name="password_confirmation" required></input>
+  </div>
+  <button type="submit" value="Sign Up" name="signup">Sign Up</button>
+
+</div>
+

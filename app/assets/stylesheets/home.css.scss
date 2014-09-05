@@ -50,3 +50,61 @@
   font-size: 13px;
   font-weight: 300;
 }
+
+.signin-form{
+  display: none;
+  width: 50%;
+  border: 1px solid black;
+  margin-top: 0px;
+}
+
+.signin-form h3{
+  text-align: center;
+  margin: 0px;
+  margin-top: 5%
+}
+
+.signin-form button{
+  margin-left: 10%;
+  margin-bottom: 5%;
+}
+
+.signin-form input{
+  display: block;
+  width: 80%;
+  margin: 5% auto;
+  height: 10%;
+}
+
+.signup-form{
+  display: none;
+  width: 50%;
+  border: 1px solid black;
+  vertical-align: middle;
+  margin-top: 0px;
+}
+
+.signup-form h3{
+  text-align: center;
+  margin: 0px;
+  margin-top: 5%
+}
+
+.signup-form button{
+  margin-left: 10%;
+  margin-bottom: 5%;
+}
+
+.signup-form input{
+  display: block;
+  width: 80%;
+  margin: 5% auto;
+  height: 10%;
+}
+.error{
+  text-align: center;
+  display: none;
+  color: red;
+  margin: 0;
+  padding: 0;
+}
