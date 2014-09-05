@@ -8,6 +8,7 @@ class CreateTrails < ActiveRecord::Migration
     	t.integer :difficulty
     	t.string :city
     	t.string :state
+      t.string :url
     	t.text :description
     	t.integer :rating
 
