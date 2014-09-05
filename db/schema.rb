@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 20140904203702) do
     t.integer  "difficulty"
     t.string   "city"
     t.string   "state"
+    t.string   "url"
     t.text     "description"
     t.integer  "rating"
     t.datetime "created_at"
