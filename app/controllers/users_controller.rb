@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  def new
+  def create
     @user = User.new(params[:user])
     if @user.save
       @message = "User Profile Created Successfully"
