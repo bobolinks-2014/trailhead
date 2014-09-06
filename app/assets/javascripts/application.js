@@ -21,8 +21,7 @@ $(document).ready(function() {
   google.maps.event.addDomListener(window, 'load', initialize);
 })
 
-
-function initialize() {
+function initialize(center) {
   var mapOptions = {
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     disableDefaultUI: true,
@@ -37,6 +36,16 @@ function initialize() {
 
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
+  $("#current-location").on("click", function() {
+
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        var geolocate = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+        map.setCenter(geolocate);
+        map.setZoom(18);
+      })
+    }
+  })
 
   var markerCollection = new MarkerCollection(map)
   markerCollection.fetch().done(function() {
@@ -61,7 +70,6 @@ function initialize() {
       for (var i = 0, marker; marker = trails[i]; i++) {
         marker.setMap(null);
       }
-
       // For each place, get the icon, place name, and location.
       markers = [];
       var bounds = new google.maps.LatLngBounds();
@@ -73,7 +81,6 @@ function initialize() {
           anchor: new google.maps.Point(17, 34),
           scaledSize: new google.maps.Size(25, 25)
         };
-
         // Create a marker for each place.
         var marker = new google.maps.Marker({
           map: map,
@@ -81,12 +88,9 @@ function initialize() {
           title: place.name,
           position: place.geometry.location
         });
-
         markers.push(marker);
-
         bounds.extend(place.geometry.location);
       }
-
       map.fitBounds(bounds);
     });
   }
@@ -96,6 +100,7 @@ function initialize() {
     var bounds = map.getBounds();
     searchBox.setBounds(bounds);
   });
+
 }
 
 function MarkerCollection(map) {
@@ -120,6 +125,9 @@ MarkerCollection.prototype.fetch = function() {
         map: this.map,
         title: markers[i]["name"],
         url: "/trails/" + markers[i]["id"]
+      })
+      google.maps.event.addListener(marker, "click", function(){
+        window.location.href = this.url
       })
       trails.push(marker)
     };
