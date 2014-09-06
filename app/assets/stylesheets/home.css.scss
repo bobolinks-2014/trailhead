@@ -1,9 +1,40 @@
+.opening {
+  color: #303030;
+  margin-top: 35px;
+  text-align: center;
+  font-size: 45px;
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.purpose {
+  line-height: 30px;
+  width: 60%;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+
+.description {
+  color: #303030;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 18px;
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+#current-location {
+  margin: auto;
+  text-align: center;
+}
+
 #map-canvas {
   height: 60%;
   width: 60%;
   margin: auto;
-  position: relative;
-  top: 100px;
+  margin-top: 32px;
+  display: block;
 }
 
 .controls {

@@ -1,7 +1,7 @@
 <div class="trail-show-content">
   <div class="trail-show-top">
     <div class="trail-show-map">
-      <span><img src="http://maps.googleapis.com/maps/api/staticmap?center=<%=@trail.latitude%>,<%=@trail.longitude%>&zoom=10&size=400x400&markers=<%=@trail.latitude%>,<%=@trail.longitude%>"></img></span>
+      <span id="map-canvas"><img src="http://maps.googleapis.com/maps/api/staticmap?center=<%=@trail.latitude%>,<%=@trail.longitude%>&zoom=10&size=400x400&markers=<%=@trail.latitude%>,<%=@trail.longitude%>"></img></span>
       <h5><%= @trail.city %></h5>
       <h5><%= @trail.state %></h5>
       <h5>temperature might go here</h5>
@@ -29,4 +29,19 @@
     <div class="single-comment">One Single Comment</div>
   </div>
 
+</div>
+
+<!-- ravi added to test photos -->
+<div>
+<%= form_for @photo, url: {action: "create", controller: "photos", trail_id: @trail.id }, :html => {:multipart => true} do |f| %>
+  <%= f.hidden_field :trail_id %>
+  <p><%= f.file_field :image %></p>
+  <p><%= f.submit %></p>
+<% end %>
+</div>
+
+<div>
+  <% @trail.photos.each do |photo| %>
+    <%= image_tag photo.image_url(:thumb).to_s %>
+  <% end %>
 </div>
