@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(strong_params)
     if @user.save
+      session[:user_id] = @user.id
       respond_to do |format|
         format.json {render json: {success: 0, message: "Thanks for signing up!"} }
       end
