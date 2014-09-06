@@ -13,6 +13,7 @@ $(document).ready(function() {
       $(".signin-button").show();
       $(".signup-button").show();
       $('.signin-form button').show();
+      $('.signup-form button').show();
       $('.center').show();
       $('.close-button.signin').show();
       $('.close-button.signup').show();

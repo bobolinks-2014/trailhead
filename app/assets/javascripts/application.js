@@ -163,5 +163,3 @@ MarkerCollection.prototype.fetch = function() {
 
 };
 
-
-}
