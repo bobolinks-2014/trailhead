@@ -44,7 +44,8 @@ $(document).ready(function() {
           $('.signup-form .message').css("color","red");
           $(".signup-form input[name*='password']").val("");
         }
-        });
+      });
+      return request;
       });
   });
 
