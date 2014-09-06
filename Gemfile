@@ -23,5 +23,6 @@ group :development, :test do
 end
 
 #Ravi's carrierwave image upload
+gem 'fog'
 gem 'carrierwave'
 gem 'mini_magick'
