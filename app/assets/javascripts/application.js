@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require clusterer
+//= require popup
 //= require_tree .
 
 
@@ -161,11 +162,3 @@ MarkerCollection.prototype.fetch = function() {
   return jqXHR
 
 }
-
-
-
-
-
-
-
-
