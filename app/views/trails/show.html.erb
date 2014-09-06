@@ -1,0 +1,32 @@
+<div class="trail-show-content">
+  <div class="trail-show-top">
+    <div class="trail-show-map">
+      <span>GOOGLE MAP GOES HERE</span>
+      <h5><%= @trail.city %></h5>
+      <h5><%= @trail.state %></h5>
+      <h5>temperature might go here</h5>
+    </div>
+
+    <div class="trail-show-vitals-top">
+      <h3><%= @trail.name %></h3>
+      <span><%= @trail.rating == nil ? 0 : @trail.rating %></span>
+      <button class="comment-button">Comment</button>
+      <button class="upload-button">Upload</button>
+    </div>
+
+    <div class="trail-show-vitals-bottom">
+      <p><%= @trail.length %></p>
+      <p><%= @trail.difficulty == nil ? "Not Yet Rated" : @trail.difficulty %></p>
+      <p><%= @trail.description %></p>
+    </div>
+  </div>
+
+  <div class="photo-carousel-section">
+    <div class="photos">PHOTOS</div>
+  </div>
+
+  <div class="comments-section">
+    <div class="single-comment">One Single Comment</div>
+  </div>
+
+</div>
