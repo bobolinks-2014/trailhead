@@ -19,11 +19,12 @@ $(document).ready(function() {
       var request = $.ajax({
         url: "/sessions",
         type: "POST",
-        data: {email: email, password: password},
+        data: {user: {email: email, password: password } },
         dataType: "json"
       });
 
       request.done(function(response){
+        //successful signin
         if (response.success === 0){
           var message = response.message;
           $('.signin-form .message').show();
@@ -31,7 +32,12 @@ $(document).ready(function() {
           $('.signin-form .message').css("color","green");
           $(".signin-form input[name*='email']").val("");
           $(".signin-form input[name*='password']").val("");
+          $('.continue-button.signin').show();
+          $('.signin-form button').hide();
+          $('.center').hide();
+          $('.close-button.signin').hide();
         }
+        //unsuccessful signin
         else if (response.success === 1){
           var message = response.message;
           $('.signin-form .message').show();
@@ -40,10 +46,15 @@ $(document).ready(function() {
           $(".signin-form input[name*='password']").val("");
         }
       });
+    });
+  });
 
-    });
-    });
-  $(".close-button").on('click', function(){
+  $(".close-button.signin").on('click', function(){
     $(".signin-form").bPopup().close();
   });
+
+  $('.continue-button.signin').on('click', function(){
+    $(".signin-form").bPopup().close();
+  });
+
 });

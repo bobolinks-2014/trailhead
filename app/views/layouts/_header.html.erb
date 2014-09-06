@@ -2,15 +2,16 @@
     <%= link_to image_tag("nav_logo.jpg", :size => "75x75"), '/', id: "logo" %>
     <nav>
       <ul class="nav_right">
-        <li class="signin-button"><%= link_to "Sign In", root_path %></li>
-        <li class="signup-button"><%= link_to "Sign Up", root_path %></li>
-        <li class="logout-button"><%= link_to "Log Out", root_path %></li>
+        <li class="signin-button">Sign In</li>
+        <li class="signup-button">Sign Up</li>
+        <li class="logout-button"><a href="/logout">Log Out</li>
+
       </ul>
     </nav>
 </header>
 
 <div class="signin-form">
-  <span class="close-button">X</span>
+  <span class="close-button signin">X</span>
   <h3>Sign In</h3>
 
   <div class="center">
@@ -19,11 +20,11 @@
     <input type="password" placeholder="Password" name="password" required></input>
   </div>
   <button type="submit" value="Sign In" name="signin">Sign In</button>
-
+  <span class="continue-button signin" value="continue">Continue</span>
 </div>
 
 <div class="signup-form">
-  <span class="close-button">X</span>
+  <span class="close-button signup">X</span>
   <h3>Sign Up</h3>
 
   <div class="center">
@@ -34,6 +35,6 @@
     <input type="password" placeholder="Password Confirmation" name="password_confirmation" required></input>
   </div>
   <button type="submit" value="Sign Up" name="signup">Sign Up</button>
-
+  <span class="continue-button signup" value="continue">Continue</span>
 </div>
 

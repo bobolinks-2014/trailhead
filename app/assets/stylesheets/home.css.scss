@@ -112,3 +112,15 @@
   float: right;
   padding: 0.75em;
 }
+.continue-button{
+  display: none;
+  border: 1px solid black;
+  border-radius: 25px;
+  padding: 0.25em;
+}
+
+.continue-button:hover{
+  background-color: green;
+  color: white;
+}
+
