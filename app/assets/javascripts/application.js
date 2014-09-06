@@ -161,4 +161,7 @@ MarkerCollection.prototype.fetch = function() {
 
   return jqXHR
 
+};
+
+
 }
