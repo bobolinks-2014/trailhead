@@ -1,6 +1,7 @@
 class TrailsController < ApplicationController
-  def index
+  respond_to :json
 
+  def index
     if request.xhr?
       respond_to do |format|
         format.json { render json: Trail.markers.to_json }
@@ -9,4 +10,10 @@ class TrailsController < ApplicationController
       redirect_to '/'
     end
   end
+
+  def show
+    @trail = Trail.find(params[:id])
+  end
+
+
 end
