@@ -13,6 +13,7 @@ $(document).ready(function() {
       });
 
     $('.signin-form button').on('click', function(event){
+      event.preventDefault();
       var email = $(".signin-form input[name*='email']").val();
       var password = $(".signin-form input[name*='password']").val();
 
@@ -36,6 +37,9 @@ $(document).ready(function() {
           $('.signin-form button').hide();
           $('.center').hide();
           $('.close-button.signin').hide();
+          $(".signin-button").hide();
+          $(".signup-button").hide();
+          $(".logout-button").show();
         }
         //unsuccessful signin
         else if (response.success === 1){
@@ -45,6 +49,7 @@ $(document).ready(function() {
           $('.signin-form .message').css("color","red");
           $(".signin-form input[name*='password']").val("");
         }
+        return request;
       });
     });
   });

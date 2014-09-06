@@ -35,6 +35,12 @@ $(document).ready(function() {
           $('.signup-form button').hide();
           $('.center').hide();
           $('.close-button.signup').hide();
+          $(".signin-button").hide();
+          $(".signup-button").hide();
+          $(".logout-button").show();
+          $(".signup-form input[name*='username']").val("");
+          $(".signup-form input[name*='email']").val("");
+          $(".signup-form input[name*='password']").val("");
         }
         //unsucessful signup
         else if (response.success === 1){
@@ -44,7 +50,8 @@ $(document).ready(function() {
           $('.signup-form .message').css("color","red");
           $(".signup-form input[name*='password']").val("");
         }
-        });
+      });
+      return request;
       });
   });
 
@@ -52,7 +59,7 @@ $(document).ready(function() {
     $(".signup-form").bPopup().close();
   });
 
-  $('.continue-button.signin').on('click', function(){
-    $(".signin-form").bPopup().close();
+  $('.continue-button.signup').on('click', function(){
+    $(".signup-form").bPopup().close();
   });
 });
