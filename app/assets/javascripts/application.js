@@ -22,6 +22,7 @@ $(document).ready(function() {
 })
 
 function initialize(center) {
+
   var mapOptions = {
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     disableDefaultUI: true,
@@ -36,23 +37,45 @@ function initialize(center) {
 
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-  $("#current-location").on("click", function() {
-
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(function(position) {
-        var geolocate = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-        map.setCenter(geolocate);
-        map.setZoom(18);
-      })
-    }
-  })
-
   var markerCollection = new MarkerCollection(map)
   markerCollection.fetch().done(function() {
     var trails = markerCollection.collection
     var markerCluster = new MarkerClusterer(map, trails, {gridSize: 50, maxZoom: 15 });
     SearchBox(trails);
+    CurrentLocationtoNearestTrails(trails)
   })
+
+
+  function findNearestTrails(markers) {
+    count = 0
+    for(var i= markers.length -1, bounds=map.getBounds(); i > 0; i--){
+      if( bounds.contains(markers[i].getPosition()) ){
+        count++;
+      }
+      console.log(i)
+    }
+    if(count > 5){
+      map.setZoom(map.getZoom())
+    }else{
+      map.setZoom(map.getZoom()-1)
+      findNearestTrails(markers);
+    }
+  }
+
+  function CurrentLocationtoNearestTrails(markers) {
+    $("#current-location").on("click", function() {
+
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          var geolocate = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+          map.setCenter(geolocate);
+          map.setZoom(18);
+          findNearestTrails(markers);
+        })
+      }
+    })
+  }
+
 
   var input = document.getElementById('pac-input');
   map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
@@ -92,6 +115,7 @@ function initialize(center) {
         bounds.extend(place.geometry.location);
       }
       map.fitBounds(bounds);
+      findNearestTrails(trails);
     });
   }
   // Bias the SearchBox results towards places that are within the bounds of the
