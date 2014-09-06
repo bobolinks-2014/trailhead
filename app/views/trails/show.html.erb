@@ -1,7 +1,7 @@
 <div class="trail-show-content">
   <div class="trail-show-top">
     <div class="trail-show-map">
-      <span><img src="http://maps.googleapis.com/maps/api/staticmap?center=<%=@trail.latitude%>,<%=@trail.longitude%>&zoom=10&size=400x400&markers=<%=@trail.latitude%>,<%=@trail.longitude%>"></img></span>
+      <span id="map-canvas"><img src="http://maps.googleapis.com/maps/api/staticmap?center=<%=@trail.latitude%>,<%=@trail.longitude%>&zoom=10&size=400x400&markers=<%=@trail.latitude%>,<%=@trail.longitude%>"></img></span>
       <h5><%= @trail.city %></h5>
       <h5><%= @trail.state %></h5>
       <h5>temperature might go here</h5>
