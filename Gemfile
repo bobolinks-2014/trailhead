@@ -21,3 +21,7 @@ group :development, :test do
 	gem 'database_cleaner', '~> 1.2.0'
 	gem 'capybara-webkit'
 end
+
+#Ravi's carrierwave image upload
+gem 'carrierwave'
+gem 'mini_magick'
