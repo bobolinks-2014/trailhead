@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require popup
 //= require clusterer
 //= require_tree .
 
@@ -123,7 +124,12 @@ function initialize() {
     var bounds = map.getBounds();
     searchBox.setBounds(bounds);
   });
-}
+
+
+
+<<<<<<< HEAD
+};
+=======
 
 
 
@@ -131,7 +137,5 @@ function initialize() {
 
 
 
-
-
-
+>>>>>>> master
 
