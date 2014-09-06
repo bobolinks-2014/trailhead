@@ -3,7 +3,6 @@ require 'spec_helper'
 feature 'initial view' do
 
   before do 
-    User.create!(username: "JohnMuir", email: "john@hike.com", password: "hiker")
     visit root_path
   end
 
@@ -35,68 +34,64 @@ feature 'initial view' do
   		end
   	end
 
+  	it "can click the sign up button to bring up the sign up form", :js => true do
+  		find(".signup-button").click
+  		expect(page.driver.browser.window_handles.length.should == 1)
+  	end
+
+  	it "the popup has the correct sign up form", :js => true do
+  		find(".signup-button").click
+  		within_window(page.driver.browser.window_handles.last) do
+  			page.should have_content('Sign Up')
+  			page.should have_css('input[type="text"][name="username"]')
+  			page.should have_css('input[type="text"][name="email"]')
+  			page.should have_css('input[type="password"][name="password"]')
+  			page.should have_css('input[type="password"][name="password_confirmation"]')
+  			page.should have_selector(:link_or_button, "Sign Up")
+  		end
+  	end
+
+  end
+
+  feature 'signin and signup' do
+
+  	before do
+  		visit root_path
+  	end
+
+  	it "should create a new user upon sign up", :js => true do
+  		find(".signup-button").click
+  		within_window(page.driver.browser.window_handles.last) do
+  			fill_in("username", with: "testhiker")
+  			fill_in("email", with: "testemail")
+  			fill_in("password", with: "password")
+  			fill_in("password_confirmation", with: "password")
+				click_button("Sign Up")
+				page.should have_content("Continue")
+				find("span.continue-button.signup").click
+				page.should have_content("Log Out")
+  		end
+  	end
+
+  	it "should log in an authenticated user", :js => true do
+  		find(".signin-button").click
+  		within_window(page.driver.browser.window_handles.last) do
+  			fill_in("email", with: "thing@thing.com")
+  			fill_in("password", with: "thing")
+  			click_button("Sign In")
+  			page.should have_content("Sign In")
+  			find("span.continue-button.signin").click
+  			page.should have_content("Log Out")
+  		end
+  	end
+
 
 	end
  
 
 end
 
-
-
-#     end
-
-#     it "should see a text field for destination address input" do
-#       expect(page).to have_css('input[type="text"][name="destination"]')
-#     end
-
-#     it "should see a drop down for make of vehicle" do
-#       expect(page).to have_css('select[name="make"]')
-#     end
-
-#     it "should see a drop down for model with single default option 'Model'" do
-#       expect(page).to have_select('model', options: ["Model"])
-#     end
-
-#     it "should see a drop down for year of vehicle with single default option 'Year'" do
-#       expect(page).to have_select('year', options: ["Year"])
-#     end
-
-#     it "should populate 'model' dropdown with appropriate models after make is selected", :js => true do
-#       select "Fisker", from: 'make'
-#       expect(page).to have_select('model', options: ["Model","Karma"])
-#     end
-
-#     it "should populate 'model year' dropdown with appropriate years after model is selected", :js => true do
-#       select "Ferrari", from: 'make'
-#       expect(page).to have_select('model', options: ["Model","308"])
-#       select "308", from: 'model'
-#       expect(page).to have_select('year', options: ["Year","1985"])
-#     end
-
-#     it "can hit submit button after information has been obtained", :js => true do
-#       select "Ferrari", from: 'make'
-#       select "308", from: 'model'
-#       select "1985", from: 'year'
-#       expect(page).to have_selector("input[type=submit][value='submit']")
-#       click_button("submit")
-#       expect(page).to have_css('ul.pricing-table')
-#     end
-  
-#   end
-
-# end
-
-
-
-# feature 'final view' do
-
-#   before do 
-#     Car.create!(make: "Acura", model: "TL", year: "2007")
-#   end
-
-#   context "after user submitted information on landing page" do
-    
-#     it "should see a table of information displaying cost information", :js => true do
+# it "should see a table of information displaying cost information", :js => true do
 #       visit root_path
 #       fill_in("starting_point", with: "351 W. Hubbard, Chicago IL")
 #       fill_in('destination', with: "633 Folsom Street, San Francisco, CA") 
@@ -124,6 +119,7 @@ end
 #     end
 #   end
 
-# end
 
-# end
+
+
+
