@@ -1,0 +1,15 @@
+<div class="trail-show-top">
+  <div class="trail-show-map">
+    <span>GOOGLE MAP GOES HERE</span>
+    <h5><%= @trail.city %></h5>
+    <h5><%= @trail.state %></h5>
+  </div>
+
+  <h3><%= @trail.name %></h3>
+  <span><%= @trail.rating == nil ? 0 : @trail.rating %></span>
+  <div class="">
+    <%= @trail.length %>
+    <%= @trail.difficulty %>
+    <%= @trail.description %>
+  </div>
+</div>
