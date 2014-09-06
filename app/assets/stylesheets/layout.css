@@ -1,3 +1,17 @@
+body {
+  background-color: #ffffff;
+  background-image: url(http://www.transparenttextures.com/patterns/billie-holiday.png);
+}
+
+#title {
+  color: #D4D4D4; 
+  display: inline-block;
+  position: relative;
+  bottom: 10px;
+  left: 4x;
+  font-size: 45px;
+}
+
 .signin-form{
   display: none;
   background-color: beige;
@@ -95,20 +109,41 @@
 }
 
 .signin-button:hover{
+  background-color: #4DA64D;
+  color: white;
+}
+
+.signin-button {
   background-color: green;
+  padding: 13px;
+  margin-right: 10px;
   color: white;
 }
 
 .signup-button:hover{
-  background-color: green;
+  background-color: #987E7E;
   color: white;
+}
+
+.signup-button {
+  padding: 13px;
+  background-color: #7E5E5E;
+  color: white;
+}
+
+#icon {
+  color: white;
+  position: relative;
+  top: 3px;
+  left: 4px;
 }
 
 header {
   display: inline-block;
-  background-color: #779C6F;
+  background-color: #143914;
   border: 1px solid black;
   width: 100%;
+  height: 70px;
   padding: 0;
   margin: 0;
 }
@@ -116,10 +151,12 @@ header {
 nav {
   display: inline;
   position: relative;
+  bottom: 10px;
   float: right;
   padding: 0;
   margin: auto 5% auto 0;
 }
+
 ul.nav_right{
   margin-top: 17%;
 }
@@ -138,4 +175,13 @@ nav ul{
 }
 nav ul li a{
   float: right;
+}
+
+.current-location{
+  margin-top: 22px;
+  text-align: center;
+}
+
+.current-location button {
+   padding: 12px 20px;
 }
