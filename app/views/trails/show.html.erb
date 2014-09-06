@@ -30,3 +30,13 @@
   </div>
 
 </div>
+
+<!-- ravi added to test photos -->
+<div>
+<%= form_for @photo, :html => {:multipart => true} do |f| %>
+  <%= f.hidden_field :trail_id %>
+  <p><%= f.file_field :image %></p>
+  <p><%= f.submit %></p>
+<%= image_tag photo.image_url(:thumb) if photo.image_url? %>
+<% end %>
+</div>
