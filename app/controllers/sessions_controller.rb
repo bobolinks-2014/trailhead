@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-	respond_to :json, :html
+	respond_to :json
 
 	def create
 		user = User.find_by_email(strong_params[:email])
@@ -17,7 +17,9 @@ class SessionsController < ApplicationController
 
 	def destroy
 		session.clear
-		redirect_to '/'
+		respond_to do |format|
+			format.json {render json: {success: 0 }}
+		end
 	end
 
 	private
