@@ -1,7 +1,7 @@
 class PhotosController < ApplicationController
 
   def create
-    @photo = Photo.new(trail_id: strong_params[:trail_id], image: strong_params[:image])
+    @photo = Photo.new(trail_id: params[:trail_id], image: strong_params[:image])
 
     if @photo.save
       redirect_to trail_path(@photo.trail_id)
@@ -13,6 +13,6 @@ class PhotosController < ApplicationController
 
 
   def strong_params
-    params.require(:photo).permit(:trail_id, :image)
+    params.require(:photo).permit(:image)
   end
 end

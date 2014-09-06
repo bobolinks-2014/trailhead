@@ -33,10 +33,15 @@
 
 <!-- ravi added to test photos -->
 <div>
-<%= form_for @photo, :html => {:multipart => true} do |f| %>
+<%= form_for @photo, url: {action: "create", controller: "photos", trail_id: @trail.id }, :html => {:multipart => true} do |f| %>
   <%= f.hidden_field :trail_id %>
   <p><%= f.file_field :image %></p>
   <p><%= f.submit %></p>
-<%= image_tag photo.image_url(:thumb) if photo.image_url? %>
 <% end %>
+</div>
+
+<div>
+  <% @trail.photos.each do |photo| %>
+    <%= image_tag photo.image_url(:thumb).to_s %>
+  <% end %>
 </div>
