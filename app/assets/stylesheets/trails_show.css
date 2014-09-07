@@ -115,6 +115,12 @@ form.upload-button{
   background-color: red;
 }
 
+#trail-map-canvas {
+  width: 300px;
+  height: 300px;
+
+  display: block;
+}
 
 .show-map {
   background-color: orange;

@@ -21,7 +21,7 @@ function initializeTrailId() {
     }
   }
 
-  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+  var map = new google.maps.Map(document.getElementById('trail-map-canvas'), mapOptions);
   var markerCollection = new MarkerCollection(map)
   markerCollection.fetch().done(function(){
     var marker = new Marker(map, trailId)
