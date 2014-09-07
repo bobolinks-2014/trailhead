@@ -14,15 +14,17 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'spring', group: :development
 
 group :development, :test do
-	gem 'simplecov', :require => false
-	gem 'rspec-rails', '~> 2.14.1'
-	gem 'shoulda-matchers', require: false
-	gem 'capybara', '~> 2.2.1'
-	gem 'database_cleaner', '~> 1.2.0'
-	gem 'capybara-webkit'
+  gem 'simplecov', :require => false
+  gem 'rspec-rails', '~> 2.14.1'
+  gem 'shoulda-matchers', require: false
+  gem 'capybara', '~> 2.2.1'
+  gem 'database_cleaner', '~> 1.2.0'
+  gem 'capybara-webkit'
 end
 
 #Ravi's carrierwave image upload
 gem 'fog'
 gem 'carrierwave'
 gem 'mini_magick'
+
+gem 'figaro', '~>1.0.0.rc1'
