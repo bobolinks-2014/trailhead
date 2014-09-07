@@ -4,7 +4,7 @@ body {
 }
 
 #title {
-  color: #D4D4D4; 
+  color: #D4D4D4;
   display: inline-block;
   position: relative;
   bottom: 10px;
@@ -185,3 +185,60 @@ nav ul li a{
 .current-location button {
    padding: 12px 20px;
 }
+
+.comment-form{
+  display: none;
+}
+
+.comment-form{
+  display: none;
+  border: 1px solid black;
+  background: white;
+  width: 50%;
+  margin-top: 0px;
+}
+
+.comment-form h3{
+  text-align: center;
+  margin: 0px;
+  margin-top: 5%;
+  margin-left: 14%;
+}
+
+.comment-form button{
+  margin-left: 20%;
+  margin-bottom: 5%;
+  width: 75%;
+  height: 20%;
+}
+
+.comment-form .input {
+  display: block;
+  margin: 7% auto;
+  height: 30%;
+}
+
+.comment-form label{
+  float: left;
+  width: 15%;
+  margin-left: 5%
+}
+
+.comment-form textarea{
+  width: 75%;
+}
+
+.comment-form input{
+  width: 75%;
+}
+
+.fa-tree{
+  color: #d3d3d3;
+  text-align: center;
+  width: 15%;
+}
+
+.fa-tree:hover{
+  color: green
+}
+
