@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   end
   resources :sessions
   resources :users
+  get '/more_comments', to: 'trails#more_comments'
   get '/logout', to: 'sessions#destroy'
 end

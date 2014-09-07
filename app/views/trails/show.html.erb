@@ -6,7 +6,7 @@
         <% if @user %>
           <button class="comment-button">Comment</button>
         <% end %>
-          <form class="upload-button" accept-charset-"UTF-8" action="trails/<%= @trail.id %>/photos" class="new_photo" enctype="multipart/form-data" id="new_photo" method="POST">
+          <form class="upload-button" accept-charset-"UTF-8" action="<%= @trail.id %>/photos" class="new_photo" enctype="multipart/form-data" id="new_photo" method="POST">
             <input id="photo_trail_id" name="photo[trail_id]" type="hidden">
             <input class="choose-photo" id="photo_image" name="photo[image]" type="file">
             <input class="submit-photo" name="commit" type="submit" value="Submit Photo">
@@ -29,29 +29,33 @@
     </div>
     <div class="comments-section">
       <% if @trail.comments != [] %>
-      <% @trail.comments.each do |comment| %>
-      <div class="one-comment">
-        <div class="comment-top">
-          <div class="comment-top-left">
-            <%= comment.user.username %> <%= Date.parse(comment.created_at.to_s) %>
+      <% @trail.comments.order(id: :desc).each_with_index do |comment, index| %>
+        <% if index < 5 %>
+        <div class="one-comment" data-id="<%= comment.id %>">
+          <div class="comment-top">
+            <div class="comment-top-left">
+              <%= comment.user.username %> <%= Date.parse(comment.created_at.to_s) %>
+            </div>
+            <div class="comment-top-right">
+              rating: <%= comment.rating %> difficulty: <%= comment.difficulty %>
+            </div>
           </div>
-          <div class="comment-top-right">
-            rating: <%= comment.rating %> difficulty: <%= comment.difficulty %>
+          <div class="comment-review">
+            <div class="comment-review-body">
+              <p><%= comment.review %></p>
+            </div>
           </div>
-        </div>
-        <div class="comment-review"><div class="comment-review-body">
-          <p><%= comment.review %></div></p>
-        </div>
-        <div class="comment-bottom">
-          <div class="comment-tip">
-            <p>Tip: <%= comment.tip %></p>
-          </div>
-          <div class="comment-date-hiked">
-            date hiked: <%= comment.date_hiked %>
+          <div class="comment-bottom">
+            <div class="comment-tip">
+              <p>Tip: <%= comment.tip %></p>
+            </div>
+            <div class="comment-date-hiked">
+              date hiked: <%= comment.date_hiked %>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    <% end %>
     <% end %>
     <% end %>
     <div class="see-more-comments-button"><button>See More</button></div>
