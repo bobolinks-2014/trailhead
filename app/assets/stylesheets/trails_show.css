@@ -51,6 +51,20 @@
   margin: 0 auto;
 }
 
+.comments-section p{
+  text-align: center;
+}
+
+.load-more-comments div{
+  width: 100%;
+  display: inline;
+}
+.load-more-comments button{
+  display: inline;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
 .single-comment{
   position: relative;
   width: 80%;

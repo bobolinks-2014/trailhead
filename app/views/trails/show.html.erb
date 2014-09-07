@@ -26,7 +26,15 @@
   </div>
 
   <div class="comments-section">
+    <div class="comments-body">
+    <% @trail.comments.order(id: :desc).each_with_index do |comment, index| %>
+      <% if index < 5 %>
+        <p data-id="<%= comment.id %>"><%= comment.review %> <%= comment.id%></p>
+      <% end %>
+    <% end %>
+  </div>
     <div class="single-comment">One Single Comment</div>
+    <button class="load-more-comments">Load More Comments</button>
   </div>
 
 </div>

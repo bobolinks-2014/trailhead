@@ -12,9 +12,23 @@ class TrailsController < ApplicationController
   end
 
   def show
+    if request.xhr?
+      current_comment_id = (params[:trail][:current_id]).to_i
+      all_trail_comments = Comment.where(trail_id: params[:id])
+        comments = []
+        all_trail_comments.order(id: :desc).each do |comment|
+          if (comment.id < current_comment_id) && (comment.id > current_comment_id - 6)
+            comments << comment
+          elsif (comment.id < current_comment_id - 6)
+            break
+          end
+        end
+      respond_to do |format|
+        format.json { render json: comments.to_json }
+      end
+    end
     @trail = Trail.find(params[:id])
     @photo = Photo.new
   end
-
 
 end
