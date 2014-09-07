@@ -190,7 +190,7 @@ nav ul li a{
   display: none;
 }
 
-.commentform{
+.comment-form{
   display: none;
   border: 1px solid black;
   background: white;
@@ -198,37 +198,37 @@ nav ul li a{
   margin-top: 0px;
 }
 
-.commentform h3{
+.comment-form h3{
   text-align: center;
   margin: 0px;
   margin-top: 5%;
   margin-left: 14%;
 }
 
-.commentform button{
+.comment-form button{
   margin-left: 20%;
   margin-bottom: 5%;
   width: 75%;
   height: 20%;
 }
 
-.commentform .input {
+.comment-form .input {
   display: block;
   margin: 7% auto;
   height: 30%;
 }
 
-.commentform label{
+.comment-form label{
   float: left;
   width: 15%;
   margin-left: 5%
 }
 
-.commentform textarea{
+.comment-form textarea{
   width: 75%;
 }
 
-.commentform input{
+.comment-form input{
   width: 75%;
 }
 
