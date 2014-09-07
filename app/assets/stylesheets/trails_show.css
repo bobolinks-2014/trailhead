@@ -1,58 +1,3 @@
-.trail-show-content{
-  -webkit-box-sizing: border-box;
-  width: 100%;
-  margin: 0.25em auto 0 auto;
-  border: 1px solid black;
-}
-
-.trail-show-top{
-  border: 1px solid black;
-}
-
-.trail-show-vitals-top{
-  border: 1px solid black;
-  display: inline;
-}
-.trail-show-vitals-top h3{
-  display: inline;
-  margin: 0;
-  padding: 0;
-}
-
-.trail-show-vitals-bottom{
-  border: 1px solid black;
-  display: block;
-  margin-top: 0.5em;
-}
-
-.photo-carousel-section{
-  border: 1px solid black;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-}
-
-.photos{
-  position: relative;
-  width: 80%;
-  margin: 0 auto;
-  display: block;
-  border: 1px solid black;
-}
-
-.comments-section{
-  border: 1px solid black;
-  display: block;
-  margin: 0 auto;
-}
-
-.single-comment{
-  position: relative;
-  width: 80%;
-  margin: 0 auto;
-  display: block;
-  border: 1px solid black;
-}
-
 /*new stufff*/
 h1 {
   text-align: center;
@@ -142,9 +87,11 @@ form.upload-button{
 
 .one-comment {
   width: 300px;
-  border: 1px solid black;
+/*  border: 1px solid black;*/
   margin: 1.0em auto 0 auto;
+  background-color: red;
 }
+
 
 .comment-top {
   width: 100%;
@@ -180,7 +127,8 @@ form.upload-button{
 }
 
 .see-more-comments-button button{
-  margin: 0 auto;
+  display: block;
+  margin: auto;
 }
 
 

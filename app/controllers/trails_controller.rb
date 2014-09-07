@@ -22,5 +22,23 @@ class TrailsController < ApplicationController
     end
   end
 
+  def more_comments
+    if request.xhr?
+      current_comment_id = (params[:trail][:current_id]).to_i
+      all_trail_comments = Comment.where(trail_id: params[:trail][:trail])
+        comments = []
+        all_trail_comments.order(id: :desc).each do |comment|
+          if (comment.id < current_comment_id) && (comment.id > current_comment_id - 6)
+            comments << comment
+          elsif (comment.id < current_comment_id - 6)
+            break
+          end
+        end
+      respond_to do |format|
+        format.json { render json: comments, include: [:user]  }
+      end
+    end
+  end
+
 
 end
