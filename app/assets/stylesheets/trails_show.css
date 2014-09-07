@@ -13,6 +13,8 @@
   border: 1px solid black;
   display: block;
   float: left;
+  width: 400px;
+  height: 400px;
 }
 
 .trail-show-vitals-top{
