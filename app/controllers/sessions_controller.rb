@@ -1,6 +1,14 @@
 class SessionsController < ApplicationController
 	respond_to :json
 
+	def index
+		if request.xhr?
+      respond_to do |format|
+        format.json { render json: current_user.to_json }
+      end
+    end
+	end
+
 	def create
 		user = User.find_by_email(strong_params[:email])
 		if user && user.authenticate(strong_params[:password])
