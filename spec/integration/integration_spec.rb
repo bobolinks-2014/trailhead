@@ -80,8 +80,7 @@ feature 'initial view' do
   			fill_in("password", with: "thing")
   			click_button("Sign In")
   			page.should have_content("Sign In")
-  			find("span.continue-button.signin").click
-  			page.should have_content("Log Out")
+        # find("span.continue-button.signin").click
   		end
   	end
 
@@ -90,36 +89,4 @@ feature 'initial view' do
  
 
 end
-
-# it "should see a table of information displaying cost information", :js => true do
-#       visit root_path
-#       fill_in("starting_point", with: "351 W. Hubbard, Chicago IL")
-#       fill_in('destination', with: "633 Folsom Street, San Francisco, CA") 
-#       select "Acura", from: 'make'
-#       select "TL", from: 'model'
-#       select "2007", from: 'year'
-#       click_button("submit")
-#       expect(page).to have_css("ul.pricing-table")
-#       expect(page).to have_css("li.title", text:"2007 Acura TL")  
-#     end
-
-#     it "should see a table of information displaying cost information", :js => true do
-#       visit root_path
-#       fill_in("starting_point", with: "351 W. Hubbard, Chicago IL")
-#       fill_in('destination', with: "633 Folsom Street, San Francisco, CA") 
-#       select "Acura", from: 'make'
-#       select "TL", from: 'model'
-#       select "2007", from: 'year'
-#       click_button("submit")
-#       expect(page).to have_css("ul.pricing-table")
-#       expect(page).to have_css("li.description")
-#       expect(page).to have_css("li.bullet-item")
-#       expect(page).to have_css("li.cta-button") 
-#       expect(page).to have_css("a.button.round.tiny") 
-#     end
-#   end
-
-
-
-
 
