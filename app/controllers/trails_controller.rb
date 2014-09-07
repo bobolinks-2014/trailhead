@@ -14,6 +14,11 @@ class TrailsController < ApplicationController
   def show
     @trail = Trail.find(params[:id])
     @photo = Photo.new
+    if request.xhr?
+      respond_to do |format|
+        format.json { render json: @trail.to_json }
+      end
+    end
   end
 
 
