@@ -4,15 +4,16 @@ class PhotosController < ApplicationController
     @photo = Photo.new(trail_id: params[:trail_id], image: strong_params[:image])
 
     if @photo.save
-      redirect_to trail_path(@photo.trail_id)
+      redirect_to "/trails/#{@photo.trail_id}"
     else
-      render '/'
+      #remember to add flash message for this
+      redirect_to "/trails/#{@photo.trail_id}"
     end
 
   end
 
 
   def strong_params
-    params.require(:photo).permit(:image)
+    params.require(:photo).permit(:image, :trail_id)
   end
 end
