@@ -9,14 +9,6 @@
   border: 1px solid black;
 }
 
-
-#map-canvas{
-  margin: 0 auto;
-  padding: 0;
-  width: 300px;
-  height: 300px;
-}
-
 .trail-show-vitals-top{
   border: 1px solid black;
   display: inline;
@@ -118,8 +110,7 @@ form.upload-button{
 #trail-map-canvas {
   width: 300px;
   height: 300px;
-
-  display: block;
+  margin: 0 auto;
 }
 
 .show-map {
@@ -140,15 +131,11 @@ form.upload-button{
   width: 300px;
   margin: auto;
 }
-.trail-carousel{
-  background-color: blue;
-  width: 300px;
-  height: 300px;
-  margin: auto;
-}
+
 
 .comments-section{
   border: 1px solid black;
+  background-color: blue;
   width: 300px;
   margin: auto;
 }
@@ -191,3 +178,9 @@ form.upload-button{
 .comment-date-hike{
   display: inline-block;
 }
+
+.see-more-comments-button button{
+  margin: 0 auto;
+}
+
+

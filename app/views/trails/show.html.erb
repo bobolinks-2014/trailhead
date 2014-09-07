@@ -13,16 +13,18 @@
           </form>
       </div>
     </div>
-    <div id="map-canvas"></div>
+
+    <div class="show-map">
+      <div id="trail-map-canvas"></div>
+    </div>
+
     <div class="trail-location"><%= @trail.city %>, <%= @trail.state %></div>
     <div class="trail-metrics">Length: <%= @trail.length %>  Difficulty: <% @trail.difficulty %></div>
     <div class="description"><p><%= @trail.description %></p></div>
+
     <div class="trail-carousel">
-      <div id="owl-demo" class="owl-carousel">
-        <% @trail.photos.each do |photo| %>
-        <div class="item"><img class="lazyOwl" data-src="<%= photo.image_url.to_s %>"></div>
-        <% end %>
-      </div>
+
+    </div>
 
     </div>
     <div class="comments-section">
@@ -52,19 +54,6 @@
     </div>
     <% end %>
     <% end %>
+    <div class="see-more-comments-button"><button>See More</button></div>
   </div>
-</div>
-<!-- ravi added to test photos -->
-<div>
-<%= form_for @photo, url: {action: "create", controller: "photos", trail_id: @trail.id }, :html => {:multipart => true} do |f| %>
-  <%= f.hidden_field :trail_id %>
-  <p><%= f.file_field :image %></p>
-  <p><%= f.submit %></p>
-<% end %>
-</div>
-
-<div>
-  <% @trail.photos.each do |photo| %>
-    <%= image_tag photo.image_url(:thumb).to_s %>
-  <% end %>
 </div>
