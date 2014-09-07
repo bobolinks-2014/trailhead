@@ -17,8 +17,8 @@
 //= require popup
 //= require_tree .
 $(document).ready(function() {
-  $("img[alt=Icon]").on("click", function() {
-    console.log("icon clicked")
-    google.maps.event.addDomListener(window, 'load', initializeHome);
+  $("#icon").on("click", function() {
+    window.location.pathname = "/"
+    initializeHome();
   })
 })
