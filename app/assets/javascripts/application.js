@@ -21,4 +21,22 @@ $(document).ready(function() {
     window.location.pathname = "/"
     initializeHome();
   })
+
+  var request = $.ajax({
+    url: '/sessions',
+    type: 'GET',
+    dataType: 'json'
+  })
+
+  request.done(function(user) {
+    if (user.success == "fails"){
+      $(".signin-button").show();
+      $(".signup-button").show();
+      $(".logout-button").hide();
+    }else{
+      $(".signin-button").hide();
+      $(".signup-button").hide();
+      $(".logout-button").show();
+    }
+  })
 })

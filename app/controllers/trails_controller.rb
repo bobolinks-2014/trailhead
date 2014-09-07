@@ -12,6 +12,7 @@ class TrailsController < ApplicationController
   end
 
   def show
+    @user = current_user
     @trail = Trail.find(params[:id])
     @photo = Photo.new
     if request.xhr?

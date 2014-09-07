@@ -3,8 +3,14 @@ class SessionsController < ApplicationController
 
 	def index
 		if request.xhr?
-      respond_to do |format|
-        format.json { render json: current_user.to_json }
+			if current_user
+      	respond_to do |format|
+        	format.json { render json: current_user.to_json }
+        end
+       else
+       	respond_to do |format|
+       		format.json {render json: {success: "fails"} }
+      	end
       end
     end
 	end
