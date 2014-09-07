@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require clusterer
 //= require popup
+//= require owl.carousel
 //= require_tree .
 $(document).ready(function() {
   $("#icon").on("click", function() {

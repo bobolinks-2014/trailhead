@@ -22,8 +22,9 @@ group :development, :test do
 	gem 'capybara-webkit'
 end
 
-#Ravi's carrierwave image upload
+#image upload and carousel
 gem 'fog'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'figaro', '~>1.0.0.rc1'
+gem 'owlcarousel-rails'

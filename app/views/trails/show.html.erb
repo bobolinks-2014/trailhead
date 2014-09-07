@@ -17,7 +17,14 @@
     <div class="trail-location"><%= @trail.city %>, <%= @trail.state %></div>
     <div class="trail-metrics">Length: <%= @trail.length %>  Difficulty: <% @trail.difficulty %></div>
     <div class="description"><p><%= @trail.description %></p></div>
-    <div class="trail-carousel"></div>
+    <div class="trail-carousel">
+      <div id="owl-demo">
+        <% @trail.photos.each do |photo| %>
+        <div class="item"><img src="<%= photo.image_url.to_s %>"></div>
+        <% end %>
+      </div>
+
+    </div>
     <div class="comments-section">
       <% if @trail.comments != [] %>
       <% @trail.comments.each do |comment| %>
