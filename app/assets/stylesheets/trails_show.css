@@ -58,3 +58,128 @@
   display: block;
   border: 1px solid black;
 }
+
+/*new stufff*/
+h1 {
+  text-align: center;
+}
+
+.rating {
+  text-align: center;
+}
+
+.user-features{
+  background-color: yellow;
+  width: 300px;
+  margin: auto;
+}
+
+.user-buttons{
+  display: inline;
+}
+
+.comment-button{
+  /*margin-left: 2.8em;*/
+}
+
+form.upload-button{
+  background-color: white;
+  vertical-align: middle;
+  width: 60%;
+  float: right;
+}
+
+.submit-photo{
+  display: inline;
+  width: 80px;
+  font-size: 0.5em;
+}
+
+.photo-text{
+  display: inline;
+  padding: 0;
+  margin: 0;
+  font-size: 0.6em;
+}
+
+.choose-photo{
+  width: 100%;
+  background-color: green;
+  font-size: 0.8em;
+}
+
+.submit-photo{
+  display: none;
+  background-color: red;
+}
+
+
+.show-map {
+  background-color: orange;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+}
+.trail-location{
+  text-align: center;
+}
+
+.trail-metrics{
+  text-align: center;
+}
+
+.description{
+  width: 300px;
+  margin: auto;
+}
+.trail-carousel{
+  background-color: blue;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+}
+
+.comments-section{
+  border: 1px solid black;
+  width: 300px;
+  margin: auto;
+}
+
+.one-comment {
+  width: 300px;
+  border: 1px solid black;
+  margin: 1.0em auto 0 auto;
+}
+
+.comment-top {
+  width: 100%;
+  border: 1px solid black;
+}
+
+.comment-top-left{
+  display: inline-block;
+}
+
+.comment-top-right{
+  display: inline-block;
+  float: right;
+}
+
+.comment-review-body{
+  width: 90%;
+  margin: 0.3em auto 0 auto;
+  padding: 0 0.3em 0 0.3em;
+  border: 1px solid black;
+}
+
+.comment-bottom{
+  border: 1px solid black;
+}
+
+.comment-tip{
+  display: inline-block;
+}
+
+.comment-date-hike{
+  display: inline-block;
+}
