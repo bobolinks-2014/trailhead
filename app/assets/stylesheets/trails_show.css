@@ -94,7 +94,17 @@ input#photo_image.choose-photo{
 }
 
 .trail-metrics{
-  text-align: center;
+  width: 300px;
+  margin: 0 auto;
+  margin-bottom: 2.8em;
+}
+
+.trail-length{
+  float: left;
+}
+
+.trail-difficulty{
+  float: right;
 }
 
 .description{
