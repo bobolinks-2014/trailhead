@@ -2,16 +2,14 @@
     <div class="trail-name"><h1><%= @trail.name %></h1></div>
     <div class="rating">Rating: <%= @trail.rating == nil ? 0 : @trail.rating %></div>
     <div class="user-features">
-      <div class="user-buttons">
-        <% if @user %>
-          <button class="comment-button">Comment</button>
-        <% end %>
+      <% if @user %>
           <form class="upload-button" accept-charset-"UTF-8" action="<%= @trail.id %>/photos" class="new_photo" enctype="multipart/form-data" id="new_photo" method="POST">
             <input id="photo_trail_id" name="photo[trail_id]" type="hidden">
             <input class="choose-photo" id="photo_image" name="photo[image]" type="file">
             <input class="submit-photo" name="commit" type="submit" value="Submit Photo">
           </form>
-      </div>
+          <button class="comment-button">Comment</button>
+        <% end %>
     </div>
 
     <div class="show-map">
@@ -28,15 +26,14 @@
     </div> 
 
     </div>
-    <div class="comments-section">
+
       <% if @trail.comments != [] %>
       <% @trail.comments.order(id: :desc).each_with_index do |comment, index| %>
         <% if index < 5 %>
+        <div class="comment-section">
         <div class="one-comment" data-id="<%= comment.id %>">
           <div class="comment-top">
-            <div class="comment-top-left">
-              <%= comment.user.username %> <%= Date.parse(comment.created_at.to_s) %>
-            </div>
+
             <div class="comment-top-right">
               rating: <%= comment.rating %> difficulty: <%= comment.difficulty %>
             </div>
@@ -48,17 +45,21 @@
           </div>
           <div class="comment-bottom">
             <div class="comment-tip">
-              <p>Tip: <%= comment.tip %></p>
+              <p><strong>Tip:</strong> <%= comment.tip %></p>
             </div>
             <div class="comment-date-hiked">
-              date hiked: <%= comment.date_hiked %>
+
+            </div>
+            <div class="comment-top-left">
+              Authored by: <strong><%= comment.user.username %></strong> | date posted: <%= Date.parse(comment.created_at.to_s) %> | date hiked: <%= comment.date_hiked %>
             </div>
           </div>
         </div>
+      </div>
       </div>
     <% end %>
     <% end %>
     <% end %>
     <div class="see-more-comments-button"><button>See More</button></div>
-  </div>
+
 </div>

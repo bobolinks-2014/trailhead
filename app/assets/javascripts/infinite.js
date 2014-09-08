@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
   $('.see-more-comments-button').on('click', function(event){
     event.preventDefault();
     var currentID = $('.one-comment').last().attr('data-id');
