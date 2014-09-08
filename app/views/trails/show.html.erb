@@ -1,4 +1,8 @@
 <div class="content">
+
+    <h1><%= flash[:notice] %></h1>
+
+
     <div class="trail-name"><h1><%= @trail.name %></h1></div>
     <div class="rating">Rating: <%= @trail.rating == nil ? 0 : @trail.rating %></div>
     <div class="user-features">
