@@ -15,6 +15,10 @@
   margin-bottom: 0.5em;
 }
 
+.rating label{
+  text-align: left;
+}
+
 .user-features{
   width: 300px;
   margin: auto;

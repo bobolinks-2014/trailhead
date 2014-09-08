@@ -4,6 +4,8 @@ $(document).ready(function() {
   $(".comment-button").on('click', function(event){
     event.preventDefault();
 
+    $(".fa").css("color", "gray")
+
     $('.comment-form').bPopup({
         modalClose: false,
         opacity: 0.6,
@@ -12,8 +14,23 @@ $(document).ready(function() {
         modalClose: true//'fixed' or 'absolute'
       });
 
+      var tree = 0;
+
+      $(".fa").on('click', function(event){
+      tree = Number($(this).attr('class').split(" ").pop())
+      for(i=0; i < tree; i++){
+        $($(".fa")[i]).css("color","green")
+      }
+      for(i=tree; i< 5; i++){
+        $($(".fa")[i]).css("color","gray")
+      }
+    })
+
+
     $('.comment-form button').on('click', function(event){
-      var rating = 1;
+
+      var rating = tree;
+      console.log(rating)
       var difficulty = $(".comment-form input[type=range]").val();
       var tip = $(".comment-form textarea[name*=tip").val();
       var review = $(".comment-form textarea[name*=review]").val();
