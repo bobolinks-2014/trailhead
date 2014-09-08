@@ -19,7 +19,7 @@ end
 
 
 10.times do
-  User.create(username: Faker::Name.first_name , email: Faker::Internet.email, password: "1234", password_confirmation: "1234")
+  User.create(username: Faker::Name.first_name , email: Faker::Internet.email, password: "1234567", password_confirmation: "1234567")
 end
 
 45.times do
