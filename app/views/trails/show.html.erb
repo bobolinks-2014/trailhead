@@ -17,7 +17,7 @@
     </div>
 
     <div class="trail-location"><%= @trail.city %>, <%= @trail.state %></div>
-    <div class="trail-metrics">Length: <%= @trail.length %>  Difficulty: <%= @trail.difficulty %></div>
+    <div class="trail-metrics">Length: <%= @trail.length %> miles  Difficulty: <%= @trail.difficulty %></div>
     <div class="description"><p><%= @trail.description %></p></div>
     <div class="trail-carousel">
       <% @trail.photos.each do |photo|  %>
