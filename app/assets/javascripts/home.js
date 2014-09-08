@@ -19,6 +19,7 @@ function initializeHome() {
   }
 
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+  var marker = []
 
   var markerCollection = new MarkerCollection(map)
   markerCollection.fetch().done(function() {
@@ -60,9 +61,9 @@ function initializeHome() {
 
 
   var input = document.getElementById('pac-input');
-  map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+  map.controls[google.maps.ControlPosition.TOP_CENTER].push(input);
 
-  var searchBox = new google.maps.places.SearchBox((input));
+  var searchBox = new google.maps.places.SearchBox(input);
 
   function SearchBox(trails) {
     google.maps.event.addListener(searchBox, 'places_changed', function() {
@@ -105,7 +106,6 @@ function initializeHome() {
     var bounds = map.getBounds();
     searchBox.setBounds(bounds);
   });
-
 }
 
 function MarkerCollection(map) {

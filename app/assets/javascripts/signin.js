@@ -40,6 +40,9 @@ $(document).ready(function() {
           $(".signin-button").hide();
           $(".signup-button").hide();
           $(".logout-button").show();
+          $(".comment-button").show();
+          $(".choose-photo").show();
+          $(".signin-form").bPopup().close();
         }
         //unsuccessful signin
         else if (response.success === 1){
@@ -57,9 +60,4 @@ $(document).ready(function() {
   $(".close-button.signin").on('click', function(){
     $(".signin-form").bPopup().close();
   });
-
-  $('.continue-button.signin').on('click', function(){
-    $(".signin-form").bPopup().close();
-  });
-
 });
