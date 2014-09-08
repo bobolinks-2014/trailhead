@@ -22,6 +22,7 @@ group :development, :test do
 	gem 'capybara', '~> 2.2.1'
 	gem 'database_cleaner', '~> 1.2.0'
 	gem 'capybara-webkit'
+	gem 'heroku'
 end
 
 #image upload and carousel
@@ -29,4 +30,4 @@ gem 'fog'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'figaro', '~>1.0.0.rc1'
-gem 'heroku'
+
