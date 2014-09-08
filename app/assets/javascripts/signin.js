@@ -42,7 +42,7 @@ $(document).ready(function() {
           $(".logout-button").show();
           $(".comment-button").show();
           $(".choose-photo").show();
-          $(".submit-photo").hide();
+          $(".signin-form").bPopup().close();
         }
         //unsuccessful signin
         else if (response.success === 1){
@@ -60,9 +60,4 @@ $(document).ready(function() {
   $(".close-button.signin").on('click', function(){
     $(".signin-form").bPopup().close();
   });
-
-  $('.continue-button.signin').on('click', function(){
-    $(".signin-form").bPopup().close();
-  });
-
 });

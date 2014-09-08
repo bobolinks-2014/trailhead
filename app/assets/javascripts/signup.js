@@ -43,7 +43,7 @@ $(document).ready(function() {
           $(".signup-form input[name*='password']").val("");
           $(".comment-button").show();
           $(".choose-photo").show();
-          $(".submit-photo").hide();
+          $(".signup-form").bPopup().close();
         }
         //unsucessful signup
         else if (response.success === 1){
@@ -52,18 +52,14 @@ $(document).ready(function() {
           $('.signup-form .message').text(message);
           $('.signup-form .message').css("color","red");
           $(".signup-form input[name*='password']").val("");
-
         }
       });
       return request;
       });
+    });
+  });
+    
+  $(".close-button.signin").on('click', function(){
+    $(".signin-form").bPopup().close();
   });
 
-  $(".close-button.signup").on('click', function(){
-    $(".signup-form").bPopup().close();
-  });
-
-  $('.continue-button.signup').on('click', function(){
-    $(".signup-form").bPopup().close();
-  });
-});

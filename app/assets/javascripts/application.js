@@ -33,10 +33,14 @@ $(document).ready(function() {
       $(".signin-button").show();
       $(".signup-button").show();
       $(".logout-button").hide();
+      $(".comment-button").hide();
+      $(".submit-photo").hide();
     }else{
       $(".signin-button").hide();
       $(".signup-button").hide();
       $(".logout-button").show();
+      $(".comment-button").show();
+      $(".choose-photo").show();
     }
   })
 })
