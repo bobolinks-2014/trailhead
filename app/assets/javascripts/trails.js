@@ -2,6 +2,8 @@ $(document).ready(function() {
   if(window.location.pathname !== '/'){
     google.maps.event.addDomListener(window, 'load', initializeTrailId);
   }
+
+  $('.see-more-comments-button').children().css("padding","13px")
 })
 
 function initializeTrailId() {

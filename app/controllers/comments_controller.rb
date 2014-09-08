@@ -13,6 +13,8 @@ class CommentsController < ApplicationController
     end
   end
 
+  private
+
   def strong_params
     params.require(:comments).permit(:user_id, :trail_id, :rating, :difficulty, :tip, :review, :date_hiked)
   end

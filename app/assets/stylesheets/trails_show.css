@@ -1,35 +1,48 @@
 /*new stufff*/
-h1 {
+ * {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+
+.content h1 {
   text-align: center;
+  font-size: 1.7em;
 }
 
 .rating {
   text-align: center;
+  margin-bottom: 0.5em;
 }
 
 .user-features{
-  background-color: yellow;
   width: 300px;
   margin: auto;
 }
 
-.user-buttons{
+/*.user-buttons{
   display: inline;
-}
+}*/
 
 .comment-button{
   /*margin-left: 2.8em;*/
+  float: right;
+  margin-right: 2.3em;
+  background-color: #6098f1;
+  margin-top: 0.7em;
+  border-radius: 5px;
 }
 
 form.upload-button{
-  background-color: white;
+  display: inline-block;
   vertical-align: middle;
-  width: 60%;
-  float: right;
+  margin-left: 1.6em;
+  width: 46%;
+  padding: 0;
 }
 
 .submit-photo{
-  display: inline;
+  display: none;
   width: 80px;
   font-size: 0.5em;
 }
@@ -41,15 +54,17 @@ form.upload-button{
   font-size: 0.6em;
 }
 
+.choose-photo {
+  width: 75%;
+  text-decoration: transparent;
+}
 .choose-photo{
-  width: 100%;
-  background-color: green;
-  font-size: 0.8em;
+  padding-right: 1.5em;
 }
 
-.submit-photo{
-  display: none;
-  background-color: red;
+input#photo_image.choose-photo{
+  /*font-size: 1em;*/
+  padding: 1.0em;
 }
 
 #trail-map-canvas {
@@ -64,8 +79,12 @@ form.upload-button{
   height: 300px;
   margin: auto;
 }
+
 .trail-location{
   text-align: center;
+  margin-top: 0.5em;
+  font-size: 1.4em;
+  margin-bottom: 0.5em;
 }
 
 .trail-metrics{
@@ -73,8 +92,11 @@ form.upload-button{
 }
 
 .description{
-  width: 300px;
+  width: 80%;
   margin: auto;
+  text-align: left;
+  line-height: 1.5em;
+  font-size: 1.15em;
 }
 
 .trail-carousel{
@@ -92,56 +114,82 @@ form.upload-button{
   margin: 0px auto;
 }
 
-.comments-section{
-  background-color: blue;
-  width: 300px;
-  margin: auto;
+
+.comment-section{
+  width: 100%;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid grey;
+  padding-top: 1.5em;
 }
 
 .one-comment {
-  width: 300px;
-/*  border: 1px solid black;*/
-  margin: 1.0em auto 0 auto;
-  background-color: red;
+  width: 80%;
+  margin: 0 auto 0 auto;
+  background-color: white;
+  border: 1px solid black;
+/*  border-radius: 5px;*/
+  margin-bottom: 1.5em;
 }
-
 
 .comment-top {
   width: 100%;
-  border: 1px solid black;
+/*  border: 1px solid black;*/
 }
 
 .comment-top-left{
   display: inline-block;
+  font-size: 0.7em;
+  margin-left: 1.2em;
+  margin-bottom: 1.2em;
 }
 
 .comment-top-right{
   display: inline-block;
   float: right;
+  font-size: 0.9em;
+  padding: 0;
+  margin-top: 0.35em;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 .comment-review-body{
   width: 90%;
-  margin: 0.3em auto 0 auto;
-  padding: 0 0.3em 0 0.3em;
-  border: 1px solid black;
+  margin: 0.6em auto 0.6em auto;
+  padding: 0.5em 0.5em 0 0.5em;
+  font-size: 0.95em;
 }
 
+
 .comment-bottom{
-  border: 1px solid black;
+  width: 100%;
+  display: inline-block;
 }
 
 .comment-tip{
   display: inline-block;
+  font-size: 0.85em;
+  margin-left: 1.2em;
+  margin-top: .3em;
+  padding: 0;
 }
 
-.comment-date-hike{
-  display: inline-block;
+.comment-date-hiked{
+  position: relative;
+  font-size: 0.3em;
+  padding: 0;
+  bottom: 0;
+ margin-left: 88%;
 }
 
 .see-more-comments-button button{
   display: block;
   margin: auto;
+  padding: 0;
+}
+
+.see-more-comments-button {
+  padding: 20px;
 }
 
 
