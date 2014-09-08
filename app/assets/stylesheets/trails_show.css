@@ -43,8 +43,13 @@ form.upload-button{
 
 .submit-photo{
   display: none;
-  width: 80px;
-  font-size: 0.5em;
+  width: 75%;
+  font-size: 0.9em;
+  position: relative;
+  top: 0.8em;
+  margin-bottom: 0.3em;
+  border-radius: 5px;
+  background-color: #e28011;
 }
 
 .photo-text{
@@ -53,8 +58,9 @@ form.upload-button{
   margin: 0;
   font-size: 0.6em;
 }
-
+/*delete display none*/
 .choose-photo {
+  /*display: none;*/
   width: 75%;
   text-decoration: transparent;
 }
