@@ -6,14 +6,14 @@ class PhotosController < ApplicationController
     p params[:photo]
     p params[:photo][:image]
    
-    if @photo.save!
+    if @photo.save
 
       redirect_to "/trails/#{@photo.trail_id}"
     else
-      #remember to add flash message for this
+      flash[:notice] = @photo.errors.full_messages.join("<br>")
       redirect_to "/trails/#{@photo.trail_id}"
     end
-
+    
   end
 
 
