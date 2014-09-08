@@ -114,10 +114,10 @@ input#photo_image.choose-photo{
 
 .description{
   width: 80%;
-  margin: auto;
+  margin: 0 auto;
   text-align: left;
   line-height: 1.5em;
-  font-size: 1.15em;
+  font-size: 1.0em;
 }
 
 .trail-carousel{
@@ -127,10 +127,8 @@ input#photo_image.choose-photo{
 }
 
 .trail-carousel-img{
-  height: 100%;
   text-align: center;
   width: 32%;
-  margin: 0px;
 }
 
 .slick-prev:before, .slick-next:before{
@@ -138,7 +136,9 @@ input#photo_image.choose-photo{
 }
 
 .trail-carousel-img img{
-  margin: 0px auto;
+  margin: 45px auto 0 auto;
+  height: 12em;
+  width: 20em;
 }
 
 
@@ -187,10 +187,8 @@ input#photo_image.choose-photo{
   font-size: 0.95em;
 }
 
-
-.comment-bottom{
-  width: 100%;
-  display: inline-block;
+.comment-button{
+  display: inline;
 }
 
 .comment-tip{
