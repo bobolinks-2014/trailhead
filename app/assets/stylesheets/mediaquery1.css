@@ -1,0 +1,232 @@
+@media (min-width: 58.75em) {
+
+div#trail-map-canvas {
+  width: 400px;
+  height: 500px;
+}
+
+div.show-map {
+  position: absolute;
+  left: 0;
+  top: 4.4em;
+  background-color: #c4e3f5;
+  width: 400px;
+  height: 500px;
+}
+
+div.trail-basic-information {
+  margin-left: 26.875em;
+}
+
+div.trail-basic-information h1 {
+  font-size: 1.4em;
+}
+
+div.trail-name{
+  display: inline-block;
+}
+
+div.rating{
+  display: inline-block;
+  margin-left: 12px;
+}
+
+div.user-features {
+  position: relative;
+  bottom: 10px;
+  right: 20px;
+}
+
+div.trail-location{
+ /* margin-left: 26.875em;*/
+}
+
+div.trail-detailed-information {
+  position: relative;
+  width: 52%;
+  left: 26.875em;
+}
+
+div.description {
+  margin: 0 0 0 26.875em;
+  width: 56%;
+  box-shadow: 0 4px 2px -2px grey;
+  height: 290px;
+  overflow: scroll;
+}
+
+div.description p{
+  width:90%;
+}
+
+}
+
+/*956px*/
+@media (min-width: 59.75em) {
+  div.description {
+  margin: 0 0 0 26.875em;
+  width: 59%;
+  box-shadow: 0 4px 2px -2px grey;
+  height: 290px;
+  overflow: scroll;
+}
+
+div.description p{
+  width:88%;
+}
+}
+
+/*985px*/
+@media (min-width: 61.56em) {
+  div.description {
+  margin: 0 0 0 26.875em;
+  width: 59%;
+  box-shadow: 0 4px 2px -2px grey;
+  height: 290px;
+  overflow: scroll;
+}
+
+div.description p{
+  width:90%;
+}
+}
+
+/*1000px*/
+@media (min-width: 62.5em) {
+  div.description {
+  margin: 0 0 0 26.875em;
+  width: 61%;
+  box-shadow: 0 4px 2px -2px grey;
+  height: 290px;
+  overflow: scroll;
+}
+
+div.description p{
+  width:90%;
+}
+}
+
+/*1047px*/
+@media (min-width: 65.43em) {
+  div.description {
+  margin: 0 0 0 26.875em;
+  width: 61%;
+  box-shadow: 0 4px 2px -2px grey;
+  height: 290px;
+  overflow: scroll;
+}
+
+div.description p{
+  width:91%;
+}
+}
+
+/*1074px*/
+@media (min-width: 67.125em) {
+  div.description {
+  margin: 0 0 0 26.875em;
+  width: 61%;
+  box-shadow: 0 4px 2px -2px grey;
+  height: 290px;
+  overflow: scroll;
+}
+
+div.description p{
+  width:93%;
+}
+}
+
+/*1116px*/
+@media (min-width: 69.75em) {
+  div.description {
+  margin: 0 0 0 26.875em;
+  width: 61%;
+  box-shadow: 0 4px 2px -2px grey;
+  height: 290px;
+  overflow: scroll;
+}
+
+div.description p{
+  width:96%;
+}
+}
+
+/*1220px*/
+@media (min-width: 76.25em) {
+  div.description {
+  margin: 0 0 0 26.875em;
+  width: 61%;
+  box-shadow: 0 4px 2px -2px grey;
+  height: 290px;
+  overflow: scroll;
+}
+
+div.user-features{
+  position: relative;
+  bottom: 3.4em;
+  left: 15em;
+}
+div.description p{
+  width:96%;
+}
+
+/*1341px*/
+@media (min-width: 83.8em) {
+*{
+  display: static;
+}
+  div.description {
+  margin: 0 0 0 26.875em;
+  width: 870px;
+  box-shadow: 0 4px 2px -2px grey;
+  height: 290px;
+  overflow: scroll;
+}
+
+div.user-features{
+  position: relative;
+  bottom: 3.4em;
+  left: 15em;
+}
+div.description p{
+  width:96%;
+}
+
+.trail-location{
+  text-align: center;
+  margin-top: 0.5em;
+  font-size: 1.4em;
+  margin-bottom: 0.5em;
+  width: 840px;
+}
+
+div.trail-difficulty{
+  position: relative;
+  right: 250px;
+  width: 90px;
+}
+
+div.trail-length{
+  position: relative;
+  right: 250px;
+  width: 110px;
+}
+
+div.trail-metrics{
+  position: relative;
+  left: 60px;
+  right: 60px;
+  width: 250px;
+  margin-left: 480px;
+  margin-bottom: 60px;
+}
+
+/*.trail-detailed-information{
+  position: absolute;
+  width: 400px;
+}*/
+
+}
+
+
+
