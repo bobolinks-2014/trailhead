@@ -1,0 +1,44 @@
+@media (min-width: 29em) {
+
+.trail-carousel-img img{
+  margin: 45px auto 0 auto;
+  height: 66%;
+  width: 92%;
+}
+
+}
+
+@media (min-width: 31.5em) {
+.content  h1{
+    color: red;
+  }
+
+.trail-carousel{
+  height: 300px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.trail-carousel-img{
+  text-align: center;
+  width: 10%;
+}
+
+.slick-prev:before, .slick-next:before{
+  color: green;
+}
+
+.trail-carousel-img img{
+  margin: 45px auto 0 auto;
+  height: 20em;
+  width: 40em;
+}
+
+
+/*.trail-carousel-img img{
+  margin: 45px auto 0 auto;
+  height: 60%;
+  width: 20%;
+}*/
+
+}
