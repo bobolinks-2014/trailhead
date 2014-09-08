@@ -40,6 +40,9 @@ $(document).ready(function() {
           $(".signin-button").hide();
           $(".signup-button").hide();
           $(".logout-button").show();
+          $(".comment-button").show();
+          $(".choose-photo").show();
+          $(".submit-photo").hide();
         }
         //unsuccessful signin
         else if (response.success === 1){

@@ -41,6 +41,9 @@ $(document).ready(function() {
           $(".signup-form input[name*='username']").val("");
           $(".signup-form input[name*='email']").val("");
           $(".signup-form input[name*='password']").val("");
+          $(".comment-button").show();
+          $(".choose-photo").show();
+          $(".submit-photo").hide();
         }
         //unsucessful signup
         else if (response.success === 1){
@@ -49,6 +52,7 @@ $(document).ready(function() {
           $('.signup-form .message').text(message);
           $('.signup-form .message').css("color","red");
           $(".signup-form input[name*='password']").val("");
+
         }
       });
       return request;

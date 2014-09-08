@@ -25,6 +25,7 @@
 }*/
 
 .comment-button{
+  display: none;
   /*margin-left: 2.8em;*/
   float: right;
   margin-right: 2.3em;
@@ -58,9 +59,9 @@ form.upload-button{
   margin: 0;
   font-size: 0.6em;
 }
-/*delete display none*/
+
 .choose-photo {
-  /*display: none;*/
+  display: none;
   width: 75%;
   text-decoration: transparent;
 }
