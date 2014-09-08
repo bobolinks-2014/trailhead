@@ -4,33 +4,42 @@ $(document).ready(function() {
   $(".comment-button").on('click', function(event){
     event.preventDefault();
 
+    var rangeHash = {0: "easy", 1: "moderate", 2: "hard"}
+    var range = 1.5
+
     $(".comment-form .fa").css("color", "gray")
+    $(".comment-form input[type=range]").val(range)
+    $(".comment-form #range").text(rangeHash[Math.floor(range)])
+
+    $('.comment-form input[type=range]').change(function(){
+      range = $('.comment-form input[type=range]').val()
+      $(".comment-form #range").text(rangeHash[Math.floor(range)])
+    })
 
     $('.comment-form').bPopup({
-        modalClose: false,
-        opacity: 0.6,
-        positionStyle: 'fixed',
-        modalColor: '#CFDBC5',
-        modalClose: true//'fixed' or 'absolute'
-      });
+      modalClose: false,
+      opacity: 0.6,
+      positionStyle: 'fixed',
+      modalColor: '#CFDBC5',
+      modalClose: true//'fixed' or 'absolute'
+    });
 
-      var tree = 0;
+    var tree = 0;
 
-      $(".comment-form .fa-tree").on('click', function(event){
-        tree = Number($(this).attr('class').split(" ").pop())
-        for(i=0; i < tree; i++){
-          $($(".comment-form .fa-tree")[i]).css("color","green")
-        }
-        for(i=tree; i< 5; i++){
-          $($(".comment-form .fa-tree")[i]).css("color","gray")
-        }
+    $(".comment-form .fa-tree").on('click', function(event){
+      tree = Number($(this).attr('class').split(" ").pop())
+      for(i=0; i < tree; i++){
+        $($(".comment-form .fa-tree")[i]).css("color","green")
+      }
+      for(i=tree; i< 5; i++){
+        $($(".comment-form .fa-tree")[i]).css("color","gray")
+      }
     })
 
 
     $('.comment-form button').on('click', function(event){
 
       var rating = tree;
-      console.log(rating)
       var difficulty = $(".comment-form input[type=range]").val();
       var tip = $(".comment-form textarea[name*=tip").val();
       var review = $(".comment-form textarea[name*=review]").val();
