@@ -101,6 +101,8 @@ input#photo_image.choose-photo{
 
 .trail-carousel{
   height: 300px;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .trail-carousel-img{
