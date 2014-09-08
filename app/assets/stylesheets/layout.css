@@ -106,6 +106,16 @@ img[alt="Trailapi"] {
   background-color: #304848;
   color: white;
   font-size: 1em;
+  cursor: hand;
+  cursor: pointer;
+}
+
+.logout-button:hover{
+  background-color: #687a7a;
+  color: white;
+  font-size: 1em;
+  cursor: hand;
+  cursor: pointer;
 }
 
 li{

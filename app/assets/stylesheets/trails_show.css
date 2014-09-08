@@ -43,8 +43,13 @@ form.upload-button{
 
 .submit-photo{
   display: none;
-  width: 80px;
-  font-size: 0.5em;
+  width: 75%;
+  font-size: 0.9em;
+  position: relative;
+  top: 0.8em;
+  margin-bottom: 0.3em;
+  border-radius: 5px;
+  background-color: #e28011;
 }
 
 .photo-text{
@@ -53,8 +58,9 @@ form.upload-button{
   margin: 0;
   font-size: 0.6em;
 }
-
+/*delete display none*/
 .choose-photo {
+  /*display: none;*/
   width: 75%;
   text-decoration: transparent;
 }
@@ -74,7 +80,7 @@ input#photo_image.choose-photo{
 }
 
 .show-map {
-  background-color: orange;
+  background-color: #c4e3f5;
   width: 300px;
   height: 300px;
   margin: auto;
@@ -88,7 +94,17 @@ input#photo_image.choose-photo{
 }
 
 .trail-metrics{
-  text-align: center;
+  width: 300px;
+  margin: 0 auto;
+  margin-bottom: 2.8em;
+}
+
+.trail-length{
+  float: left;
+}
+
+.trail-difficulty{
+  float: right;
 }
 
 .description{
@@ -101,6 +117,8 @@ input#photo_image.choose-photo{
 
 .trail-carousel{
   height: 300px;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .trail-carousel-img{
@@ -108,6 +126,10 @@ input#photo_image.choose-photo{
   text-align: center;
   width: 32%;
   margin: 0px;
+}
+
+.slick-prev:before, .slick-next:before{
+  color: green;
 }
 
 .trail-carousel-img img{

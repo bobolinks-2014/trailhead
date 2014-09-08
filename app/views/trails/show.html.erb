@@ -17,13 +17,13 @@
     </div>
 
     <div class="trail-location"><%= @trail.city %>, <%= @trail.state %></div>
-    <div class="trail-metrics">Length: <%= @trail.length %>  Difficulty: <% @trail.difficulty %></div>
+    <div class="trail-metrics"><div class="trail-length">Length: <%= @trail.length %> miles</div><div class="trail-difficulty">Difficulty: <%= @trail.difficulty %></div></div>
     <div class="description"><p><%= @trail.description %></p></div>
     <div class="trail-carousel">
       <% @trail.photos.each do |photo|  %>
         <div class="trail-carousel-img"><img src=<%= photo.image_url(:thumb).to_s %>></img></div>
       <% end %>
-    </div> 
+    </div>
 
     </div>
 
