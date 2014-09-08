@@ -4,7 +4,7 @@ $(document).ready(function() {
   $(".comment-button").on('click', function(event){
     event.preventDefault();
 
-    $(".fa").css("color", "gray")
+    $(".comment-form .fa").css("color", "gray")
 
     $('.comment-form').bPopup({
         modalClose: false,
@@ -16,14 +16,14 @@ $(document).ready(function() {
 
       var tree = 0;
 
-      $(".fa").on('click', function(event){
-      tree = Number($(this).attr('class').split(" ").pop())
-      for(i=0; i < tree; i++){
-        $($(".fa")[i]).css("color","green")
-      }
-      for(i=tree; i< 5; i++){
-        $($(".fa")[i]).css("color","gray")
-      }
+      $(".comment-form .fa-tree").on('click', function(event){
+        tree = Number($(this).attr('class').split(" ").pop())
+        for(i=0; i < tree; i++){
+          $($(".comment-form .fa-tree")[i]).css("color","green")
+        }
+        for(i=tree; i< 5; i++){
+          $($(".comment-form .fa-tree")[i]).css("color","gray")
+        }
     })
 
 

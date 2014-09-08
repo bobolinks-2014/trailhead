@@ -266,13 +266,13 @@ nav ul li a{
   width: 75%;
 }
 
-.fa-tree{
+.comment-form .fa-tree{
   color: #d3d3d3;
   text-align: center;
   width: 15%;
 }
 
-.fa-tree:hover{
+.comment-form .fa-tree:hover{
   color: green
 }
 
