@@ -112,6 +112,10 @@ input#photo_image.choose-photo{
   margin: 0px;
 }
 
+.slick-prev:before, .slick-next:before{
+  color: green;
+}
+
 .trail-carousel-img img{
   margin: 0px auto;
 }
