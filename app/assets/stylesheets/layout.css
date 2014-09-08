@@ -4,6 +4,16 @@ body {
   font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+.footer {
+  background-color: #133813;
+  height: 80px;
+}
+
+img[alt="Trailapi"] {
+  margin-top: 7px;
+  margin-left: 20px;
+}
+
 #title {
   color: #D4D4D4;
   display: inline-block;
@@ -92,6 +102,19 @@ body {
 
 .logout-button{
   display: none;
+  padding: 13px;
+  background-color: #304848;
+  color: white;
+  font-size: 1em;
+}
+
+li{
+  list-style-type: none;
+}
+
+.logout-href{
+  text-decoration: none;
+  color: white;
 }
 .continue-button{
   display: none;
