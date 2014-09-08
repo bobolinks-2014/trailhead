@@ -77,9 +77,22 @@ form.upload-button{
   margin: auto;
 }
 
+.trail-carousel{
+  height: 300px;
+}
+
+.trail-carousel-img{
+  height: 100%;
+  text-align: center;
+  width: 32%;
+  margin: 0px;
+}
+
+.trail-carousel-img img{
+  margin: 0px auto;
+}
 
 .comments-section{
-  border: 1px solid black;
   background-color: blue;
   width: 300px;
   margin: auto;
@@ -130,5 +143,7 @@ form.upload-button{
   display: block;
   margin: auto;
 }
+
+
 
 
