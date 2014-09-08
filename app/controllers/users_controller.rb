@@ -9,7 +9,7 @@ class UsersController < ApplicationController
       end
     else
       respond_to do |format|
-        format.json {render json: {success: 1, message: "Unable to create the user. The password is in use."} }
+        format.json {render json: {success: 1, message: "Password must be 6 or more characters"} }
       end
     end
   end
