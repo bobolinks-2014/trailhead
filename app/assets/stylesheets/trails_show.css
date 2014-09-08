@@ -187,10 +187,8 @@ input#photo_image.choose-photo{
   font-size: 0.95em;
 }
 
-
-.comment-bottom{
-  width: 100%;
-  display: inline-block;
+.comment-button{
+  display: inline;
 }
 
 .comment-tip{

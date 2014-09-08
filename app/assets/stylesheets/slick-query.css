@@ -9,9 +9,6 @@
 }
 
 @media (min-width: 31.5em) {
-.content  h1{
-    color: red;
-  }
 
 .trail-carousel{
   height: 300px;
