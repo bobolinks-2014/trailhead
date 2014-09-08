@@ -8,7 +8,7 @@ class Photo < ActiveRecord::Base
   validates :image,
     :presence => true,
     :file_size => {
-      :maximum => 0.5.megabytes.to_i
+      :maximum => (4.0).megabytes.to_i
     }
 
 end
