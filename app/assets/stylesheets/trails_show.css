@@ -21,19 +21,17 @@
 
 .user-features{
   width: 300px;
-  margin: 0.2em auto 0.2em auto;
+  height: 30px;
+  margin: 0.1em auto 0.2em auto;
 }
 
 
 /*this is where the actual upload button is*/
 #photo_image{
   z-index: 2;
+  width: 121px;
+  height: 23px;
   opacity: 0;
-}
-
-#photo_image:hover{
-  z-index: 2;
-  background-color: #4DA64D;
 }
 
 /*this is what is used to overlay the upload-button*/
@@ -59,13 +57,18 @@ i.fa-camera-retro{
   background-color: green;
 }
 
-i.fa-camera-retro:hover{
-  background-color: #4DA64D;
+/*subimt photo button*/
+input.submit-photo{
+  /*margin-top: 0.4em;*/
+  display: none;
+  width: 121px;
+  font-size: 0.9em;
+  position: relative;
+  top: 0;
+  border-radius: 5px;
+  background-color: #e28011;
 }
 
-input.submit-photo{
-  margin-top: 0.4em;
-}
 
 /*comment button*/
 .comment-button{
@@ -84,31 +87,26 @@ input.submit-photo{
 /*centers the upload and submit button*/
 form.upload-button{
   display: inline-block;
-  vertical-align: middle;
+  /*vertical-align: middle;*/
   margin-left: 1.6em;
   width: 46%;
   padding: 0;
 }
 
-.submit-photo{
-  display: none;
-  width: 75%;
-  font-size: 0.9em;
-  position: relative;
-  top: 0.8em;
-  margin-bottom: 0.3em;
-  border-radius: 5px;
-  background-color: #e28011;
-}
 
-/*.photo-text{
-  display: inline;
+.photo-text{
+  /*display: inline;*/
+  z-index: 2;
+  position: absolute;
+  /*text-align: center;*/
+  top: -45%;
   padding: 0;
   margin: 0;
-  font-size: 0.6em;
+  /*opacity: 0;*/
+  font-size: 0.8em;
 }
 
-.choose-photo {
+/*.choose-photo {
   display: none;
   width: 75%;
   text-decoration: transparent;
