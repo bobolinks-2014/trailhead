@@ -6,8 +6,7 @@ $(document).ready(function() {
     initializeCommentForm();
     showCommentForm();
 
-    function initializeCommentForm() {
-      
+    function initializeCommentForm() {      
       $(".comment-form .fa").css("color", "gray")
       var rangeHash = {0: "easy", 1: "moderate", 2: "hard"}
       var range = 1.5

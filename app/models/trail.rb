@@ -3,7 +3,7 @@ class Trail < ActiveRecord::Base
 	has_many :comments
 
   def self.markers
-    Trail.select('id, name, latitude, longitude')
+    Trail.select('id, name, latitude, longitude, rating, difficulty, length')
   end
 
   def difficulty_in_words
