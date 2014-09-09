@@ -1,39 +1,83 @@
 .opening {
   color: #303030;
-  margin-top: 35px;
   text-align: center;
-  font-size: 45px;
+  font-size: 30px;
   font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
   text-transform: uppercase;
   font-weight: bold;
 }
 
-.purpose {
-  line-height: 30px;
-  width: 60%;
-  margin: auto;
-  margin-top: 30px;
-  margin-bottom: 100px;
+.opening p {
+  margin-top: 0px;
+  color: black;
+}
+
+.current-location button {
+  z-index: 8;
 }
 
 .home-description {
+  position: relative;
+  bottom: 14px;
   color: #303030;
-  margin-top: 10px;
   text-align: center;
   font-size: 18px;
   font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 #current-location {
+  color: black;
   margin: auto;
   text-align: center;
 }
 
-#map-canvas {
-  height: 60%;
-  width: 60%;
+.explore p {
+  line-height: 1.5em;
+  position: relative;
+}
+
+.explore h3, .engage h3 {
+  text-align: center;
+  color: #161616;
+  font-size: 1.5em;
+}
+
+.engage p {
+  line-height: 1.5em;
+  position: relative;
+}
+
+.engage h3 {
+  text-align: center;
+  color: #161616;
+  font-size: 1.5em;
+}
+
+#heart, #boot {
+  display: block;
   margin: auto;
-  margin-top: 32px;
+}
+
+.home {
+  overflow: scroll;
+  position: absolute;
+  top: 70px;
+  right: 0%;
+  bottom: 7%;
+  padding: 2%;
+  margin: 0px;
+  opacity: .8;
+  height: 86%;
+  width: 350px;
+  z-index: 5;
+  background-color: white;
+}
+
+#map-canvas {
+  z-index: 3;
+  height: 86%;
+  width: 100%;
+  margin: auto;
   display: block;
 }
 
