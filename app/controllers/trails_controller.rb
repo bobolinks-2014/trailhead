@@ -11,6 +11,23 @@ class TrailsController < ApplicationController
     end
   end
 
+  def create
+    if request.xhr?
+      @trail = Trail.new(name: params[:name], city: params[:city], state: params[:state], length: params[:length], description: params[:description], latitude: params[:latitude], longitude: params[:longitude], under_review: true)
+
+      respond_to do |format|
+        if @trail.save
+          format.json {render json: {success: 0} }
+        else
+          format.json {render json: {success: 1, messages: @trail.errors.full_messages.join("<br>")} }
+        end
+      end
+      
+    end
+
+
+  end
+
   def show
     @user = current_user
     @trail = Trail.find(params[:id])
