@@ -14,6 +14,9 @@
 
 .current-location button {
   z-index: 8;
+  position: relative;
+  bottom: 13px;
+  margin-bottom: 5px;
 }
 
 .home-description {
@@ -38,6 +41,7 @@
 
 .explore h3, .engage h3 {
   text-align: center;
+  margin: 0px 0px 17px 0px;
   color: #161616;
   font-size: 1.5em;
 }
@@ -53,7 +57,7 @@
   font-size: 1.5em;
 }
 
-#heart, #boot {
+#heart, #boots {
   display: block;
   margin: auto;
 }
