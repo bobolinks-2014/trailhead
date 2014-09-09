@@ -188,7 +188,7 @@ MarkerCollection.prototype.fetch = function() {
         // url: "/trails/" + markers[i]["id"], 
         info: new google.maps.InfoWindow({
           content: '<div id="info-content">'+
-          '<h1 id="firstHeading" class="firstHeading"> <a href=/trails/'+markers[i]["id"] + '>' + markers[i]["name"] + '</a></h1> <p> Length: ' + markers[i]["length"] + ' mile(s) <p> Rating: ' + trees(markers[i]["rating"]) + '</p> <p> Difficulty: ' + rangeHash[Math.floor(markers[i].difficulty)] + '</p> </div>'
+          '<h1 id="firstHeading" class="firstHeading"> <a href=/trails/'+markers[i]["id"] + '>' + markers[i]["name"] + '</a></h1> <p> Length: ' + markers[i]["length"] + ' mile(s) <p> Rating: </p> <p> Difficulty: ' + rangeHash[Math.floor(markers[i].difficulty)] + '</p> </div>'
         }) 
       })
       trails.push(marker)
