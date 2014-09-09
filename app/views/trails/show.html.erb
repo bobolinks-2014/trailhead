@@ -40,13 +40,13 @@
   <div class="description"><p><%= @trail.description %></p></div>
 
 </div>
-
+  <% if @trail.photos != [] %>
     <div class="trail-carousel">
       <% @trail.photos.each do |photo|  %>
         <div class="trail-carousel-img"><img src=<%= photo.image_url(:thumb).to_s %>></img></div>
       <% end %>
     </div>
-
+  <% end %>
     </div>
 
       <% if @trail.comments != [] %>
