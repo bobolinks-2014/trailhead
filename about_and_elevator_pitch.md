@@ -5,7 +5,7 @@ TrailHead offers vital information about the most important part of a hike: the 
 
 ###Trail specific info and user interactivity:
 
-Detailed trail information including location, length, and difficulty are at your fingertips. Explore a trail in depth and see photos of where you're headed before you set off. Check out trail reviews posted by hikers like you and see their tips for making the hike more about the trek and less about the distractions. Lace up your boots and head out, then circle back to TrekTracker and share your experience with other hikers like you.
+Detailed trail information including location, length, and difficulty are at your fingertips. Explore a trail in depth and see photos of where you're headed before you set off. Check out trail reviews posted by hikers like you and see their tips for making the most out of the trek. Lace up your boots and head out, then circle back to Trailhead to review your trail and share a tip of your own.
 
 
 ###Elevator pitch:
