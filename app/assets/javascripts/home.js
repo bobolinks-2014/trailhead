@@ -47,7 +47,7 @@ function initializeHome() {
   }
 
   function CurrentLocationtoNearestTrails(markers) {
-    $("button[type=button]").on("click", function() {
+    $(".button-current-location").on("click", function() {
 
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
@@ -107,6 +107,45 @@ function initializeHome() {
     var bounds = map.getBounds();
     searchBox.setBounds(bounds);
   });
+
+  $(".add-marker-button").on("click", function(event) {
+    google.maps.event.addListener(map, 'click', function(event) {
+      var marker = new google.maps.Marker({
+        position: event.latLng,
+        map: map,
+        info: new google.maps.InfoWindow({
+          content: '<form class="trail-form" action="/user_trails/new"><p><label> Trail Name: <label><input name="name" type="text"></input></p><p><label> City: <label><input name="city" type="text"></input></p><p><label> State: <label><input name="state" type="text"></input></p><p><label> Length: <label><input name="length" type="text"></input></p><p><label> Description: <label><input name="description" type="text"></input></p><p><button type="submit" name="trail_submit">Submit Trail</button></form></p>'
+        })
+      })
+        console.log(this)
+        marker.info.open(map, marker)
+      $("button[name='trail_submit']").on("click", function(e) {
+        e.preventDefault();
+
+        var name = $(".trail-form input[name=name]").val();
+        var city = $(".trail-form input[name=city]").val();
+        var state = $(".trail-form input[name=state]").val();
+        var length = $(".trail-form input[name=length]").val();
+        var description = $(".trail-form input[name=description]").val();
+        var latitude = event.latLng.lat();
+        var longitude = event.latLng.lng();
+
+        var jqXHR = $.ajax({
+          url: "/trails/new",
+          type: "POST",
+          data: {name: name, city: city, state: state, length: length, description: description, latitude: latitude, longitude: longitude},
+          dataType: "json"
+        });
+
+        jqXHR.done(function(response) {
+          if(response === 1){
+            marker.info.close()
+            alert("thanks for your response")
+          }
+        })
+      })
+    })
+  })
 }
 
 function MarkerCollection(map) {
