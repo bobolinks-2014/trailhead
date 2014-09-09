@@ -117,7 +117,7 @@ function initializeHome() {
           content: '<form class="trail-form" action="/user_trails/new"><p><label> Trail Name: <label><input name="name" type="text"></input></p><p><label> City: <label><input name="city" type="text"></input></p><p><label> State: <label><input name="state" type="text"></input></p><p><label> Length: <label><input name="length" type="text"></input></p><p><label> Description: <label><input name="description" type="text"></input></p><p><button type="submit" name="trail_submit">Submit Trail</button></form></p>'
         })
       })
-        console.log(this)
+
         marker.info.open(map, marker)
       $("button[name='trail_submit']").on("click", function(e) {
         e.preventDefault();
@@ -138,7 +138,7 @@ function initializeHome() {
         });
 
         jqXHR.done(function(response) {
-          if(response === 1){
+          if(response === 0){
             marker.info.close()
             alert("thanks for your response")
           }
