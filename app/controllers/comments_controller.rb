@@ -17,7 +17,7 @@ class CommentsController < ApplicationController
       end
     else
       respond_to do |format|
-        format.json {render json: {success: 1, message: "Could not create comment"} }
+        format.json {render json: {success: 1, message: "Could not create comment", @comment, include[:user] } }
       end
     end
   end
