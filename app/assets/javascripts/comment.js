@@ -7,17 +7,22 @@ $(document).ready(function() {
     showCommentForm();
 
     function initializeCommentForm() {      
-      $(".comment-form .fa").css("color", "gray")
-      var rangeHash = {0: "easy", 1: "moderate", 2: "hard"}
-      var range = 1.5
-      $(".comment-form input[type=range]").val(range)
-      $(".comment-form #range").text(rangeHash[Math.floor(range)])
+      $(".comment-form .fa").css("color", "gray");
+
+      var levelDescription = ["children and elderly, trails are generally in good condition, under 300 foot elevation gain, under 4 miles round trip", "someone in good hiking condition, trails are generally in good condition, between 300 and 1000 foot increase in elevation, between 4 and 10 miles in length", "someone in excellent hiking condition, trails are not always in good condition, over 1000 foot increase in elevation, over 10 miles in length"];
+
+      var rangeHash = {0: "Easy:", 1: "Moderate:", 2: "Hard:"};
+      var range = 1.5;
+      $(".comment-form input[type=range]").val(range);
+      $(".comment-form #range").text(rangeHash[Math.floor(range)]);
+      $(".difficulty-text").text(levelDescription[Math.floor(range)]);
       
       $('.comment-form input[type=range]').change(function(){
-        range = $('.comment-form input[type=range]').val()
-        $(".comment-form #range").text(rangeHash[Math.floor(range)])
-      })
-    } 
+        range = $('.comment-form input[type=range]').val();
+        $(".comment-form #range").text(rangeHash[Math.floor(range)]);
+        $(".difficulty-text").text(levelDescription[Math.floor(range)]);
+      });
+    }; 
 
     function showCommentForm() {
       $('.comment-form').bPopup({
