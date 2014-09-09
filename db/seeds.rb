@@ -28,3 +28,7 @@ i = 0
   puts "Seeding #{i}th comment" if i % 1000 == 0
   i += 1 
 end
+
+30.times do
+  Comment.create(user_id: rand(1..10), trail_id: 1, review: Faker::Lorem.paragraph(6), difficulty: rand(1..3), rating: rand(1..5), tip: Faker::Lorem.sentence(1), date_hiked: Time.now.ago(45))
+end
