@@ -122,23 +122,24 @@ function initializeHome() {
       $("button[name='trail_submit']").on("click", function(e) {
         e.preventDefault();
 
-        var name = $(".trail-form input[name=name]").val();
-        var city = $(".trail-form input[name=city]").val();
-        var state = $(".trail-form input[name=state]").val();
-        var length = $(".trail-form input[name=length]").val();
-        var description = $(".trail-form input[name=description]").val();
+        var name = $(".trail-form input[name=name]").last().val();
+        var city = $(".trail-form input[name=city]").last().val();
+        var state = $(".trail-form input[name=state]").last().val();
+        var length = $(".trail-form input[name=length]").last().val();
+        var description = $(".trail-form input[name=description]").last().val();
         var latitude = event.latLng.lat();
         var longitude = event.latLng.lng();
 
         var jqXHR = $.ajax({
-          url: "/trails/new",
+          url: "/trails",
           type: "POST",
           data: {name: name, city: city, state: state, length: length, description: description, latitude: latitude, longitude: longitude},
           dataType: "json"
         });
 
         jqXHR.done(function(response) {
-          if(response === 0){
+          if(response.success === 0){
+            debugger;
             marker.info.close()
             alert("thanks for your response")
           }
