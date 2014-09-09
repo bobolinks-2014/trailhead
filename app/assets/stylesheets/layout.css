@@ -15,12 +15,14 @@ img[alt="Trailapi"] {
 }
 
 #title {
-  color: #D4D4D4;
+  color: white;
   display: inline-block;
   position: relative;
-  bottom: 10px;
-  left: 4x;
-  font-size: 800%;
+  bottom: 4px;
+  left: 4px;
+  font-size: 300%;
+  font-family: 'Ubuntu', sans-serif;
+  /*font-family: 'Merriweather', serif;*/
 }
 
 .signin-form{
@@ -218,7 +220,8 @@ nav ul li a{
 
 .current-location button {
    padding: 12px 20px;
-   font-family: 'Merriweather', serif;
+   font-family: 'Ubuntu', sans-serif;
+   /*font-family: 'Merriweather', serif;*/
 }
 
 .comment-form{
