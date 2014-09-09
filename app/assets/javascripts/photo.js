@@ -4,6 +4,7 @@ $(document).ready(function(){
   	var arr = photoText.split('\\');
   	photoText = arr[arr.length-1];
   	$('.choose-photo').hide();
+  	$('.style-choose-photo').hide();
   	$('.submit-photo').show();
   	$('.upload-button').append('<p class="photo-text">'+photoText+'</p>')
   });
