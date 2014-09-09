@@ -1,15 +1,22 @@
-<div class="opening">Find Your Path</div>
-<div class="home-description">Discover new hikes from over 6,500 U.S. trails</div>
-
-<div class="current-location">
-	<button type="button">Use current location</button>
-</div>
-
-<input id="pac-input" class="controls" type="text" placeholder="Search Box">
-
 <div id="map-canvas"></div>
 
-<p class="purpose">TrekTracker offers vital information about the most important part of a hike: the Trail. An interactive map lets you find the right trail for you, and fills your pack with the information you need to make the hike your own. Detailed trail information such as pinpoint accuracy of trailheads using latitude and longitude, trail length, and difficulty are easily accessible. Explore a trail in depth and see photos of where you're headed before you get there. Check out trail reviews posted by hikers like you and see their tips for making the hike more about the trek, and less about the distractions. Lace up your boots and head out, then circle back to TrekTracker and share your experience with other hikers like you.</p>
+<div class="home">
+  <div class="opening"><p>Find Your Path</p></div>
+  <div class="home-description">Discover new hikes from over 6,500 U.S. trails</div>
+  <div class="current-location">
+  	<button class="button-current-location" type="button">Use current location</button>
+  </div>
+  <div class="explore">
+    <h3>Explore</h3>
+    <p>Use the interactive map to explore vital and user-curated trail information including ratings, length, difficulty, and descriptions</p>
+  </div>
+  <div class="engage">
+    <h3>Explore</h3>
+    <%= image_tag("heart100.png", :id => "heart") %>
+    <p>View and upload trail pictures</p>
+  </div>
+  <input id="pac-input" class="controls" type="text" placeholder="Search Box">
 
+</div>
 
 

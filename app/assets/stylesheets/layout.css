@@ -6,7 +6,11 @@ body {
 
 .footer {
   background-color: #133813;
-  height: 80px;
+  height: 8%;
+  z-index: 7;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
 }
 
 img[alt="Trailapi"] {
