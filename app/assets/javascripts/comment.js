@@ -60,13 +60,15 @@ $(document).ready(function() {
       dataType: "json"
     });  
     request.done(function(response){
-      debugger;
-      if (response.success === 0){
+      if (response.success != 1){
         $(".comment-form").bPopup().close()
         $(".comment-form input[type=range]").val(range);
         $(".comment-form textarea[name*=tip").val("");
         $(".comment-form textarea[name*=review]").val("");
         $(".comment-form input[type=date]").val("");
+        $('.comment-section').first().before(
+          '<div class="comment-section"><div class="one-comment" data-id="'+ response.id +'"><div class="comment-top"><div class="comment-top-right"> rating: '+ response.rating +' difficulty: '+ response.difficulty +'</div></div><div class="comment-review"><div class="comment-review-body"><p>'+ response.review +'</p></div></div><div class="comment-bottom"><div class="comment-tip"><p><strong>Tip: </strong>'+response.tip+'</p></div><div class="comment-date-hiked"></div><div class="comment-top-left"> Authored by: <strong>'+response.user.username+'</strong> | date posted: '+response.created_at+' | date hiked: '+response.date_hike+'</div></div></div></div>'
+          )
       }
       else if (response.success === 1){
         var message = response.message;
