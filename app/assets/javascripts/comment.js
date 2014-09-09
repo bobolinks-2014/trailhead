@@ -43,7 +43,6 @@ $(document).ready(function() {
 
   $('.comment-form button').on('click', function(event){
     var rating = tree;
-    console.log(tree)
     var difficulty = Number($(".comment-form input[type=range]").val());
     var tip = $(".comment-form textarea[name*=tip").val();
     var review = $(".comment-form textarea[name*=review]").val();
