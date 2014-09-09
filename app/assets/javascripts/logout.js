@@ -21,6 +21,7 @@ $(document).ready(function() {
       $('.signup-form .message').text("");
       $('.continue-button.signin').hide();
       $('.continue-button.signup').hide();
+      $('.style-choose-photo').hide();
       $(".comment-button").hide();
       $(".choose-photo").hide();
       $(".submit-photo").hide();

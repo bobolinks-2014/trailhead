@@ -57,9 +57,13 @@ $(document).ready(function() {
       return request;
       });
     });
+  
+  $(".close-button.signup").on('click', function(){
+    event.preventDefault();
+    $(".signup-form").bPopup().close();
   });
+
+});
     
-  $(".close-button.signin").on('click', function(){
-    $(".signin-form").bPopup().close();
-  });
+
 

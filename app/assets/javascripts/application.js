@@ -34,12 +34,14 @@ $(document).ready(function() {
       $(".signup-button").show();
       $(".logout-button").hide();
       $(".comment-button").hide();
+      $('.style-choose-photo').hide();
       $(".submit-photo").hide();
     }else{
       $(".signin-button").hide();
       $(".signup-button").hide();
       $(".logout-button").show();
       $(".comment-button").show();
+      $('.style-choose-photo').show();
       $(".choose-photo").show();
     }
   })
