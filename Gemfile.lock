@@ -60,7 +60,7 @@ GEM
     erubis (2.7.0)
     excon (0.39.5)
     execjs (2.2.1)
-    faker (1.4.2)
+    faker (1.4.3)
       i18n (~> 0.5)
     figaro (1.0.0.rc1)
       rails (>= 3, < 5)
