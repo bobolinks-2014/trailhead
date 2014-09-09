@@ -67,8 +67,6 @@ feature 'initial view' do
   			fill_in("password", with: "password")
   			fill_in("password_confirmation", with: "password")
 				click_button("Sign Up")
-				# find("continue").click
-				# page.should have_content("Log Out")
   		end
   	end
 
@@ -79,7 +77,6 @@ feature 'initial view' do
   			fill_in("password", with: "thing")
   			click_button("Sign In")
   			page.should have_content("Sign In")
-        # find("span.continue-button.signin").click
   		end
   	end
 
