@@ -7,17 +7,22 @@ $(document).ready(function() {
     showCommentForm();
 
     function initializeCommentForm() {      
-      $(".comment-form .fa").css("color", "gray")
-      var rangeHash = {0: "easy", 1: "moderate", 2: "hard"}
-      var range = 1.5
-      $(".comment-form input[type=range]").val(range)
-      $(".comment-form #range").text(rangeHash[Math.floor(range)])
+      $(".comment-form .fa").css("color", "gray");
+
+      var levelDescription = ["children and elderly, trails are generally in good condition, under 300 foot elevation gain, under 4 miles round trip", "someone in good hiking condition, trails are generally in good condition, between 300 and 1000 foot increase in elevation, between 4 and 10 miles in length", "someone in excellent hiking condition, trails are not always in good condition, over 1000 foot increase in elevation, over 10 miles in length"];
+
+      var rangeHash = {0: "Easy:", 1: "Moderate:", 2: "Hard:"};
+      var range = 1.5;
+      $(".comment-form input[type=range]").val(range);
+      $(".comment-form #range").text(rangeHash[Math.floor(range)]);
+      $(".difficulty-text").text(levelDescription[Math.floor(range)]);
       
       $('.comment-form input[type=range]').change(function(){
-        range = $('.comment-form input[type=range]').val()
-        $(".comment-form #range").text(rangeHash[Math.floor(range)])
-      })
-    } 
+        range = $('.comment-form input[type=range]').val();
+        $(".comment-form #range").text(rangeHash[Math.floor(range)]);
+        $(".difficulty-text").text(levelDescription[Math.floor(range)]);
+      });
+    }; 
 
     function showCommentForm() {
       $('.comment-form').bPopup({
@@ -56,12 +61,21 @@ $(document).ready(function() {
     });  
     request.done(function(response){
       debugger;
-      if (response.success === 0){
+      if (response.success != 1){
         $(".comment-form").bPopup().close()
         $(".comment-form input[type=range]").val(range);
         $(".comment-form textarea[name*=tip").val("");
         $(".comment-form textarea[name*=review]").val("");
         $(".comment-form input[type=date]").val("");
+        var date = new Date();
+        var day = date.getDate();
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var dateString = year + '-' + month + '-' + day;
+
+        $('.comment-section').first().before(
+          '<div class="comment-section"><div class="one-comment" data-id="'+ response.id +'"><div class="comment-top"><div class="comment-top-right"> rating: '+ response.rating +' difficulty: '+ response.difficulty +'</div></div><div class="comment-review"><div class="comment-review-body"><p>'+ response.review +'</p></div></div><div class="comment-bottom"><div class="comment-tip"><p><strong>Tip: </strong>'+response.tip+'</p></div><div class="comment-date-hiked"></div><div class="comment-top-left"> Authored by: <strong>'+response.user.username+'</strong> | date posted: '+ dateString +' | date hiked: '+ response.date_hiked +'</div></div></div></div>'
+          )
       }
       else if (response.success === 1){
         var message = response.message;
