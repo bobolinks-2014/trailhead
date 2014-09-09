@@ -26,6 +26,7 @@ function initializeHome() {
     var trails = markerCollection.collection
     var markerCluster = new MarkerClusterer(map, trails, {gridSize: 50, maxZoom: 15 });
     SearchBox(trails);
+    // InfoWindows(trails)
     CurrentLocationtoNearestTrails(trails)
   })
 
@@ -114,6 +115,18 @@ function MarkerCollection(map) {
 }
 
 MarkerCollection.prototype.fetch = function() {
+  function trees(rating){
+    var info_trees = ""
+    if(rating == null){
+      info_trees = 'not yet rated'
+    }
+    else{
+      for(i=0; i<rating; i++){
+        info_trees = info_trees + '<i class="fa fa-tree"></i>'
+      }
+    }
+    return info_trees
+  }
 
   var jqXHR = $.ajax({
     url: "/trails",
@@ -123,23 +136,39 @@ MarkerCollection.prototype.fetch = function() {
 
   jqXHR.done(function(markers) {
     var trails = []
+    var infoWindows = []
+    var rangeHash = {0: "easy", 1: "moderate", 2: "hard"}
     for (i=0; i < markers.length; i++) {
       var p = new google.maps.LatLng(markers[i]["latitude"],markers[i]["longitude"])
       var marker = new google.maps.Marker({
         position: p,
         map: this.map,
+        id: markers[i]["id"],
         title: markers[i]["name"],
-        url: "/trails/" + markers[i]["id"]
-      })
-      google.maps.event.addListener(marker, "click", function(){
-        window.location.href = this.url
+        // url: "/trails/" + markers[i]["id"], 
+        info: new google.maps.InfoWindow({
+          content: '<div id="info-content">'+
+          '<h1 id="firstHeading" class="firstHeading"> <a href=/trails/'+markers[i]["id"] + '>' + markers[i]["name"] + '</a></h1> <p> Length: ' + markers[i]["length"] + ' mile(s) <p> Rating: ' + trees(markers[i]["rating"]) + '</p> <p> Difficulty: ' + rangeHash[Math.floor(markers[i].difficulty)] + '</p> </div>'
+        }) 
       })
       trails.push(marker)
+      infoWindows.push(marker.info)
+      google.maps.event.addListener(marker, "dblclick", function(){
+        window.location.href = '/trails/'+ this.id
+      })
+      google.maps.event.addListener(marker, "click", function() {
+        for(i=0; i<infoWindows.length; i++){
+          infoWindows[i].close();
+        }
+        this.info.open(this.map, this);
+      })
+          
     };
     this.collection = trails
   }.bind(this));
 
   return jqXHR
-
 };
+
+
 

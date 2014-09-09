@@ -48,8 +48,7 @@ Marker.prototype.fetch = function() {
 
   var jqXHR = $.ajax({
     url: "/trails/" + trailId,
-    type: "GET",
-    dataType: "json"
+    type: "GET"
   });
 
   jqXHR.done(function(marker) {
