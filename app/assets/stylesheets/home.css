@@ -8,6 +8,7 @@
 }
 
 .opening p {
+  margin-top: 0px;
   color: black;
 }
 
@@ -52,13 +53,13 @@
   font-size: 1.5em;
 }
 
-#heart {
-  color: red;
+#heart, #boot {
   display: block;
   margin: auto;
 }
 
 .home {
+  overflow: scroll;
   position: absolute;
   top: 70px;
   right: 0%;
