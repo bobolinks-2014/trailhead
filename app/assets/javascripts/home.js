@@ -188,9 +188,10 @@ MarkerCollection.prototype.fetch = function() {
         // url: "/trails/" + markers[i]["id"], 
         info: new google.maps.InfoWindow({
           content: '<div id="info-content">'+
-          '<h1 id="firstHeading" class="firstHeading"> <a href=/trails/'+markers[i]["id"] + '>' + markers[i]["name"] + '</a></h1> <p> Length: ' + markers[i]["length"] + ' mile(s) <p> Rating: ' + trees(markers[i]["rating"]) + '</p> <p> Difficulty: ' + rangeHash[Math.floor(markers[i].difficulty)] + '</p> </div>'
+          '<h1 id="firstHeading" class="firstHeading"> <a href=/trails/'+markers[i]["id"] + '>' + markers[i]["name"] + '</a></h1> <p> Length: ' + markers[i]["length"] + ' mile(s) <p> Rating: '+ markers[i]["rating"] +' </p> <p> Difficulty: ' + markers[i]["difficulty"] + '</p> </div>'
         }) 
       })
+      // ' + trees(markers[i]["rating"]) + '
       trails.push(marker)
       infoWindows.push(marker.info)
       google.maps.event.addListener(marker, "dblclick", function(){

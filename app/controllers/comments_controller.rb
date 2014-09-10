@@ -7,7 +7,6 @@ class CommentsController < ApplicationController
       @comment.update(user: current_user)
       @comment.trail.update_rating
       @comment.trail.update_difficulty
-      
       respond_to do |format|
         format.json {render json: @comment, include: [:user] }
       end
