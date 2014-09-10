@@ -43,6 +43,7 @@
 
 input.style-choose-photo{
   position: absolute;
+  cursor: pointer;
 }
 
 i.fa-camera-retro{
@@ -52,9 +53,15 @@ i.fa-camera-retro{
   box-shadow: 0 1px 1px 0;
   border-radius: 5px;
   padding: 0.2em;
-  cursor: hand;
-  cursor: pointer;
+  /*cursor: pointer;*/
   background-color: #4A8A4A;
+  cursor: pointer;
+}
+
+i.fa-camera-retro:hover{
+  position: absolute;
+
+  cursor: pointer;
 }
 
 /*subimt photo button*/
