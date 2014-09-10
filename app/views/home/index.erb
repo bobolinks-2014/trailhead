@@ -1,14 +1,16 @@
 <div id="map-canvas"></div>
-<input id="pac-input" class="controls" type="text" placeholder="Search Box">
+<input id="pac-input" class="controls" type="text" placeholder="Search" style="left:5px">
+
+<div class="current-local-button">
+	<i class="fa fa-crosshairs fa-lg"></i>
+</div>
 
 <div class="home">
+	
 	
 	<div class="home-top">
 	  <div class="opening"><p>Find Your Path</p></div>
 	  <div class="home-description">Discover new hikes from over 6,500 U.S. trails</div>
-	  <div class="current-location">
-	  	<button class="button-current-location" type="button"><i class="fa fa-crosshairs fa-lg"></i> use current location</button>
-	  </div>
 	  <div class="explore">
 	    <h3>Explore</h3>
 	     <%= image_tag("boots100.png", :id => "boots") %>
@@ -20,9 +22,11 @@
 	    <p>View and upload recent trail pictures, and browse through thousands of user-submitted comments for reviews, tips, and current trail conditions</p>
 	  </div> 
 	</div>
-
+	<div class="current-location">
+	  <div class="all-trails-button" type="button"> See All Trails</div>
+	</div>
 	<div class="home-bottom">
-		<div class="create-trail-button">Create a Trail!</div>
+		<div class="create-trail-button">Create A Trail!</div>
 	</div>
 	<div class="trail-form">
 		<form action="/user_trails/new">
