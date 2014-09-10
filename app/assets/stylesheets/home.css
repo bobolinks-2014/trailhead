@@ -186,7 +186,7 @@
   background-position: bottom right;
 }
 
-.trail-form button{
+.submit-create-trail{
   background-color: #005F6B;
   padding: 10px;
   border-radius: 5px;
@@ -194,6 +194,18 @@
   width: 100%;
 }
 
-.trail-form button:hover{
+.submit-create-trail:hover{ 
   background-color: #196F7A;
+}
+
+.cancel-create-trail{
+  background-color: #87919E;
+  padding: 10px;
+  margin-top: 1em;
+  border-radius: 5px;
+  color: white;
+  width: 100%;
+}
+.cancel-create-trail:hover{
+  background-color: #A9B5C5;
 }
