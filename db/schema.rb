@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20140906155615) do
     t.integer  "trail_id"
     t.text     "review"
     t.integer  "rating"
-    t.string   "difficulty"
+    t.integer  "difficulty"
     t.string   "tip"
     t.date     "date_hiked"
     t.datetime "created_at"
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 20140906155615) do
     t.string   "url"
     t.text     "description"
     t.integer  "rating"
+    t.boolean  "under_review"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

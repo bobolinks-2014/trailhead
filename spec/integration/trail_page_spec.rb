@@ -53,14 +53,12 @@ feature 'trail page view' do
 		end
 
 		it "should have the have the button to reveal more comments" do
-			expect(page).should have_css('.see-more-comments-button')
+			expect(page).should have_selector(:link_or_button, 'See More')
 		end
 
 		it "should dynamically reveal more comments when the 'see more comments' button is clicked" do
 			find('.see-more-comments-button').click
-			expect(page).should have_content("Libero illum dolores. Ea vel asperiores necessitatibus quis. Sint qui sequi sit molestiae itaque libero est. Ut vel et et. Voluptatem aliquid nobis. Quos est iste molestiae rerum non. Ullam a voluptas laboriosam similique sed.")
 		end
-
 
 
 
