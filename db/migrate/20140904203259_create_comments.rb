@@ -6,7 +6,7 @@ class CreateComments < ActiveRecord::Migration
 
     	t.text :review
     	t.integer :rating
-    	t.string :difficulty
+    	t.integer :difficulty
     	t.string :tip
     	
     	t.date :date_hiked

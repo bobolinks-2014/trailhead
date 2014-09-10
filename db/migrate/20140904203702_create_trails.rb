@@ -11,6 +11,7 @@ class CreateTrails < ActiveRecord::Migration
       t.string :url
     	t.text :description
     	t.integer :rating
+      t.boolean :under_review
 
       t.timestamps
     end

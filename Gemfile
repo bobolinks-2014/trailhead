@@ -7,10 +7,12 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem "bcrypt-ruby", :require => "bcrypt"
 gem 'jquery-rails'
-gem 'turbolinks'
+# gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'faker'
 
+gem 'rails_12factor', group: :production
 gem 'spring', group: :development
 
 group :development, :test do
@@ -20,4 +22,12 @@ group :development, :test do
 	gem 'capybara', '~> 2.2.1'
 	gem 'database_cleaner', '~> 1.2.0'
 	gem 'capybara-webkit'
+	gem 'heroku'
 end
+
+#image upload and carousel
+gem 'fog'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'figaro', '~>1.0.0.rc1'
+
