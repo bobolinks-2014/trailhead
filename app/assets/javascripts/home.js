@@ -122,29 +122,32 @@ function initializeHome() {
       marker.info.open(map, marker)
       
       google.maps.event.addListener(marker, "drag", function(event){
-        var latitude = event.latLng.lat();
-        var longitude = event.latLng.lng();
+        marker.position = event.latLng;
+        console.log(marker.position);
+       });
 
-      });
 
       $(".submit-create-trail").on("click", function(e) {
         e.preventDefault();
-
-        var name = $(".trail-form input[name=name]").last().val();
-        var city = $(".trail-form input[name=city]").last().val();
-        var state = $(".trail-form input[name=state]").last().val();
-        var length = $(".trail-form input[name=length]").last().val();
-        var description = $(".trail-form input[name=description]").last().val();
-        var latitude = event.latLng.lat();
-        var longitude = event.latLng.lng();
+        var name = $(".trail-form-name input").val();
+        var city = $(".trail-form-city input").val();
+        var state = $(".trail-form-state input").val();
+        var length = $(".trail-form-length input").val();
+        var description = $(".trail-form-description input").val();
+       
+        var latitude = marker.position.lat();
+        var longitude = marker.position.lng();
+        console.log(latitude)
+        console.log(longitude)
+        debugger
 
         var jqXHR = $.ajax({
           url: "/trails",
           type: "POST",
-          data: {name: name, city: city, state: state, length: length, description: description, latitude: latitude, longitude: longitude},
+          data: { name: name, city: city, state: state, length: length, description: description, latitude: latitude, longitude: longitude },
           dataType: "json"
         });
-
+     
         jqXHR.done(function(response) {
           if(response.success === 0){
             debugger;
