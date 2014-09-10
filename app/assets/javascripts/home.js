@@ -129,6 +129,9 @@ function initializeHome() {
 
       $(".submit-create-trail").on("click", function(e) {
         e.preventDefault();
+
+        marker.draggable = false;
+
         var name = $(".trail-form-name input").val();
         var city = $(".trail-form-city input").val();
         var state = $(".trail-form-state input").val();
