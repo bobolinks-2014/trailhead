@@ -119,8 +119,15 @@ function initializeHome() {
         })
       });
 
-        marker.info.open(map, marker)
-      $("button[name='trail_submit']").on("click", function(e) {
+      marker.info.open(map, marker)
+      
+      google.maps.event.addListener(marker, "drag", function(event){
+        var latitude = event.latLng.lat();
+        var longitude = event.latLng.lng();
+
+      });
+
+      $(".submit-create-trail").on("click", function(e) {
         e.preventDefault();
 
         var name = $(".trail-form input[name=name]").last().val();
