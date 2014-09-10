@@ -1,4 +1,14 @@
 $(document).ready(function() {
+
+  $('.upload-button').mouseenter(function(){
+    $('.fa-camera-retro').css('background-color', '#5C965C');
+    $('.fa-camera-retro').css('color', 'white');
+    $('.upload-button').mouseleave(function(){
+      $('.fa-camera-retro').css('background-color', '#4A8A4A');
+      $('.fa-camera-retro').css('color', 'black');
+    });
+  });
+
   if(window.location.pathname !== '/'){
     google.maps.event.addDomListener(window, 'load', initializeTrailId);
   }
