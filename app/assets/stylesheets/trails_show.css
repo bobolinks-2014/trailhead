@@ -12,7 +12,8 @@
 
 .rating {
   text-align: center;
-  margin-bottom: 0.5em;
+  margin-bottom: 1.2em;
+
 }
 
 .rating label{
@@ -162,6 +163,8 @@ form.upload-button{
 }
 
 .description{
+  padding: 0px;
+  overflow: scroll;
   width: 80%;
   margin: 0 auto;
   text-align: left;
