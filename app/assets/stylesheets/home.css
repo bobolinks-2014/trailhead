@@ -140,6 +140,7 @@
 .create-trail-button{
   border: 1px solid grey;
   border-radius: 5px;
+  padding: 8px;
   text-align: center;
   background-color: green;
 }
@@ -182,6 +183,7 @@
   padding: 10px;
   border-radius: 5px;
   color: white;
+  width: 100%;
 }
 
 .trail-form button:hover{
