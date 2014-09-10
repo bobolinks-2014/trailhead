@@ -18,6 +18,12 @@
   bottom: 13px;
   margin-bottom: 5px;
   border-radius: 5px;
+  background-color: #DA7979;
+}
+
+.current-location button:hover {
+  background-color: #E49D9D;
+  color: white;
 }
 
 .home-description {
