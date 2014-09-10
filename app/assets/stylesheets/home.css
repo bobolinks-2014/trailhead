@@ -14,7 +14,7 @@
 
 .current-local-button{
   position: absolute;
-  top: 108px; 
+  top: 93px; 
   z-index: 5;
   width: 2%; 
   left: 60.5%;
@@ -22,8 +22,9 @@
   color: #008BFE;
 }
 
-.fa-lg:hover{
+.fa-crosshairs:hover{
   text-shadow: 1px 0px 20px hsl(207,100%,70%);
+  cursor: pointer;
 }
 
 .all-trails-button {
@@ -152,9 +153,6 @@
   width: 25%;
 }
 
-.pac-container {
-
-}
 
 #type-selector {
   color: #fff;

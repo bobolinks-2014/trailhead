@@ -7,26 +7,26 @@
 
 <div class="home">
 	
-	
 	<div class="home-top">
 	  <div class="opening"><p>Find Your Path</p></div>
 	  <div class="home-description">Discover new hikes from over 6,500 U.S. trails</div>
 	  <div class="explore">
 	    <h3>Explore</h3>
 	     <%= image_tag("boots100.png", :id => "boots") %>
-	    <p>Use the interactive map to explore vital and user-curated trail information including ratings, length, difficulty, and descriptions</p>
+	    <p>Use the map to find and plan your next hike no matter where you’re headed. See detailed trail information from trail reviews, photos and must-have tips to current trail conditions - all curated content from other hikers like you.</p>
 	  </div>
 	  <div class="engage">
 	    <h3>Engage</h3>
 	    <%= image_tag("heart100.png", :size => "85x85", :id => "heart") %>
-	    <p>View and upload recent trail pictures, and browse through thousands of user-submitted comments for reviews, tips, and current trail conditions</p>
+	    <p>Find trails you’ve hiked and engage with others who’ve traveled the same path. Leave comments, write reviews, and upload your photos.</p>
 	  </div> 
 	</div>
 	<div class="current-location">
 	  <div class="all-trails-button" type="button"> See All Trails</div>
 	</div>
+	<div class="create-trail-info"><p>Know of a trail but don’t see it on our map? We’ll take care of that.</p></div>
 	<div class="home-bottom">
-		<div class="create-trail-button">Create A Trail!</div>
+		<div class="create-trail-button">Create A Trail</div>
 	</div>
 	<div class="trail-form">
 		<form action="/user_trails/new">
