@@ -57,7 +57,11 @@
           <div class="comment-top">
 
             <div class="comment-top-right">
-              rating: <%= comment.rating %> difficulty: <%= comment.difficulty %>
+              rating: 
+              <% comment.rating.times do %> 
+                <i class="fa fa-tree"></i>
+              <% end %>
+              difficulty: <%=comment.difficulty_to_words %>
             </div>
           </div>
           <div class="comment-review">
