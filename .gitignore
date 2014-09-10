@@ -15,11 +15,7 @@
 /log/*.log
 /tmp
 /coverage
-<<<<<<< HEAD
-/config/application.yml
-=======
 
 # Ignore application configuration
 /config/application.yml
 
->>>>>>> 4bbe289b4231cb74d450dea8d9afab7d6917bf63
