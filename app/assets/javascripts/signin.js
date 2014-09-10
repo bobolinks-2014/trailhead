@@ -28,18 +28,15 @@ $(document).ready(function() {
         //successful signin
         if (response.success === 0){
           var message = response.message;
-          $('.signin-form .message').show();
-          $('.signin-form .message').text(message);
-          $('.signin-form .message').css("color","green");
           $(".signin-form input[name*='email']").val("");
           $(".signin-form input[name*='password']").val("");
-          $('.continue-button.signin').show();
-          $('.signin-form button').hide();
-          $('.center').hide();
-          $('.close-button.signin').hide();
           $(".signin-button").hide();
           $(".signup-button").hide();
           $(".logout-button").show();
+          $(".comment-button").show();
+          $('.style-choose-photo').show();
+          $(".choose-photo").show();
+          $(".signin-form").bPopup().close();
         }
         //unsuccessful signin
         else if (response.success === 1){
@@ -57,9 +54,4 @@ $(document).ready(function() {
   $(".close-button.signin").on('click', function(){
     $(".signin-form").bPopup().close();
   });
-
-  $('.continue-button.signin').on('click', function(){
-    $(".signin-form").bPopup().close();
-  });
-
 });

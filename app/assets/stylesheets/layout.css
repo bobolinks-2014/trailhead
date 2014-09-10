@@ -1,69 +1,146 @@
+body {
+  background-color: #ffffff;
+  background-image: url(http://www.transparenttextures.com/patterns/billie-holiday.png);
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.footer {
+  background-color: #133813;
+  height: 8%;
+  z-index: 7;
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+}
+
+img[alt="Trailapi"] {
+  margin-top: 7px;
+  margin-left: 20px;
+}
+
+#title {
+  color: #D4D4D4;
+  display: inline-block;
+  position: relative;
+  bottom: 10px;
+  left: 4x;
+  font-size: 800%;
+}
+
 .signin-form{
-  display: none;
-  background-color: beige;
-  width: 50%;
+  border-radius: 4px;
   border: 1px solid black;
+  display: none;
+  background-color: #FCFCFC;
+  width: 50%;
   vertical-align: middle;
   margin-top: 0px;
 }
 
 .signin-form h3{
   text-align: center;
+  margin-bottom: 20px;
+  font-size: 45px;
   margin: 0px;
-  margin-top: 5%
+  margin-top: 7%
 }
 
-.signin-form button{
-  margin-left: 10%;
+.signin-form input[type="email"] {
+  margin-top: 30px;
+}
+
+.signin-form button {
+  margin-left: 105px;
   margin-bottom: 5%;
 }
 
-.signin-form input{
+.signin-form input {
   display: block;
-  width: 80%;
-  margin: 5% auto;
-  height: 10%;
+  margin: 13px auto;
 }
 
-.signup-form{
+.signin-form input[type="email"],
+.signin-form input[type="password"] {
+  padding: 11px 35px 11px 8px;
+  border-color: grey;
+  border-radius: 3px;
+  font-size: 19px;
+}
+
+.signin-form button {
+  padding: 15px 25px;
+  position: relative;
+  left: 180px;
+  background-color: #424242;
+  font-size: 20px;
+  color: white;
+  border-radius: 3px;
+  margin-left: 10%;
+  margin-bottom: 50px;
+}
+
+.signin-form button:hover {
+  background-color: #616161;
+}
+
+.signup-form {
+  border-radius: 4px;
   display: none;
-  background-color: beige;
+  background-color: #FCFCFC;
   width: 50%;
   border: 1px solid black;
   vertical-align: middle;
   margin-top: 0px;
 }
 
-.signup-form h3{
+.signup-form h3 {
   text-align: center;
+  font-size: 45px;
   margin: 0px;
-  margin-top: 5%
+  margin-top: 5%;
+  margin-bottom: 30px;
 }
 
 .signup-form button{
+  padding: 15px 25px;
+  position: relative;
+  left: 223px;
+  font-size: 20px;
+  background-color: #424242;
+  color: white;
+  border-radius: 3px;
   margin-left: 10%;
-  margin-bottom: 5%;
+  margin-bottom: 50px;
+}
+
+.signup-form button:hover {
+  background-color: #616161;
 }
 
 .signup-form input{
   display: block;
-  width: 80%;
-  margin: 5% auto;
-  height: 10%;
+  margin: 13px auto;
+  padding: 11px 35px 11px 8px;
+  border-color: grey;
+  border-radius: 3px;
+  font-size: 19px;
 }
+
 .message{
   text-align: center;
   display: none;
   margin: 0;
   padding: 0;
 }
+
 .close-button{
   position: relative;
+  color: white;
   border: 1px solid black;
-  background-color: orange;
-  border-radius: 25px;
+  background-color: #383937;
+  border-radius: 999px;
   float: right;
-  right: -0.75em;
+  right: -0.45em;
   top: -0.75em;
   padding: 0.75em;
   cursor: hand;
@@ -71,12 +148,35 @@
 }
 
 .close-button:hover{
-  background-color: red;
+  background-color: #60615F;
   color: white;
 }
 
 .logout-button{
   display: none;
+  padding: 13px;
+  background-color: #304848;
+  color: white;
+  font-size: 1em;
+  cursor: hand;
+  cursor: pointer;
+}
+
+.logout-button:hover{
+  background-color: #687a7a;
+  color: white;
+  font-size: 1em;
+  cursor: hand;
+  cursor: pointer;
+}
+
+li{
+  list-style-type: none;
+}
+
+.logout-href{
+  text-decoration: none;
+  color: white;
 }
 .continue-button{
   display: none;
@@ -95,20 +195,41 @@
 }
 
 .signin-button:hover{
+  background-color: #4DA64D;
+  color: white;
+}
+
+.signin-button {
   background-color: green;
+  padding: 13px;
+  margin-right: 10px;
   color: white;
 }
 
 .signup-button:hover{
-  background-color: green;
+  background-color: #987E7E;
   color: white;
+}
+
+.signup-button {
+  padding: 13px;
+  background-color: #7E5E5E;
+  color: white;
+}
+
+#icon {
+  color: white;
+  position: relative;
+  top: 3px;
+  left: 4px;
 }
 
 header {
   display: inline-block;
-  background-color: #779C6F;
+  background-color: #143914;
   border: 1px solid black;
   width: 100%;
+  height: 70px;
   padding: 0;
   margin: 0;
 }
@@ -116,10 +237,12 @@ header {
 nav {
   display: inline;
   position: relative;
+  bottom: 10px;
   float: right;
   padding: 0;
   margin: auto 5% auto 0;
 }
+
 ul.nav_right{
   margin-top: 17%;
 }
@@ -139,3 +262,76 @@ nav ul{
 nav ul li a{
   float: right;
 }
+
+.current-location{
+  margin-top: 22px;
+  text-align: center;
+}
+
+.current-location button {
+   padding: 12px 20px;
+}
+
+.comment-form{
+  display: none;
+}
+
+.comment-form{
+  display: none;
+  border: 1px solid black;
+  background: white;
+  width: 60%;
+  margin-top: 0px;
+}
+
+.comment-form h3{
+  text-align: center;
+  margin: 0px;
+  margin-top: 5%;
+  margin-left: 14%;
+}
+
+.comment-form button{
+  margin-left: 25%;
+  margin-bottom: 5%;
+  width: 60%;
+  height: 20%;
+}
+
+.comment-form .input {
+  display: block;
+  margin: 7% auto;
+  height: 30%;
+}
+
+.comment-form label{
+  float: left;
+  width: 15%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.comment-form textarea{
+  width: 60%;
+}
+
+.comment-form input{
+  width: 60%;
+}
+
+.comment-form .input .rating{
+  width: 60%;
+  text-align: left;
+}
+
+.comment-form .fa-tree{
+  color: #d3d3d3;
+  text-align: left;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.comment-form .fa-tree:hover{
+  color: green
+}
+
