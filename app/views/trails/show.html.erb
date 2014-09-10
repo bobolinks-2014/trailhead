@@ -88,7 +88,7 @@
     <% end %>
     <% end %>
 
-    <% if @trail.comments != [] %>
+    <% unless @trail.comments.size < 5 %>
       <div class="see-more-comments-button"><button>See More</button></div>
     <% end %>
 </div>

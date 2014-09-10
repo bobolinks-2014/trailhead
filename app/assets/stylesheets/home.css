@@ -17,6 +17,13 @@
   position: relative;
   bottom: 13px;
   margin-bottom: 5px;
+  border-radius: 5px;
+  background-color: #DA7979;
+}
+
+.current-location button:hover {
+  background-color: #E49D9D;
+  color: white;
 }
 
 .home-description {
@@ -140,7 +147,9 @@
 .create-trail-button{
   border: 1px solid grey;
   border-radius: 5px;
+  padding: 10px;
   text-align: center;
+  border: 3px solid #cccccc;
   background-color: green;
 }
 
@@ -177,13 +186,26 @@
   background-position: bottom right;
 }
 
-.trail-form button{
+.submit-create-trail{
   background-color: #005F6B;
   padding: 10px;
   border-radius: 5px;
   color: white;
+  width: 100%;
 }
 
-.trail-form button:hover{
+.submit-create-trail:hover{ 
   background-color: #196F7A;
+}
+
+.cancel-create-trail{
+  background-color: #87919E;
+  padding: 10px;
+  margin-top: 1em;
+  border-radius: 5px;
+  color: white;
+  width: 100%;
+}
+.cancel-create-trail:hover{
+  background-color: #A9B5C5;
 }
