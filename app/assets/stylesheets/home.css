@@ -210,11 +210,15 @@
 }
 
 /*google maps info window*/
-div.new-trail-info{
-  width: 400px;
+div.marker-trail-info{
+  width: 300px;
   margin: 19px;
   padding: 0;
-  overflow: hidden;
+  height: 150px;
+}
+
+.first-heading{
+  color: #00688B;
 }
 
 
