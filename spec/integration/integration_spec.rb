@@ -29,7 +29,7 @@ feature 'initial view' do
   		find(".signin-button").click
   		within_window(page.driver.browser.window_handles.last) do 
   			page.should have_content('Sign In')
-  			page.should have_css('input[type="text"][name="email"]')
+  			page.should have_css('input[type="password"][name="password"]')
   			page.should have_selector(:link_or_button, "Sign In")
   		end
   	end
