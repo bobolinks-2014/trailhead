@@ -17,7 +17,7 @@ feature 'initial view' do
 	  end
 
 	  it "should see a 'use current location' button" do
-  		expect(page).to have_selector(:link_or_button, 'Use current location')
+  		expect(page).to have_selector(:link_or_button, 'use current location')
   	end
 
   	it "can click the sign in button to bring up the sign in form", :js => true do
@@ -29,7 +29,7 @@ feature 'initial view' do
   		find(".signin-button").click
   		within_window(page.driver.browser.window_handles.last) do 
   			page.should have_content('Sign In')
-  			page.should have_css('input[type="text"][name="email"]')
+  			page.should have_css('input[type="password"][name="password"]')
   			page.should have_selector(:link_or_button, "Sign In")
   		end
   	end
