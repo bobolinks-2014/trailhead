@@ -114,21 +114,30 @@ function initializeHome() {
         position: position,
         draggable: true,
         map: map,
+        icon: 'https://maps.google.com/mapfiles/ms/icons/green-dot.png',
         info: new google.maps.InfoWindow({
-          content: '<p>Drag this marker to your trail head</p>'
+          content: '<p class="marker-info-window">Drag this marker to your trail head</p>',
+          maxWidth: 300
         })
       });
 
-      marker.info.open(map, marker)
-      
+      marker.info.open(map, marker);
+
+
       google.maps.event.addListener(marker, "drag", function(event){
         marker.position = event.latLng;
         console.log(marker.position);
        });
 
 
-      $(".submit-create-trail").on("click", function(e) {
-        e.preventDefault();
+      $(".cancel-create-trail").on("click" , function(event){
+        event.preventDefault();
+        marker.setMap(null);
+      });
+
+
+      $(".submit-create-trail").on("click", function(event) {
+        event.preventDefault();
 
         marker.draggable = false;
 
@@ -150,13 +159,23 @@ function initializeHome() {
         });
      
         jqXHR.done(function(response) {
-          if(response.success === 0){
-            debugger;
-            marker.info.close()
-            alert("thanks for your response")
+          
+          if(response.sucess != 1){
+            // debugger
+            var trail = response.trail;
+
+            trailInfo = '<h1 id="firstHeading" class="firstHeading"> <a href=/trails/'+trail.id + '>' + trail.name + '</a></h1> <p> Length: ' + trail.length + ' mile(s) <p> Rating: '+ trail.rating +' </p> <p> Difficulty: ' + trail.difficulty + '</p> </div>';
+
+            marker.info.content = trailInfo;
+            marker.info.close(map, marker);
+            marker.info.open(map, marker);
+
+            
+          } else{
+            debugger
           }
-        })
-      })
+        });
+      });
   
   })
 }
