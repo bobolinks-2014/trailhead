@@ -28,5 +28,9 @@ class Trail < ActiveRecord::Base
 
   end
 
+  def rating_to_trees
+    trees = ('<i class="fa fa-tree" style="color: #143914"></i>' * (self.rating)) + ('<i class="fa fa-tree" style="color: #d3d3d3"></i>' * (5 - self.rating))
+  end
+
 end
 # // var markers = [{name: "Rocky",id: 1, latitude: 37.09024, longitude: -95.712891}, {name: "Foo", id: 2, latitude: 38.09024, longitude: -96.712891}, {name: "Baz", id: 3, latitude: 36.09024, longitude: -94.712891}]
