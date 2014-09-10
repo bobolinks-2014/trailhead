@@ -191,7 +191,12 @@ function initializeHome() {
         jqXHR.done(function(response) {
           
           if(response.sucess != 1){
-            // debugger
+            $(".trail-form-name input").val("");
+            $(".trail-form-city input").val("");
+            $(".trail-form-state input").val("");
+            $(".trail-form-length input").val("");
+            $(".trail-form-description textarea").val("");
+
             var trail = response.trail;
 
             trailInfo = '<div class="marker-trail-info"><h1 id="firstHeading" class="firstHeading"> <a href=/trails/'+trail.id + '>' + trail.name + '</a></h1> <p> Length: ' + trail.length + ' mile(s) <p> Rating: Not yet rated </p> <p> Difficulty: Not yet rated </p> </div>';
@@ -201,9 +206,9 @@ function initializeHome() {
             marker.info.open(map, marker);
 
             
-          } else{
-            debugger
-          }
+          } else if(response.sucess === 1){
+            
+          };
         });
       });
   
