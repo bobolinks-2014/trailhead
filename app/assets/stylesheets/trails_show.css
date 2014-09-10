@@ -84,6 +84,11 @@ input.submit-photo{
   border-radius: 5px;
 }
 
+.comment-button:hover{
+  background-color: #8BB3F4;
+  color: white;
+}
+
 /*centers the upload and submit button*/
 form.upload-button{
   display: inline-block;
