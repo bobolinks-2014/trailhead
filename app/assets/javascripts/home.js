@@ -11,7 +11,7 @@ function initializeHome() {
     disableDefaultUI: true,
     zoomControl: true,
     center: {lat: 37.09024, lng: -95.712891},
-    zoom: 4,
+    zoom: 5,
     zoomControlOptions:{
       style: google.maps.ZoomControlStyle.LARGE,
       position: google.maps.ControlPosition.LEFT_CENTER
@@ -19,6 +19,7 @@ function initializeHome() {
   }
 
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
   var marker = []
 
   var markerCollection = new MarkerCollection(map)
@@ -27,8 +28,29 @@ function initializeHome() {
     var markerCluster = new MarkerClusterer(map, trails, {gridSize: 50, maxZoom: 15 });
     SearchBox(trails);
     // InfoWindows(trails)
-    CurrentLocationtoNearestTrails(trails)
+    
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        var geolocate = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+        map.setCenter(geolocate);
+        map.setZoom(18);
+        findNearestTrails(trails);
+      })
+      }else{
+        map.setCenter({lat: 37.09024, lng: -95.712891})
+        map.setZoom(5)
+      }
+      backtoHomeView(trails)
+      backtotheUSView()
   })
+
+
+  function backtotheUSView(){
+    $('.all-trails-button').on("click", function(){
+      map.setCenter({lat: 37.09024, lng: -95.712891})
+      map.setZoom(5)  
+    })
+  }
 
 
   function findNearestTrails(markers) {
@@ -46,8 +68,8 @@ function initializeHome() {
     }
   }
 
-  function CurrentLocationtoNearestTrails(markers) {
-    $(".button-current-location").on("click", function() {
+  function backtoHomeView(markers) {
+    $(".current-local-button").on("click", function() {
 
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
@@ -56,13 +78,17 @@ function initializeHome() {
           map.setZoom(18);
           findNearestTrails(markers);
         })
+      }else{
+        map.setCenter({lat: 37.09024, lng: -95.712891})
+        map.setZoom(4)
       }
     })
   }
 
 
   var input = document.getElementById('pac-input');
-  map.controls[google.maps.ControlPosition.TOP_CENTER].push(input);
+  map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+  $('#pac-input').css("left: 5px")
 
   var searchBox = new google.maps.places.SearchBox(input);
 
