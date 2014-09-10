@@ -209,3 +209,10 @@
 .cancel-create-trail:hover{
   background-color: #A9B5C5;
 }
+
+/*google maps info window*/
+div.new-trail-info{
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+}

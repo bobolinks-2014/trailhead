@@ -110,23 +110,27 @@ function initializeHome() {
 
   $(".create-trail-button").on("click", function(event) {
       var position = map.getCenter();
+      
+      var polyline = new google.maps. Polyline({
+
+      });
+
       var marker = new google.maps.Marker({
         position: position,
         draggable: true,
         map: map,
-        icon: 'https://maps.google.com/mapfiles/ms/icons/green-dot.png',
         info: new google.maps.InfoWindow({
-          content: '<p class="marker-info-window">Drag this marker to your trail head</p>',
-          maxWidth: 300
+          content: '<div class="marker-info-window">Drag this marker to your trail head</div>'
         })
+
       });
+      // marker.setAnimation(DROP);
 
       marker.info.open(map, marker);
 
 
       google.maps.event.addListener(marker, "drag", function(event){
         marker.position = event.latLng;
-        console.log(marker.position);
        });
 
 
@@ -164,7 +168,7 @@ function initializeHome() {
             // debugger
             var trail = response.trail;
 
-            trailInfo = '<h1 id="firstHeading" class="firstHeading"> <a href=/trails/'+trail.id + '>' + trail.name + '</a></h1> <p> Length: ' + trail.length + ' mile(s) <p> Rating: '+ trail.rating +' </p> <p> Difficulty: ' + trail.difficulty + '</p> </div>';
+            trailInfo = '<div class="new-trail-info"><h1 id="firstHeading" class="firstHeading"> <a href=/trails/'+trail.id + '>' + trail.name + '</a></h1> <p> Length: ' + trail.length + ' mile(s) <p> Rating: Not yet rated </p> <p> Difficulty: Not yet rated </p> </div>';
 
             marker.info.content = trailInfo;
             marker.info.close(map, marker);
