@@ -17,7 +17,7 @@ class TrailsController < ApplicationController
 
       respond_to do |format|
         if @trail.save
-          format.json {render json: {success: 0} }
+          format.json {render json: { trail: @trail } }
         else
           format.json {render json: {success: 1, messages: @trail.errors.full_messages.join("<br>")} }
         end

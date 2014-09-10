@@ -182,7 +182,6 @@
   border-radius: 3px;
   border: 3px solid #cccccc;
   padding: 5px;
-  background-image: url(bg.gif);
   background-position: bottom right;
 }
 
@@ -208,4 +207,11 @@
 }
 .cancel-create-trail:hover{
   background-color: #A9B5C5;
+}
+
+/*google maps info window*/
+div.new-trail-info{
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
 }
