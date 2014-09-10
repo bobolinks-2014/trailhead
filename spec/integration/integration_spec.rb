@@ -17,7 +17,7 @@ feature 'initial view' do
 	  end
 
 	  it "should see a 'use current location' button" do
-  		expect(page).to have_selector(:link_or_button, 'Use current location')
+  		expect(page).to have_selector(:link_or_button, 'use current location')
   	end
 
   	it "can click the sign in button to bring up the sign in form", :js => true do
