@@ -68,3 +68,63 @@ div.description {
 
 }
 
+@media (min-width: 1400px) {
+  body {
+    /*background-color: green;*/
+  }
+
+  .trail-show {
+    /*background-color: yellow;*/
+    width: 1120px;
+    margin: auto;
+  }
+
+  div#trail-map-canvas {
+  width: 100%;
+  height: 550px;
+  }
+
+  div.show-map {
+    position: relative;
+    left: 160px;
+    margin-top: -271px;
+    margin-left: -160px;
+    background-color: #c4e3f5;
+    width: 480px;
+  }
+
+  div.trail-detailed-information {
+    position: relative;bottom: 200px;
+  }
+
+  div.description {
+    position: relative;
+    bottom: 200px;
+    height: 240px;
+    overflow: scroll;
+  }
+
+  div.trail-carousel {
+    width: 480px;
+    display: fixed;
+    margin: 0px;
+    position: relative;
+    bottom: 190px;
+  }
+
+  div.comment-section {
+    width: 600px;
+    position: relative;
+    bottom: 450px;
+    left: 220px;
+  }
+
+  div.fixed-show {
+    display: fixed;
+  }
+  
+  
+}
+
+
+

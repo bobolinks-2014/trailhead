@@ -3,7 +3,7 @@ $(document).ready(function() {
   if (window.matchMedia("(min-width: 77.8em)").matches){
   $(".trail-carousel").slick({
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
     speed: 600
   });

@@ -164,12 +164,11 @@ form.upload-button{
 
 .description{
   padding: 0px;
-  overflow: scroll;
   width: 80%;
   margin: 0 auto;
   text-align: left;
   line-height: 1.5em;
-  font-size: 1.0em;
+  font-size: 1.1em;
 }
 
 .trail-carousel{
