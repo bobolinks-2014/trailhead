@@ -108,20 +108,19 @@
   bottom: 7%;
   padding: 2%;
   margin: 0px;
-  opacity: .8;
+  opacity: .85;
   height: 86%;
   width: 350px;
   z-index: 5;
   background-color: white;
 }
 
-
-
+/*actual map*/
 #map-canvas {
   z-index: 3;
-  height: 86%;
+  height: 88%;
   width: 100%;
-  margin: auto;
+  margin: 0 0 0 0;
   display: block;
 }
 
@@ -227,8 +226,15 @@
 }
 
 /*google maps info window*/
-div.new-trail-info{
-  width: 100%;
-  margin: 0;
-  overflow: hidden;
+div.marker-trail-info{
+  width: 300px;
+  margin: 19px;
+  padding: 0;
+  height: 150px;
 }
+
+.first-heading{
+  color: #00688B;
+}
+
+

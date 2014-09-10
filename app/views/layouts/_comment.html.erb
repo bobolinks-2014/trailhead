@@ -1,27 +1,43 @@
 <div class="comment-form">
-  <h3> Comment </h3>
+  <h2> Comment </h2>
   <p class="message"></p>
-  <div class="input rating">
-    <label >Rate your hike:</label>
-    <input type="hidden" required><i class="fa fa-tree 1"></i><i class="fa fa-tree 2"></i><i class="fa fa-tree 3"></i></i><i class="fa fa-tree 4"></i><i class="fa fa-tree 5"></i></input>
+
+  <div class="comment-information">
+    <div class="input rating">
+      <div class="comment-rating">
+        <label >Rate your hike:</label>
+        <input type="hidden" required><i class="fa fa-tree 1"></i><i class="fa fa-tree 2"></i><i class="fa fa-tree 3"></i></i><i class="fa fa-tree 4"></i><i class="fa fa-tree 5"></i></input>
+      </div>
+    </div>
+
+    <div class="input difficulty">
+      <div class="comment-difficulty">
+        <div class="comment-difficulty-line">
+          How difficult was the trail?
+        </div>
+      </div>
+      <div class="comment-range">
+        <div class="slider"><input type="range" size="100"  min=".1" max="2.9" step="0.1" required></div>
+
+      </div>
+        
+    </div>
+
+    <div><label id="range"></label></div>
+    <div class="difficulty-text"></div>
+    
+    <div class="input tip">
+      <label >Tip: </label><br>
+      <textarea placeholder="key trail info other hikers have to know" name="tip" rows="3" maxlength="140" required></textarea>
+    </div>
+    <div class="input review">
+      <label >Review:</label><br>
+      <textarea placeholder="give us the good, the bad, and the ugly about this trail. leave no stone unturned!" name="review" rows="6" required></textarea>
+    </div>
+    <div class="input date-hiked">
+      <label >Date Hiked:</label>
+      <input type="date" name="date-hiked" required>
+    </div>
+    <button type="submit" name="comment_submit">Post</button>
   </div>
-  <div class="input difficulty">
-    <label >How difficult was the trail?</label>
-    <input type="range"  min=".1" max="2.9" step="0.1"required>
-    <label id="range"></label>
-  </div>
-  <div class="difficulty-text"></div>
-  <div class="input tip">
-    <label >Tip</label>
-    <textarea placeholder="key trail info other hikers have to know" name="tip" rows="3" maxlength="140" required></textarea>
-  </div>
-  <div class="input review">
-    <label >Review</label>
-    <textarea placeholder="give us the good, the bad, and the ugly about this trail. leave no stone unturned!" name="review" rows="6" required></textarea>
-  </div>
-  <div class="input date-hiked">
-    <label >Date Hiked</label>
-    <input type="date" name="date-hiked" required>
-  </div>
-  <button type="submit" name="comment_submit">Post</button>
 </div>

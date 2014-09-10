@@ -194,7 +194,7 @@ function initializeHome() {
             // debugger
             var trail = response.trail;
 
-            trailInfo = '<div class="new-trail-info"><h1 id="firstHeading" class="firstHeading"> <a href=/trails/'+trail.id + '>' + trail.name + '</a></h1> <p> Length: ' + trail.length + ' mile(s) <p> Rating: Not yet rated </p> <p> Difficulty: Not yet rated </p> </div>';
+            trailInfo = '<div class="marker-trail-info"><h1 id="firstHeading" class="firstHeading"> <a href=/trails/'+trail.id + '>' + trail.name + '</a></h1> <p> Length: ' + trail.length + ' mile(s) <p> Rating: Not yet rated </p> <p> Difficulty: Not yet rated </p> </div>';
 
             marker.info.content = trailInfo;
             marker.info.close(map, marker);
@@ -248,8 +248,8 @@ MarkerCollection.prototype.fetch = function() {
         title: markers[i]["name"],
 
         info: new google.maps.InfoWindow({
-          content: '<div id="info-content">'+
-          '<h1 id="firstHeading" class="firstHeading"> <a href=/trails/'+markers[i]["id"] + '>' + markers[i]["name"] + '</a></h1> <p> Length: ' + markers[i]["length"] + ' mile(s) <p> Rating: '+ markers[i]["rating"] +' </p> <p> Difficulty: ' + markers[i]["difficulty"] + '</p> </div>'
+          content: '<div class="marker-trail-info"><div id="info-content">'+
+          '<h1 id="firstHeading" class="firstHeading"> <a href=/trails/'+markers[i]["id"] + '>' + markers[i]["name"] + '</a></h1> <p> Length: ' + markers[i]["length"] + ' mile(s) <p> Rating: '+ markers[i]["rating"] +' </p> <p> Difficulty: ' + markers[i]["difficulty"] + '</p> </div></div>'
         }) 
       })
 
