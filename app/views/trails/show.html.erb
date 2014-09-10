@@ -42,6 +42,10 @@
 </div>
   <% if @trail.photos != [] %>
     <div class="trail-carousel">
+
+      <!-- add script tag for static map image -->
+      <div class="trail-carousel-img"><%= image_tag("google_map_marker.jpg") %></div>
+
       <% @trail.photos.each do |photo|  %>
         <div class="trail-carousel-img"><img src=<%= photo.image_url(:thumb).to_s %>></img></div>
       <% end %>
