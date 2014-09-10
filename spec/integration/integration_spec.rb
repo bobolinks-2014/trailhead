@@ -16,10 +16,6 @@ feature 'initial view' do
 	    expect(page).to have_content('Sign Up')
 	  end
 
-	  it "should see a 'use current location' button" do
-  		expect(page).to have_selector(:link_or_button, 'use current location')
-  	end
-
   	it "can click the sign in button to bring up the sign in form", :js => true do
   		find(".signin-button").click
   		expect(page.driver.browser.window_handles.length.should == 1)
@@ -44,8 +40,8 @@ feature 'initial view' do
   		within_window(page.driver.browser.window_handles.last) do
   			page.should have_content('Sign Up')
   			page.should have_css('input[type="text"][name="username"]')
-  			page.should have_css('input[type="text"][name="email"]')
-  			page.should have_css('input[type="password"][name="password"]')
+  			page.should have_css('input[type="text"][name="email-signup"]')
+  			page.should have_css('input[type="password"][name="password-signup"]')
   			page.should have_css('input[type="password"][name="password_confirmation"]')
   			page.should have_selector(:link_or_button, "Sign Up")
   		end
@@ -63,8 +59,8 @@ feature 'initial view' do
   		find(".signup-button").click
   		within_window(page.driver.browser.window_handles.last) do
   			fill_in("username", with: "testhiker")
-  			fill_in("email", with: "testemail")
-  			fill_in("password", with: "password")
+  			fill_in("email-signup", with: "testemail")
+  			fill_in("password-signup", with: "password")
   			fill_in("password_confirmation", with: "password")
 				click_button("Sign Up")
   		end

@@ -48,16 +48,22 @@ feature 'trail page view' do
 			expect(page).should have_xpath("//img[@src='/assets/icon.png']")
 		end
 
-		it "should have the functionality to post comments" do
+		it "should have the ability to post comments" do
 			expect(page).should have_css('div.comment-form')
 		end
 
-		it "should have the have the button to reveal more comments" do
-			expect(page).should have_selector(:link_or_button, 'See More')
-		end
-
-		it "should dynamically reveal more comments when the 'see more comments' button is clicked" do
-			find('.see-more-comments-button').click
+		pending "should have the functionality to post comments", :js => true do
+			find(".signup-button").click
+			fill_in("username", with: "thedude")
+			fill_in("email-signup", with: "eldudarino@dude.com")
+			fill_in("password-signup", with: "password")
+			fill_in("password_confirmation", with: "password")
+			click_button("Sign Up")
+			expect(page).should have_css('button.comment-button').click
+			within_windo(page.driver.browser.window_handles.last) do
+			fill_in("tip", with: "bring your waterproof shell, it's bound to be raining here!")
+			fill_in("review", with:"blah blah skeet skeet this trail rocks")
+			end
 		end
 
 
