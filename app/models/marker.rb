@@ -14,8 +14,6 @@ class Marker
 		if rating == nil || rating.to_i == 0 
        @rating = "Not rated"
     else
-    	p rating
-    	p "<i class='fa fa-tree'></i>" *rating
        @rating = "<i class='fa fa-tree'></i>" * rating
     end
 	end
