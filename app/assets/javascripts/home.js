@@ -87,7 +87,7 @@ function initializeHome() {
 
 
   var input = document.getElementById('pac-input');
-  map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+  map.controls[google.maps.ControlPosition.TOP_CENTER].push(input);
   $('#pac-input').css("left: 5px")
 
   var searchBox = new google.maps.places.SearchBox(input);
