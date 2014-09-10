@@ -37,7 +37,7 @@ end
   
   # Photo.create(trail_id: 1, created_at: Time.now, updated_at: Time.now, image: uploader.retrieve_from_store!('/1a-gummy.jpg'))
   
- # Photo.create!(trail_id: 2, created_at: Time.now, updated_at: Time.now, image: retrieve!('1a-gummy.jpg'))
+ # Photo.create!(trail_id: 3, created_at: Time.now, updated_at: Time.now, image: File.open(File.expand_path(File.join('~/Desktop', '/1a-gummy_2.jpg'))))
 # end
 
 # uploader = ImageUploader.new
