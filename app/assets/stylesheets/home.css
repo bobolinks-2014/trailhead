@@ -22,8 +22,9 @@
   color: #008BFE;
 }
 
-.fa-lg:hover{
+.fa-crosshairs:hover{
   text-shadow: 1px 0px 20px hsl(207,100%,70%);
+  cursor: pointer;
 }
 
 .all-trails-button {
