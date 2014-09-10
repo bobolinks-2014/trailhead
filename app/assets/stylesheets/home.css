@@ -211,7 +211,10 @@
 
 /*google maps info window*/
 div.new-trail-info{
-  width: 100%;
-  margin: 0;
+  width: 400px;
+  margin: 19px;
+  padding: 0;
   overflow: hidden;
 }
+
+
