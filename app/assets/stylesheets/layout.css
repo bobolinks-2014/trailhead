@@ -281,7 +281,7 @@ nav ul li a{
   border: 3px solid #cccccc;
   background: #FBFFED;
   width: 35%;
-  height: 600px;
+  height: 650px;
   margin-top: 2%;
 }
 
@@ -349,41 +349,35 @@ div.tip textarea, div.review textarea{
   margin-bottom: 1%;
 }
 
-div.
-
+div.date-hiked input{
+  width: 100%;
+  height: 80%;
+  border-radius: 3px;
+  border: 3px solid #cccccc;
+  padding: 5px;
+  margin-bottom: 1%;
+}
 
 .comment-form button{
-
+  width: 100%;
+  margin: 2% auto;
+  background-color: #005F6B;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
 }
 
-.comment-form .input {
-
+.comment-form button:hover{
+  background-color: #196F7A;
 }
 
-.comment-form label{
-
-}
-
-.comment-form textarea{
-  
-}
-
-.comment-form input{
-  
-}
-
-.comment-form .input .rating{
-
-}
 
 .comment-form .fa-tree{
   color: #d3d3d3;
   text-align: left;
   margin-right: 0px;
   margin-left: 0px;
+  cursor: pointer;
 }
 
-.comment-form .fa-tree:hover{
-  color: green
-}
 
