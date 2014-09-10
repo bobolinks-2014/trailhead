@@ -4,7 +4,6 @@ class TrailsController < ApplicationController
   def index
     if request.xhr?
       respond_to do |format|
-        p Trail.markers
         format.json { render json: Trail.markers.to_json }
       end
     else

@@ -53,7 +53,7 @@ $(document).ready(function() {
     var date_hiked = $(".comment-form input[type=date]").val();
     var pattern = new RegExp(/\d+/)
     var trail_id = Number(pattern.exec(window.location.pathname))
-    
+
     var request = $.ajax({
       url: "/trails/"+trail_id+"/comments",
       type: "POST",
