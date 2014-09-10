@@ -108,15 +108,16 @@ function initializeHome() {
     searchBox.setBounds(bounds);
   });
 
-  $(".add-marker-button").on("click", function(event) {
-    google.maps.event.addListener(map, 'click', function(event) {
+  $(".create-trail-button").on("click", function(event) {
+      var position = map.getCenter();
       var marker = new google.maps.Marker({
-        position: event.latLng,
+        position: position,
+        draggable: true,
         map: map,
         info: new google.maps.InfoWindow({
-          content: '<form class="trail-form" action="/user_trails/new"><p><label> Trail Name: <label><input name="name" type="text"></input></p><p><label> City: <label><input name="city" type="text"></input></p><p><label> State: <label><input name="state" type="text"></input></p><p><label> Length: <label><input name="length" type="text"></input></p><p><label> Description: <label><input name="description" type="text"></input></p><p><button type="submit" name="trail_submit">Submit Trail</button></form></p>'
+          content: '<p>Drag this marker to your trail head</p>'
         })
-      })
+      });
 
         marker.info.open(map, marker)
       $("button[name='trail_submit']").on("click", function(e) {
@@ -145,7 +146,7 @@ function initializeHome() {
           }
         })
       })
-    })
+  
   })
 }
 
