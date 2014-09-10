@@ -12,18 +12,50 @@
   color: black;
 }
 
-.current-location button {
-  z-index: 8;
-  position: relative;
-  bottom: 13px;
-  margin-bottom: 5px;
-  border-radius: 5px;
-  background-color: #DA7979;
+.current-local-button{
+  position: absolute;
+  top: 108px; 
+  z-index: 5;
+  width: 2%; 
+  left: 60.5%;
+  margin-right: 2%;
+  color: #008BFE;
 }
 
-.current-location button:hover {
-  background-color: #E49D9D;
+.fa-lg:hover{
+  text-shadow: 1px 0px 20px hsl(207,100%,70%);
+}
+
+.all-trails-button {
+  font-size: 18px;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border: 3px solid #cccccc;
+  background-color: hsl(120,48%,35%);
+}
+
+.create-trail-button:hover{
+  background-color: hsl(120,48%,45%);
   color: white;
+  cursor: hand;
+  cursor: pointer; 
+}
+
+.create-trail-button{
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  border: 3px solid #cccccc;
+  background-color: hsl(120,48%,35%);
+}
+
+.create-trail-button:hover, .all-trails-button:hover{
+  background-color: hsl(120,48%,45%);
+  color: white;
+  cursor: hand;
+  cursor: pointer; 
 }
 
 .home-description {
@@ -106,22 +138,22 @@
 #pac-input {
   background-color: #fff;
   padding: 0 11px 0 13px;
-  width: 400px;
-  font-family: Roboto;
-  font-size: 15px;
+  width: 25%;
+  font-size: 18px;
   font-weight: 300;
   text-overflow: ellipsis;
+  left: 5px;
 }
 
 #pac-input:focus {
   border-color: #4d90fe;
   margin-left: -1px;
   padding-left: 14px;  /* Regular padding-left + 1. */
-  width: 401px;
+  width: 25%;
 }
 
 .pac-container {
-  font-family: Roboto;
+
 }
 
 #type-selector {
@@ -131,7 +163,6 @@
 }
 
 #type-selector label {
-  font-family: Roboto;
   font-size: 13px;
   font-weight: 300;
 }
@@ -143,22 +174,6 @@
 }
 .trail-form form{
   height: 100%;
-}
-
-.create-trail-button{
-  border: 1px solid grey;
-  border-radius: 5px;
-  padding: 10px;
-  text-align: center;
-  border: 3px solid #cccccc;
-  background-color: green;
-}
-
-.create-trail-button:hover{
-  background-color: #32CD32;
-  color: white;
-  cursor: hand;
-  cursor: pointer;
 }
 
 .trail-form input{
