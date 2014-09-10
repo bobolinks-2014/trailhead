@@ -7,9 +7,13 @@ class UsersController < ApplicationController
       respond_to do |format|
         format.json {render json: {success: 0, message: "Thanks For Signing Up!"} }
       end
-    elsif User.find_by(:email => @user.email)
+    elsif User.find_by(username: @user.username)
       respond_to do |format|
-        format.json {render json: {success: 1, message: "Email Already In Database!"} }
+        format.json {render json: {success: 1, message: "Username Already Taken!"} }
+      end
+    elsif User.find_by(email: @user.email)
+      respond_to do |format|
+        format.json {render json: {success: 1, message: "Email Already Taken!"} }
       end
     elsif @user.password.blank? || @user.password.length < 6
       respond_to do |format|
