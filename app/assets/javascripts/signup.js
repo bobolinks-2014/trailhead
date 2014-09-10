@@ -42,6 +42,7 @@ $(document).ready(function() {
           $(".signup-form input[name*='email']").val("");
           $(".signup-form input[name*='password']").val("");
           $(".comment-button").show();
+          $('.style-choose-photo').show();
           $(".choose-photo").show();
           $(".signup-form").bPopup().close();
         }
