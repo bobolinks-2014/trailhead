@@ -245,6 +245,7 @@ nav {
 
 ul.nav_right{
   margin-top: 17%;
+  margin-bottom: 0
 }
 
 nav ul li{
@@ -272,66 +273,111 @@ nav ul li a{
    padding: 12px 20px;
 }
 
+/*comment form styling*/
 .comment-form{
+  webkit-border-box: box-sizing;
   display: none;
+  border-radius: 5px;
+  border: 3px solid #cccccc;
+  background: #FBFFED;
+  width: 35%;
+  height: 650px;
+  margin-top: 2%;
 }
 
-.comment-form{
-  display: none;
-  border: 1px solid black;
-  background: white;
-  width: 60%;
-  margin-top: 0px;
-}
-
-.comment-form h3{
+.comment-form h2{
   text-align: center;
   margin: 0px;
   margin-top: 5%;
-  margin-left: 14%;
+}
+
+.comment-information{
+  width: 80%;
+  margin: 2% auto 0 auto;
+}
+
+div.input.rating {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 1.2%
+}
+
+div.comment-rating{
+  margin: 0 auto;
+}
+
+
+div.input.difficulty {
+  margin: 0;
+  width: 100%;
+  margin-bottom: 1.2%
+}
+
+div.comment-difficulty{
+  width: 100%;
+}
+
+div.comment-difficulty-line{
+  margin: 0 auto;
+  text-align: center;
+}
+
+div.comment-range {
+  width: 100%;
+  margin: 10px auto;
+}
+
+div.comment-range input{
+  width: 100%;
+}
+
+div.slider{
+  width: 80%;
+  margin: 0 auto;
+}
+
+div.difficulty-text{
+  margin-bottom: 2%;
+}
+
+div.tip textarea, div.review textarea{
+  width: 100%;
+  height: 80%;
+  border-radius: 3px;
+  border: 3px solid #cccccc;
+  padding: 5px;
+  margin-bottom: 1%;
+}
+
+div.date-hiked input{
+  width: 100%;
+  height: 80%;
+  border-radius: 3px;
+  border: 3px solid #cccccc;
+  padding: 5px;
+  margin-bottom: 1%;
 }
 
 .comment-form button{
-  margin-left: 25%;
-  margin-bottom: 5%;
-  width: 60%;
-  height: 20%;
+  width: 100%;
+  margin: 2% auto;
+  background-color: #005F6B;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
 }
 
-.comment-form .input {
-  display: block;
-  margin: 7% auto;
-  height: 30%;
+.comment-form button:hover{
+  background-color: #196F7A;
 }
 
-.comment-form label{
-  float: left;
-  width: 15%;
-  margin-left: 5%;
-  margin-right: 5%;
-}
-
-.comment-form textarea{
-  width: 60%;
-}
-
-.comment-form input{
-  width: 60%;
-}
-
-.comment-form .input .rating{
-  width: 60%;
-  text-align: left;
-}
 
 .comment-form .fa-tree{
   color: #d3d3d3;
   text-align: left;
   margin-right: 0px;
   margin-left: 0px;
+  cursor: pointer;
 }
 
-.comment-form .fa-tree:hover{
-  color: green
-}
 
