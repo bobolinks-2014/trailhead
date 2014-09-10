@@ -33,15 +33,20 @@ $(document).ready(function() {
         modalClose: true//'fixed' or 'absolute'
       });
 
-      $(".comment-form .fa-tree").on('click', function(event){
-        tree = Number($(this).attr('class').split(" ").pop())
-        for(i=0; i < tree; i++){
-          $($(".comment-form .fa-tree")[i]).css("color","green")
-        }
-        for(i=tree; i< 5; i++){
-          $($(".comment-form .fa-tree")[i]).css("color","gray")
-        }
-      })
+      function colorTrees(listener){
+        $(".comment-form .fa-tree").on(listener, function(event){
+          tree = Number($(this).attr('class').split(" ").pop())
+          for(i = 0; i < tree; i++){
+            $($(".comment-form .fa-tree")[i]).css("color","green")
+          }
+          for(i = tree; i< 5; i++){
+            $($(".comment-form .fa-tree")[i]).css("color","gray")
+          }
+        });
+      }
+
+      colorTrees('click');
+      colorTrees('mouseover');
     };
   });
 
@@ -53,6 +58,7 @@ $(document).ready(function() {
     var date_hiked = $(".comment-form input[type=date]").val();
     var pattern = new RegExp(/\d+/)
     var trail_id = Number(pattern.exec(window.location.pathname))
+
     var request = $.ajax({
       url: "/trails/"+trail_id+"/comments",
       type: "POST",
@@ -60,7 +66,6 @@ $(document).ready(function() {
       dataType: "json"
     });  
     request.done(function(response){
-      debugger;
       if (response.success != 1){
         $(".comment-form").bPopup().close()
         $(".comment-form input[type=range]").val(range);
@@ -85,5 +90,6 @@ $(document).ready(function() {
       }
     });
   });
+  
 });
 

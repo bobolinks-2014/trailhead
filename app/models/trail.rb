@@ -3,16 +3,20 @@ class Trail < ActiveRecord::Base
 	has_many :comments
 
   def self.markers
-    Trail.select('id, name, latitude, longitude, rating, difficulty, length')
+    markers = []
+    Trail.select('id, name, latitude, longitude, rating, difficulty, length').each do |trail| 
+      markers << Marker.new(trail)
+    end
+    return markers
   end
 
   def difficulty_in_words
-  	convert_hash = {Easy: 0, Moderate: 1, Hard: 2}
-  	if self.difficulty
-  		convert_hash.key(self.difficulty.floor)
-  	else
-  		"Not rated"
-  	end
+    convert_hash = {Easy: 0, Moderate: 1, Hard: 2}
+    if self.difficulty == nil || self.difficulty == 0 
+      "Not rated"
+    else
+      convert_hash.key(difficulty.floor).to_s
+    end
   end
 
   def update_rating
