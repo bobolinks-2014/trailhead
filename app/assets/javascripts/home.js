@@ -133,13 +133,11 @@ function initializeHome() {
         var city = $(".trail-form-city input").val();
         var state = $(".trail-form-state input").val();
         var length = $(".trail-form-length input").val();
-        var description = $(".trail-form-description input").val();
+        var description = $(".trail-form-description textarea").val();
        
         var latitude = marker.position.lat();
         var longitude = marker.position.lng();
-        console.log(latitude)
-        console.log(longitude)
-        debugger
+  
 
         var jqXHR = $.ajax({
           url: "/trails",
