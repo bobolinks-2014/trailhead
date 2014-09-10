@@ -1,21 +1,62 @@
 <div id="map-canvas"></div>
+<input id="pac-input" class="controls" type="text" placeholder="Search Box">
 
 <div class="home">
-  <div class="opening"><p>Find Your Path</p></div>
-  <div class="home-description">Discover new hikes from over 6,500 U.S. trails</div>
-  <div class="current-location">
-  	<button class="button-current-location" type="button">Use current location</button>
-  </div>
-  <div class="explore">
-    <h3>Explore</h3>
-     <%= image_tag("boot100.png", :id => "boot") %>
-    <p>Use the interactive map to explore vital and user-curated trail information including ratings, length, difficulty, and descriptions</p>
-  </div>
-  <div class="engage">
-    <h3>Engage</h3>
-    <%= image_tag("heart100.png", :id => "heart") %>
-    <p>View and upload recent trail pictures, and browse through thousands of user-submitted comments for reviews, tips, and current trail conditions</p>
-  </div>
-  <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+	
+	<div class="home-top">
+	  <div class="opening"><p>Find Your Path</p></div>
+	  <div class="home-description">Discover new hikes from over 6,500 U.S. trails</div>
+	  <div class="current-location">
+	  	<button class="button-current-location" type="button">Use current location</button>
+	  </div>
+	  <div class="explore">
+	    <h3>Explore</h3>
+	     <%= image_tag("boots100.png", :id => "boots") %>
+	    <p>Use the interactive map to explore vital and user-curated trail information including ratings, length, difficulty, and descriptions</p>
+	  </div>
+	  <div class="engage">
+	    <h3>Engage</h3>
+	    <%= image_tag("heart100.png", :size => "85x85", :id => "heart") %>
+	    <p>View and upload recent trail pictures, and browse through thousands of user-submitted comments for reviews, tips, and current trail conditions</p>
+	  </div> 
+	</div>
 
+	<div class="home-bottom">
+		<div class="create-trail-button">Create a Trail!</div>
+	</div>
+	<div class="trail-form">
+		<form action="/user_trails/new">
+			<input name="latitude" type="hidden"></input>
+
+			<input name="longitude" type="hidden"></input>
+
+			<div class="trail-form-name">
+				<label> Trail Name: <label>
+				<input name="name" type="text" placeholder="e.g. Appalachian Trail"></input>
+			</div>
+			
+			<div class="trail-form-city">
+				<label> City: <label><br>
+				<input name="city" type="text" placeholder="e.g. Hanover"></input>
+			</div>
+
+			<div class="trail-form-state">
+			<label> State: <label><br>
+			<input name="state" type="text" placeholder="e.g. New Hampshire"></input>
+			</div>
+
+			<div class="trail-form-length">
+				<label> Length in miles: <label>
+				<input name="length" type="text" placeholder="1.2"></input>
+			</div>
+
+			<div class="trail-form-description">
+			<label> Description: <label><br>
+			<textarea name="description" type="text" placeholder="write a detailed description of the trail here..."></textarea>
+			</div>
+
+			<button type="submit" name="trail-submit">Submit Trail</button>
+
+			</form>
+	</div>
 </div>

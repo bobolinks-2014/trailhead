@@ -87,6 +87,8 @@
     <% end %>
     <% end %>
     <% end %>
-    <div class="see-more-comments-button"><button>See More</button></div>
 
+    <% if @trail.comments != [] %>
+      <div class="see-more-comments-button"><button>See More</button></div>
+    <% end %>
 </div>
