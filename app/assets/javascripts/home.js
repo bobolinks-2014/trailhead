@@ -145,7 +145,7 @@ function initializeHome() {
         position: position,
         draggable: true,
         map: map,
-        icon: 'assets/boots100.png',
+        // icon: 'assets/boots100.png',
         optimized: true,
 
         info: new google.maps.InfoWindow({
