@@ -202,7 +202,7 @@ function initializeHome() {
 
             var trail = response.trail;
 
-            trailInfo = '<div class="marker-trail-info"><h1 id="firstHeading" class="firstHeading"> <a href=/trails/'+trail.id + '>' + trail.name + '</a></h1> <p> Length: ' + trail.length + ' mile(s) <p> Rating: Not yet rated </p> <p> Difficulty: Not yet rated </p> </div>';
+            trailInfo = '<div class="marker-trail-info"><h1 id="firstHeading" class="firstHeading"> <a href=/trails/'+trail.id + '>' + trail.name + '</a></h1> <p> Length: ' + trail.length + ' mile(s) <p> Rating: Not yet rated </p> <p> Difficulty: Not yet rated </p> <p> User submitted trail: pending verification. </p> </div>';
 
             marker.info.content = trailInfo;
             marker.info.close(map, marker);
