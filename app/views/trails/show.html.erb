@@ -15,7 +15,8 @@
       <div class="user-features">
         <form class="upload-button" accept-charset-"UTF-8" action="<%= @trail.id %>/photos" class="new_photo" enctype="multipart/form-data" id="new_photo" method="POST">
             <input id="photo_trail_id" name="photo[trail_id]" type="hidden">
-            <div class="style-choose-photo"><i class="fa fa-camera-retro fa-2x">Upload Photo</i>
+            <div class="style-choose-photo">
+              <i class="fa fa-camera-retro fa-2x">Upload Photo</i>
             <input class="choose-photo" id="photo_image" name="photo[image]" type="file">
             </div>
             <input class="submit-photo" name="commit" type="submit" value="Submit Photo">
@@ -132,6 +133,8 @@
 
   </div>
 
-    
+</div>
 
+<div class="trail-footer">
+  <%= image_tag("trailapi.png", :size => "174x60", :id => "icon") %>
 </div>
