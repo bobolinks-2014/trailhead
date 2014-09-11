@@ -8,6 +8,7 @@ class Marker
 		@rating = convert_to_trees(trail.rating)
 		@difficulty = convert_to_words(trail.difficulty)
 		@length = trail.length
+		@under_review = trail.under_review
 	end 
 
 	def convert_to_trees(rating)
