@@ -16,7 +16,7 @@
 //= require popup
 //= require_tree .
 $(document).ready(function() {
-  $("#icon").on("click", function() {
+  $(".title-click").on("click", function() {
     window.location.pathname = "/"
     initializeHome();
   })

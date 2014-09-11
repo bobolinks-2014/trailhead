@@ -28,6 +28,10 @@ h1#title {
   margin-top: 1%;
 }
 
+#title-image:hover, #title:hover{
+  cursor: pointer;
+}
+
 .signin-form{
   border-radius: 4px;
   border: 1px solid black;
