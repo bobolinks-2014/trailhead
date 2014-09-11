@@ -4,15 +4,6 @@ body {
   font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-.footer {
-  background-color: #133813;
-  height: 8%;
-  z-index: 7;
-  position: fixed;
-  width: 100%;
-  bottom: 0px;
-}
-
 img[alt="Trailapi"] {
   margin-top: 7px;
   margin-left: 20px;

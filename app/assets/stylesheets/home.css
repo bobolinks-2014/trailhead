@@ -7,6 +7,15 @@
   font-weight: bold;
 }
 
+.home-footer {
+  background-color: #133813;
+  height: 8%;
+  z-index: 7;
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+}
+
 .opening p {
   margin-top: 0px;
   color: black;
@@ -34,13 +43,6 @@
   border-radius: 5px;
   border: 3px solid #cccccc;
   background-color: hsl(120,48%,35%);
-}
-
-.create-trail-button:hover{
-  background-color: hsl(120,48%,45%);
-  color: white;
-  cursor: hand;
-  cursor: pointer; 
 }
 
 .create-trail-button{
