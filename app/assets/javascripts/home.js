@@ -251,12 +251,15 @@ MarkerCollection.prototype.fetch = function() {
       var p = new google.maps.LatLng(markers[i]["latitude"],markers[i]["longitude"])
       
       var image = '';
+      var status = '';
       //trails from our db
       if (markers[i]["under_review"] == false){
         image = 'assets/icon_green.png';
+        status = 'Trail verified'
       //user submitted trails
       } else{
         image = 'assets/icon_gray_black.png';
+        status = 'User submitted trail: pending verification.';
       }
       var marker = new google.maps.Marker({
         position: p,
@@ -268,7 +271,7 @@ MarkerCollection.prototype.fetch = function() {
 
         info: new google.maps.InfoWindow({
           content: '<div class="marker-trail-info"><div id="info-content">'+
-          '<h1 id="firstHeading" class="firstHeading"> <a href=/trails/'+markers[i]["id"] + '>' + markers[i]["name"] + '</a></h1> <p> Length: ' + markers[i]["length"] + ' mile(s) <p> Rating: '+ markers[i]["rating"] +' </p> <p> Difficulty: ' + markers[i]["difficulty"] + '</p> </div></div>'
+          '<h1 id="firstHeading" class="firstHeading"> <a href=/trails/'+markers[i]["id"] + '>' + markers[i]["name"] + '</a></h1> <p> Length: ' + markers[i]["length"] + ' mile(s) <p> Rating: '+ markers[i]["rating"] +' </p> <p> Difficulty: ' + markers[i]["difficulty"] + '</p> <p> '+ status +'</p> </div></div>'
         }) 
       })
 
