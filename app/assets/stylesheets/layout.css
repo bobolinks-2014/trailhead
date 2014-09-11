@@ -232,6 +232,8 @@ li{
 }
 
 header {
+  position: fixed;
+  top: 0px;
   display: inline-block;
   background-color: #143914;
   border: 1px solid black;
