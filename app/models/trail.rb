@@ -4,7 +4,7 @@ class Trail < ActiveRecord::Base
 
   def self.markers
     markers = []
-    Trail.select('id, name, latitude, longitude, rating, difficulty, length').each do |trail| 
+    Trail.select('id, name, latitude, longitude, rating, difficulty, length, under_review').each do |trail| 
       markers << Marker.new(trail)
     end
     return markers

@@ -60,7 +60,7 @@ function initializeHome() {
         count++;
       }
     }
-    if(count > 5){
+    if(count > 4){
       map.setZoom(map.getZoom())
     }else{
       map.setZoom(map.getZoom()-1)
@@ -140,11 +140,14 @@ function initializeHome() {
       var polyline = new google.maps. Polyline({
 
       });
-
+      //user generated marker when they press the create trail button
       var marker = new google.maps.Marker({
         position: position,
         draggable: true,
         map: map,
+        icon: 'assets/boots100.png',
+        optimized: true,
+
         info: new google.maps.InfoWindow({
           content: '<div class="marker-info-window">Drag this marker to your trail head</div>'
         })
@@ -246,11 +249,22 @@ MarkerCollection.prototype.fetch = function() {
     var rangeHash = {0: "easy", 1: "moderate", 2: "hard"}
     for (i=0; i < markers.length; i++) {
       var p = new google.maps.LatLng(markers[i]["latitude"],markers[i]["longitude"])
+      
+      var image = '';
+      //trails from our db
+      if (markers[i]["under_review"] == false){
+        image = 'assets/heart100.png';
+      //user submitted trails
+      } else{
+        image = 'assets/trailapi.png';
+      }
       var marker = new google.maps.Marker({
         position: p,
         map: this.map,
         id: markers[i]["id"],
         title: markers[i]["name"],
+        icon: image,
+        optimized: true,
 
         info: new google.maps.InfoWindow({
           content: '<div class="marker-trail-info"><div id="info-content">'+
