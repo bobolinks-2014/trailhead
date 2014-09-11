@@ -140,11 +140,14 @@ function initializeHome() {
       var polyline = new google.maps. Polyline({
 
       });
-
+      //user generated marker when they press the create trail button
       var marker = new google.maps.Marker({
         position: position,
         draggable: true,
         map: map,
+        icon: 'assets/boots100.png',
+        optimized: true,
+
         info: new google.maps.InfoWindow({
           content: '<div class="marker-info-window">Drag this marker to your trail head</div>'
         })
