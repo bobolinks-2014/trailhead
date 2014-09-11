@@ -6,7 +6,6 @@
   text-transform: uppercase;
   font-weight: bold;
 }
-
 .home-footer {
   background-color: #133813;
   height: 8%;
@@ -43,6 +42,13 @@
   border-radius: 5px;
   border: 3px solid #cccccc;
   background-color: hsl(120,48%,35%);
+}
+
+.create-trail-button:hover{
+  background-color: hsl(120,48%,45%);
+  color: white;
+  cursor: hand;
+  cursor: pointer; 
 }
 
 .create-trail-button{
@@ -108,11 +114,9 @@
   position: absolute;
   top: 70px;
   right: 0%;
-  bottom: 7%;
-  padding: 2%;
   margin: 0px;
   opacity: .85;
-  height: 86%;
+  height: calc(92% - 70px);
   width: 350px;
   z-index: 5;
   background-color: white;
@@ -121,7 +125,7 @@
 /*actual map*/
 #map-canvas {
   z-index: 3;
-  height: 88%;
+  height: calc(92% - 70px);
   width: 100%;
   margin: 70px 0 0 0;
   display: block;
