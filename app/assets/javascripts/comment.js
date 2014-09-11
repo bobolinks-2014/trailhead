@@ -77,9 +77,23 @@ $(document).ready(function() {
         var year = date.getFullYear();
         var month = date.getMonth() + 1;
         var dateString = year + '-' + month + '-' + day;
+        var rangeHash = {0: "easy", 1: "moderate", 2: "hard"};
 
+        function ratingTrees(rating){
+          var trees = '';
+          for(i = 0; i < rating; i++){
+            trees = trees + '<i class="fa fa-tree" style="color: #143914"></i>';
+          }
+          for(i = 0; i < 5-rating; i++){
+            trees = trees + '<i class="fa fa-tree" style="color: #d3d3d3"></i>';
+          }
+          return trees;
+        }
+
+        trees = ('<i class="fa fa-tree" style="color: #143914"></i>' * (self.rating)) + ('<i class="fa fa-tree" style="color: #d3d3d3"></i>' * (5 - self.rating))
+        
         $('.comment-section').first().before(
-          '<div class="comment-section"><div class="one-comment" data-id="'+ response.id +'"><div class="comment-top"><div class="comment-top-right"> rating: '+ response.rating +' difficulty: '+ response.difficulty +'</div></div><div class="comment-review"><div class="comment-review-body"><p>'+ response.review +'</p></div></div><div class="comment-bottom"><div class="comment-tip"><p><strong>Tip: </strong>'+response.tip+'</p></div><div class="comment-date-hiked"></div><div class="comment-top-left"> Authored by: <strong>'+response.user.username+'</strong> | date posted: '+ dateString +' | date hiked: '+ response.date_hiked +'</div></div></div></div>'
+          '<div class="comment-section"><div class="one-comment" data-id="'+ response.id +'"><div class="comment-top"><div class="comment-top-right"> rating: '+ ratingTrees(response.rating) +' difficulty: '+ rangeHash[response.difficulty] +'</div></div><div class="comment-review"><div class="comment-review-body"><p>'+ response.review +'</p></div></div><div class="comment-bottom"><div class="comment-tip"><p><strong>Tip: </strong>'+response.tip+'</p></div><div class="comment-date-hiked"></div><div class="comment-top-left"> Authored by: <strong>'+response.user.username+'</strong> | date posted: '+ dateString +' | date hiked: '+ response.date_hiked +'</div></div></div></div>'
           )
       }
       else if (response.success === 1){

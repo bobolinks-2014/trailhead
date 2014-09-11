@@ -1,7 +1,7 @@
 .opening {
   color: #303030;
   text-align: center;
-  font-size: 30px;
+  font-size: 1.7em;
   font-family: 'Ubuntu', sans-serif;
   /*font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;*/
   text-transform: uppercase;
@@ -10,10 +10,22 @@
 .home-footer {
   background-color: #133813;
   height: 8%;
-  z-index: 7;
+  z-index: 5;
   position: fixed;
   width: 100%;
   bottom: 0px;
+}
+
+div.home-top{
+  position: relative;
+  width: 80%;
+  margin: 15px auto auto auto;
+}
+
+div.home-bottom{
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .opening p {
@@ -73,7 +85,7 @@
   bottom: 14px;
   color: #303030;
   text-align: center;
-  font-size: 18px;
+  font-size: 17px;
   font-family: 'Ubuntu', sans-serif;
   /*font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;*/
 }
@@ -105,7 +117,18 @@
   text-align: center;
   color: #161616;
   font-size: 1.5em;
+  padding: 0 auto;
   /*font-family: 'Ubuntu', sans-serif;*/
+}
+
+.engage-title, .engage-image, .explore-title{
+  width: 20%;
+  margin: 1px auto;
+}
+
+.explore-image{
+  width: 20%;
+  margin: 1px auto;
 }
 
 #heart, #boots {
@@ -120,8 +143,9 @@
   margin: 0px;
   opacity: .85;
   height: calc(92% - 70px);
-  width: 350px;
-  z-index: 5;
+  /*width: 350px;*/
+  width: 26%;
+  z-index: 3;
   background-color: white;
 }
 
@@ -130,7 +154,7 @@
   z-index: 3;
   height: calc(92% - 70px);
   width: 100%;
-  margin: 70px 0 0 0;
+  top: 70px;
   display: block;
 }
 
@@ -176,6 +200,8 @@
 
 /*trail form*/
 .trail-form{
+  width: 80%;
+  margin: 0 auto;
   display: none;
   height: 70%;
 }

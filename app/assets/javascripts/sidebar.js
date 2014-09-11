@@ -13,6 +13,7 @@ $(document).ready(function(){
 		$('.home-top').slideDown();
 		$('.create-trail-button').show();
 		$('.all-trails-button').show();
+		$('.create-trail-info').show();
 		$('.trail-form').hide();
 	});
 

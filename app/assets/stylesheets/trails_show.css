@@ -40,8 +40,8 @@
 
 .trail-basic-information{
   display: block;
-  max-height: 350px;
-  overflow: scroll;
+  max-height: 417px;
+  /*overflow: scroll;*/
 }
 
 h3{
@@ -146,11 +146,17 @@ i.fa-camera-retro{
   display: none;
   width: 200px;
   padding-bottom: 3px;
+  height: 23px;
   /*margin-left: 2.8em;*/
   float: right;
   background-color: #4A8A4A;;
   /*margin-top: 0.7em;*/
   border-radius: 5px;
+  cursor: pointer;
+}
+
+.fa-pencil{
+  vertical-align: middle;
 }
 
 

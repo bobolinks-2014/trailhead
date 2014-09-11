@@ -28,8 +28,8 @@ $(document).ready(function() {
     $(".trail-carousel-map-img").click(function(){
       $(".show-map").find(':first-child').remove()
       $(".show-map").append("<div id='trail-map-canvas'></div>")
-      console.log("want to append")
-      initializeTrailId()
+ 
+      initializeTrailId();
     })    
   })
 
