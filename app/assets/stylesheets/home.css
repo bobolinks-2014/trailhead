@@ -2,7 +2,8 @@
   color: #303030;
   text-align: center;
   font-size: 30px;
-  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+  /*font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;*/
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -67,7 +68,8 @@
   color: #303030;
   text-align: center;
   font-size: 18px;
-  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+  /*font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;*/
 }
 
 #current-location {
@@ -97,6 +99,7 @@
   text-align: center;
   color: #161616;
   font-size: 1.5em;
+  /*font-family: 'Ubuntu', sans-serif;*/
 }
 
 #heart, #boots {
