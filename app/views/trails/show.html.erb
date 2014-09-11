@@ -48,9 +48,7 @@
           <% if @trail.rating == nil %>
             <%= 0 %>
           <% else %>
-            <% @trail.rating.to_i.times do %>
-              <i class="fa fa-tree"></i>
-            <% end %>
+            <%= @trail.rating_to_trees.html_safe %>
           <% end %>
         </div>
 
@@ -88,9 +86,8 @@
                     <div class="comment-top">
 
                       <div class="comment-top-right">rating: 
-                        <% comment.rating.times do %> 
-                        <i class="fa fa-tree"></i>
-                        <% end %>
+                        <%= comment.rating_to_trees.html_safe %> 
+                        
                         difficulty: <%=comment.difficulty_to_words %>
                       </div>
                     
