@@ -254,11 +254,11 @@ MarkerCollection.prototype.fetch = function() {
       var status = '';
       //trails from our db
       if (markers[i]["under_review"] == false){
-        image = 'assets/icon_green.png';
+        image = location.origin + '/assets/icon_green.png';
         status = 'Trail verified'
       //user submitted trails
       } else{
-        image = 'assets/icon_gray_black.png';
+        image = location.origin + '/assets/icon_gray_black.png';
         status = 'User submitted trail: pending verification.';
       }
       var marker = new google.maps.Marker({
