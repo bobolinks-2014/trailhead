@@ -2,7 +2,7 @@ body {
   background-color: #ffffff;
   background-image: url(http://www.transparenttextures.com/patterns/billie-holiday.png);
   /*font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;*/
-  /*font-family: 'Ubuntu', sans-serif;*/
+  font-family: 'Ubuntu', sans-serif;
 }
 
 img[alt="Trailapi"] {
@@ -10,13 +10,22 @@ img[alt="Trailapi"] {
   margin-left: 20px;
 }
 
-#title {
-  color: #D4D4D4;
+h1#title {
+  color: #ffffff;
   display: inline-block;
   position: relative;
-  bottom: 10px;
-  left: 4x;
-  font-size: 800%;
+  left: 2%;
+  padding: 0;
+  font-size: 300%;
+  margin:0;
+
+}
+
+#title-image{
+  display: inline-block;
+  position: relative;
+  margin-left: 2%;
+  margin-top: 1%;
 }
 
 .signin-form{
@@ -234,6 +243,7 @@ header {
   padding: 0;
   margin: 0;
 }
+
 
 nav {
   display: inline;
