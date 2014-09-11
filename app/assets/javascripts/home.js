@@ -253,10 +253,10 @@ MarkerCollection.prototype.fetch = function() {
       var image = '';
       //trails from our db
       if (markers[i]["under_review"] == false){
-        image = 'assets/heart100.png';
+        image = 'assets/icon_green.png';
       //user submitted trails
       } else{
-        image = 'assets/trailapi.png';
+        image = 'assets/icon_gray_black.png';
       }
       var marker = new google.maps.Marker({
         position: p,
