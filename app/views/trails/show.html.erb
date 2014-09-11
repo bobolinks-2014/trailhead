@@ -26,7 +26,7 @@
     
 
     <div class="trail-carousel"> 
-      <div class="trail-carousel-map-img"><%= image_tag("google_map.jpg") %></div>
+      <div class="trail-carousel-map-img"><%= image_tag("google_map_marker.png") %></div>
       <% @trail.photos.each do |photo|  %>
         <div class="trail-carousel-img"><img src=<%= photo.image_url(:thumb).to_s %>></img>
         </div>
