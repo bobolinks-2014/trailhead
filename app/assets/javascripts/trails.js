@@ -16,6 +16,23 @@ $(document).ready(function() {
   }
 
   $('.see-more-comments-button').children().css("padding","13px")
+
+    $('.trail-carousel-img').click(function(){
+    $(".show-map").html($(this).html())
+    $(".show-map").children().css("max-height", "80%")
+    $(".show-map").children().css("margin-top", "10%")
+    $(".show-map").children().css("margin-bottom", "10%")
+    $(".show-map").children().css("margin-left", "10%")
+    $(".show-map").children().css("margin-right", "10%")
+    $(".show-map").children().css("width", "80%")
+    $(".trail-carousel-map-img").click(function(){
+      $(".show-map").find(':first-child').remove()
+      $(".show-map").append("<div id='trail-map-canvas'></div>")
+      console.log("want to append")
+      initializeTrailId()
+    })    
+  })
+
 })
 
 function initializeTrailId() {

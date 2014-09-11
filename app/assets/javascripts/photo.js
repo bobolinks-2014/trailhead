@@ -6,7 +6,7 @@ $(document).ready(function(){
   	$('.choose-photo').hide();
   	$('.style-choose-photo').hide();
   	$('.submit-photo').show();
-  	$('.upload-button').append('<p class="photo-text">'+photoText+'</p>')
+  	$('.upload-button').append('<div class="photo-text">'+photoText+'</div>')
   });
 
 });

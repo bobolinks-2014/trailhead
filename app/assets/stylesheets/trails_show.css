@@ -33,6 +33,7 @@
 .show-map {
   background-color: #c4e3f5;
   margin: auto;
+  height: 400px;
 }
 
 
@@ -96,8 +97,24 @@ i.fa-camera-retro:hover{
   float: right;
   width: 200px;
 }
+
+
 .submit-photo{
   display:none;
+  border: 1px solid grey;
+  box-shadow: 0 1px 1px 0;
+  border-radius: 5px;
+  padding: 0.1em;
+  width: 200px;
+  background-color: #4A8A4A;
+  float: right;
+  height: 23px;
+}
+
+.photo-text{
+  float: right;
+  padding-right: 5px;
+  line-height: 23px;
 }
 
 .hiker-commentaries{
