@@ -12,6 +12,7 @@ $(document).ready(function(){
 		event.preventDefault();
 		$('.home-top').slideDown();
 		$('.create-trail-button').show();
+		$('.all-trails-button').show();
 		$('.trail-form').hide();
 	});
 
