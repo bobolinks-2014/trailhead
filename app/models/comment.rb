@@ -13,6 +13,6 @@ class Comment < ActiveRecord::Base
 	end
 
 	def rating_to_trees
-   	'<i class="fa fa-tree"></i>' * self.rating
+   	trees = ('<i class="fa fa-tree" style="color: #143914"></i>' * (self.rating)) + ('<i class="fa fa-tree" style="color: #d3d3d3"></i>' * (5 - self.rating))
 	end
 end
