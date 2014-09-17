@@ -44,9 +44,9 @@ feature 'trail page view' do
 			expect(page).to have_content("There are two short trails in the park; the Sand Hog Trail, located near the beach, loops through an area of native trees and vegetation typically found along the coast in the Florida Keys. Several interpretive plaques identify various plants and provide interesting information that you may not know. The other trail, Fort View Trail, takes you through a small section of tropical hammock that overlooks the fort and moat. The native trees provide essential food and habitat needed for many of the migratory bird species that frequent this area. Fort Taylor is the last stop for many of these species that get the rest and re-nourishment needed before continuing their migratory journey. Birds that have never before been seen in the United States, have been spotted at Fort Taylor and usually along the Fort View Trail.")
 		end
 
-		it "should see the trailhead icon" do
-			expect(page).should have_xpath("//img[@src='/assets/icon.png']")
-		end
+		# it "should see the trailhead icon" do
+		# 	expect(page).should have_xpath("//img[@src='/assets/icon.png']")
+		# end
 
 		it "should have the ability to post comments" do
 			expect(page).should have_css('div.comment-form')
