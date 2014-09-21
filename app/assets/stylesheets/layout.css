@@ -111,17 +111,16 @@ h1#title {
 .signup-form button{
   padding: 15px 25px;
   position: relative;
-  left: 223px;
+  left: 24%;
   font-size: 20px;
-  background-color: #424242;
+  background-color: #005F6B;
   color: white;
-  border-radius: 3px;
-  margin-left: 10%;
-  margin-bottom: 50px;
+  border-radius: 5px;margin-bottom: 50px;
+  width: 52%;
 }
 
 .signup-form button:hover {
-  background-color: #616161;
+  background-color: #196F7A;
 }
 
 .signup-form input{
