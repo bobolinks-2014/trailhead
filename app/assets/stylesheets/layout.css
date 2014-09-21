@@ -143,15 +143,16 @@ h1#title {
 
 .close-button{
   position: relative;
-  color: #60615F;
+  color: steelblue;
   float: right;
   cursor: pointer;
   margin: 1em 1em 0 0;
   font-size: 1.4em;
+  font-weight: 800;
 }
 
 .close-button:hover{
-  color: black;
+  color: #6B9BC3;
 }
 
 .logout-button{
