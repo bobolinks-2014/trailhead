@@ -6,8 +6,8 @@ body {
 }
 
 img[alt="Trailapi"] {
-  margin-top: 7px;
-  margin-left: 20px;
+  margin-left: 2em;
+  margin-bottom: 0.1em;
 }
 
 h1#title {

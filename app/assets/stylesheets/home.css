@@ -16,6 +16,10 @@
   bottom: 0px;
 }
 
+.home-footer img{
+  margin-top: 1px; 
+}
+
 div.home-top{
   position: relative;
   width: 80%;
@@ -49,8 +53,8 @@ div.home-bottom{
 }
 
 .all-trails-button {
-  font-size: 18px;
-  padding: 10px;
+  font-size: 16px;
+  padding: 8px;
   margin-bottom: 5px;
   border-radius: 5px;
   border: 3px solid #cccccc;
@@ -65,9 +69,9 @@ div.home-bottom{
 }
 
 .create-trail-button{
-  font-size: 18px;
+  font-size: 16px;
   border-radius: 5px;
-  padding: 10px;
+  padding: 8px;
   text-align: center;
   border: 3px solid #cccccc;
   background-color: hsl(120,48%,35%);
@@ -80,14 +84,20 @@ div.home-bottom{
   cursor: pointer; 
 }
 
-.home-description {
+div.home-description {
   position: relative;
-  bottom: 14px;
+  bottom: 12px;
   color: #303030;
   text-align: center;
-  font-size: 17px;
+  font-size: 0.8em;
   font-family: 'Ubuntu', sans-serif;
   /*font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;*/
+}
+
+.home-description p{
+  font-size: 1.3em;
+  margin: 0 auto;
+  padding: 0;
 }
 
 #current-location {
@@ -97,7 +107,8 @@ div.home-bottom{
 }
 
 .explore p {
-  line-height: 1.5em;
+  line-height: 1.3em;
+  text-align: center;
   position: relative;
 }
 
@@ -105,11 +116,12 @@ div.home-bottom{
   text-align: center;
   margin: 0px 0px 17px 0px;
   color: #161616;
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 .engage p {
-  line-height: 1.5em;
+  line-height: 1.3em;
+  text-align: center;
   position: relative;
 }
 
@@ -121,9 +133,14 @@ div.home-bottom{
   /*font-family: 'Ubuntu', sans-serif;*/
 }
 
-.engage-title, .engage-image, .explore-title{
-  width: 20%;
+.engage-title, .explore-title{
+  width: 24%;
   margin: 1px auto;
+}
+
+.engage-image{
+  width: 20%;
+  margin: 0 auto;
 }
 
 .explore-image{
@@ -213,7 +230,7 @@ div.home-bottom{
   width: 100%;
   border: 3px solid #cccccc;
   border-radius: 3px;
-  margin-bottom: 1.8em;
+  margin-bottom: 1.4em;
   padding: 5px;
 }
 
