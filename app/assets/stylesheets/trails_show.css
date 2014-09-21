@@ -14,8 +14,10 @@
 
 .left-side {
   position: fixed;
-  width: 460px;
-  height: 650px;
+  width: 32%;
+  height: 60%;
+  /*width: 460px;
+  height: 650px;*/
   margin-top: 15px;
 }
 
@@ -27,14 +29,14 @@
 }
 
 #trail-map-canvas {
-  height: 400px;
+  height: 300px;
 }
 
 .show-map {
   background-color: hsl(0,0%,94%);
   border: 1px solid black;
   margin: auto;
-  height: 400px;
+  height: 300px;
 }
 
 
