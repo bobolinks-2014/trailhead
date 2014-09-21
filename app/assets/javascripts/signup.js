@@ -45,6 +45,7 @@ $(document).ready(function() {
           $('.style-choose-photo').show();
           $(".choose-photo").show();
           $(".trail-form-signin-message").hide();
+          $(".submit-create-trail").show();
           $(".signup-form").bPopup().close();
         }
         //unsucessful signup
