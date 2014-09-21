@@ -25,6 +25,8 @@ $(document).ready(function() {
       $(".comment-button").hide();
       $(".choose-photo").hide();
       $(".submit-photo").hide();
+      $(".submit-create-trail").hide();
+      $(".trail-form-signin-message").show();
     });
 
     return request;

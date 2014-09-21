@@ -12,6 +12,10 @@
   bottom: 0px;
 }
 
+.trail-footer img{
+  margin-top: 1px;
+}
+
 .left-side {
   position: fixed;
   width: 32%;
@@ -80,15 +84,9 @@ i.fa-camera-retro{
   padding: 0.1em;
   width: 200px;
   text-align: center;
-  /*cursor: pointer;*/
   background-color: #4A8A4A;
   cursor: pointer;
 }
-
-/*i.fa-camera-retro:hover{
-  position: absolute;
-  cursor: pointer;
-}*/
 
 .user-features{
   display:inline;
@@ -98,13 +96,13 @@ i.fa-camera-retro{
   text-align: right;
   width: 100%
 }
+
 .style-choose-photo{
   display:inline;
   float: right;
   width: 200px;
   font-size: 1.4em;
 }
-
 
 .submit-photo{
   display:none;

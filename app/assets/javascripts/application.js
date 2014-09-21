@@ -33,7 +33,9 @@ $(document).ready(function() {
       $(".signup-button").show();
       $(".logout-button").hide();
       $(".comment-button").hide();
+      $(".trail-form-signin-message").show();
       $('.style-choose-photo').hide();
+      $(".submit-create-trail").hide();
       $(".submit-photo").hide();
     }else{
       $(".signin-button").hide();
@@ -41,6 +43,8 @@ $(document).ready(function() {
       $(".logout-button").show();
       $(".comment-button").show();
       $('.style-choose-photo').show();
+      $(".trail-form-signin-message").hide();
+      $(".submit-create-trail").show();
       $(".choose-photo").show();
     }
   })
