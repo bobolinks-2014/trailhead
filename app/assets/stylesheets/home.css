@@ -16,6 +16,10 @@
   bottom: 0px;
 }
 
+.home-footer img{
+  margin-top: 1px; 
+}
+
 div.home-top{
   position: relative;
   width: 80%;
