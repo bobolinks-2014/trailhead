@@ -101,6 +101,7 @@ h1#title {
 
 .signup-form h3 {
   text-align: center;
+  display: block;
   font-size: 45px;
   margin: 0px;
   margin-top: 5%;
