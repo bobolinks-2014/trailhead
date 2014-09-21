@@ -92,7 +92,8 @@ h1#title {
 .signup-form {
   border-radius: 4px;
   display: none;
-  background-color: #FCFCFC;
+  background-image: url(signup-image.jpg);
+  background-size: 100% 100%; 
   width: 50%;
   border: 1px solid black;
   vertical-align: middle;
@@ -101,7 +102,9 @@ h1#title {
 
 .signup-form h3 {
   text-align: center;
+  display: block;
   font-size: 45px;
+  color: steelblue;
   margin: 0px;
   margin-top: 5%;
   margin-bottom: 30px;
@@ -110,17 +113,16 @@ h1#title {
 .signup-form button{
   padding: 15px 25px;
   position: relative;
-  left: 223px;
+  left: 24%;
   font-size: 20px;
-  background-color: #424242;
+  background-color: #005F6B;
   color: white;
-  border-radius: 3px;
-  margin-left: 10%;
-  margin-bottom: 50px;
+  border-radius: 5px;margin-bottom: 50px;
+  width: 52%;
 }
 
 .signup-form button:hover {
-  background-color: #616161;
+  background-color: #196F7A;
 }
 
 .signup-form input{
@@ -141,21 +143,16 @@ h1#title {
 
 .close-button{
   position: relative;
-  color: white;
-  border: 1px solid black;
-  background-color: #383937;
-  border-radius: 999px;
+  color: steelblue;
   float: right;
-  right: -0.45em;
-  top: -0.75em;
-  padding: 0.75em;
-  cursor: hand;
   cursor: pointer;
+  margin: 1em 1em 0 0;
+  font-size: 1.4em;
+  font-weight: 800;
 }
 
 .close-button:hover{
-  background-color: #60615F;
-  color: white;
+  color: #6B9BC3;
 }
 
 .logout-button{
