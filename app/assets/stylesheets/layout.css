@@ -155,21 +155,20 @@ h1#title {
 }
 
 .logout-button{
-  display: none;
-  padding: 13px;
-  background-color: #304848;
-  color: white;
-  font-size: 1em;
-  cursor: hand;
-  cursor: pointer;
+  background-color: hsl(180,20%,24%);
+  margin-right: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  border: 2px solid #cccccc;
+  position: relative;
+  top: 1em;
 }
 
 .logout-button:hover{
-  background-color: #687a7a;
+ background-color: hsl(180,20%,34%);
   color: white;
-  font-size: 1em;
-  cursor: hand;
-  cursor: pointer;
 }
 
 li{
