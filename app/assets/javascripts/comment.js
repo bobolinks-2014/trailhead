@@ -1,15 +1,16 @@
 $(document).ready(function() {
   var tree = 0;
 
-  $(".cancel-create-comment").on('click', function(event){
-    event.preventDefault();
-    
-  });
-
   $(".comment-button").on('click', function(event){
     event.preventDefault();
     initializeCommentForm();
     showCommentForm();
+
+  $(".cancel-create-comment").on('click', function(event){
+    event.preventDefault();
+    $(".comment-form").bPopup().close();
+  });
+
 
     function initializeCommentForm() {      
       $(".comment-form .fa").css("color", "gray");
@@ -72,7 +73,7 @@ $(document).ready(function() {
     });  
     request.done(function(response){
       if (response.success != 1){
-        $(".comment-form").bPopup().close()
+        $(".comment-form").bPopup().close();
         $(".comment-form input[type=range]").val(range);
         $(".comment-form textarea[name*=tip").val("");
         $(".comment-form textarea[name*=review]").val("");
