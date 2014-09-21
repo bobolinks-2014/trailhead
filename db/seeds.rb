@@ -48,7 +48,7 @@ comment5 = Comment.create(user: user1, trail_id: 4561, review: "The trail was li
 comment5.trail.update_rating
 comment5.trail.update_difficulty
 
-comment1 = Comment.create(user: user2, trail_id: 4561, review: "Well, that was the worst trail I've ever hiked", difficulty: rand(1..3), rating: 2, tip: "Don't go. It's a trap.", date_hiked: Time.now.ago(45))
+comment1 = Comment.create(user: user2, trail_id: 4561, review: "Well, that was the worst trail I've ever hiked", difficulty: rand(0..2), rating: 2, tip: "Don't go. It's a trap.", date_hiked: Time.now.ago(45))
 
 comment1.trail.update_rating
 comment1.trail.update_difficulty
@@ -59,13 +59,13 @@ comment2.trail.update_rating
 comment2.trail.update_difficulty
 
 
-comment3= Comment.create(user: user4, trail_id: 4561, review: "That was swell. Really swell. Like the most swell thing I've done.", difficulty: rand(1..3), rating: 5, tip: "I brought music, jammed, and walked. T'was great.", date_hiked: Time.now.ago(45))
+comment3= Comment.create(user: user4, trail_id: 4561, review: "That was swell. Really swell. Like the most swell thing I've done.", difficulty: rand(0..2), rating: 5, tip: "I brought music, jammed, and walked. T'was great.", date_hiked: Time.now.ago(45))
 
 comment3.trail.update_rating
 comment3.trail.update_difficulty
 
 
-comment4= Comment.create(user: user5, trail_id: 4561, review: "It was muddy and there were flies everywhere, maybe I'm reviewing the outdoors in general, but I appreciate this outlet that give voice to my opinion.", difficulty: 3, rating: 2, tip: "While you may have to sign in to post on this site, you don't have to hike the trail to post on this site", date_hiked: Time.now.ago(45))
+comment4= Comment.create(user: user5, trail_id: 4561, review: "It was muddy and there were flies everywhere, maybe I'm reviewing the outdoors in general, but I appreciate this outlet that give voice to my opinion.", difficulty: 2, rating: 2, tip: "While you may have to sign in to post on this site, you don't have to hike the trail to post on this site", date_hiked: Time.now.ago(45))
 
 
 comment4.trail.update_rating

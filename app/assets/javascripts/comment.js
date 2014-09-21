@@ -6,10 +6,16 @@ $(document).ready(function() {
     initializeCommentForm();
     showCommentForm();
 
+  $(".cancel-create-comment").on('click', function(event){
+    event.preventDefault();
+    $(".comment-form").bPopup().close();
+  });
+
+
     function initializeCommentForm() {      
       $(".comment-form .fa").css("color", "gray");
 
-      var levelDescription = ["children and elderly, trails are generally in good condition, under 300 foot elevation gain, under 4 miles round trip", "someone in good hiking condition, trails are generally in good condition, between 300 and 1000 foot increase in elevation, between 4 and 10 miles in length", "someone in excellent hiking condition, trails are not always in good condition, over 1000 foot increase in elevation, over 10 miles in length"];
+      var levelDescription = ["Children and elderly, trails are generally in good condition, under 300 foot elevation gain, under 4 miles round trip.", "Someone in good hiking condition, trails are generally in good condition, between 300 and 1000 foot increase in elevation, between 4 and 10 miles in length.", "Someone in excellent hiking condition, trails are not always in good condition, over 1000 foot increase in elevation, over 10 miles in length."];
 
       var rangeHash = {0: "Easy:", 1: "Moderate:", 2: "Hard:"};
       var range = 1.5;
@@ -67,7 +73,7 @@ $(document).ready(function() {
     });  
     request.done(function(response){
       if (response.success != 1){
-        $(".comment-form").bPopup().close()
+        $(".comment-form").bPopup().close();
         $(".comment-form input[type=range]").val(range);
         $(".comment-form textarea[name*=tip").val("");
         $(".comment-form textarea[name*=review]").val("");
