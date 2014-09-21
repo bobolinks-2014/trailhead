@@ -33,6 +33,7 @@ $(document).ready(function() {
       $(".signup-button").show();
       $(".logout-button").hide();
       $(".comment-button").hide();
+      $(".trail-form-signin-message").show();
       $('.style-choose-photo').hide();
       $(".submit-photo").hide();
     }else{
@@ -41,6 +42,7 @@ $(document).ready(function() {
       $(".logout-button").show();
       $(".comment-button").show();
       $('.style-choose-photo').show();
+      $(".trail-form-signin-message").hide();
       $(".choose-photo").show();
     }
   })
