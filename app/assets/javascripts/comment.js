@@ -1,6 +1,11 @@
 $(document).ready(function() {
   var tree = 0;
 
+  $(".cancel-create-comment").on('click', function(event){
+    event.preventDefault();
+    
+  });
+
   $(".comment-button").on('click', function(event){
     event.preventDefault();
     initializeCommentForm();
