@@ -59,8 +59,13 @@ h1#title {
 }
 
 .signin-form button {
-  margin-left: 105px;
-  margin-bottom: 5%;
+  padding: 15px 25px;
+  position: relative;
+  font-size: 20px;
+  background-color: #005F6B;
+  color: white;
+  border-radius: 5px;margin-bottom: 50px;
+  width: 52%;
 }
 
 .signin-form input {
@@ -76,17 +81,6 @@ h1#title {
   font-size: 19px;
 }
 
-.signin-form button {
-  padding: 15px 25px;
-  position: relative;
-  left: 180px;
-  background-color: #424242;
-  font-size: 20px;
-  color: white;
-  border-radius: 3px;
-  margin-left: 10%;
-  margin-bottom: 50px;
-}
 
 .signin-form button:hover {
   background-color: #616161;
