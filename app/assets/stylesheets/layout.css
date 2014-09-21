@@ -61,11 +61,13 @@ h1#title {
 .signin-form button {
   padding: 15px 25px;
   position: relative;
+  left: 24.5%;
   font-size: 20px;
   background-color: #005F6B;
   color: white;
-  border-radius: 5px;margin-bottom: 50px;
-  width: 52%;
+  border-radius: 5px;
+  margin-bottom: 50px;
+  width: 51.5%;
 }
 
 .signin-form input {
