@@ -36,6 +36,7 @@ $(document).ready(function() {
           $(".comment-button").show();
           $('.style-choose-photo').show();
           $(".choose-photo").show();
+          $(".trail-form-signin-message").hide();
           $(".signin-form").bPopup().close();
         }
         //unsuccessful signin
