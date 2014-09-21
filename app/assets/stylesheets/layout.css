@@ -35,20 +35,23 @@ h1#title {
 
 .signin-form{
   border-radius: 4px;
-  border: 1px solid black;
   display: none;
-  background-color: #FCFCFC;
+  background-image: url(signup-image.jpg);
+  background-size: 100% 100%; 
   width: 50%;
+  border: 1px solid black;
   vertical-align: middle;
   margin-top: 0px;
 }
 
 .signin-form h3{
   text-align: center;
-  margin-bottom: 20px;
+  display: block;
   font-size: 45px;
+  color: steelblue;
   margin: 0px;
-  margin-top: 7%
+  margin-top: 5%;
+  margin-bottom: 30px;
 }
 
 .signin-form input[type="email"] {
@@ -56,8 +59,15 @@ h1#title {
 }
 
 .signin-form button {
-  margin-left: 105px;
-  margin-bottom: 5%;
+  padding: 15px 25px;
+  position: relative;
+  left: 24.5%;
+  font-size: 20px;
+  background-color: #005F6B;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 50px;
+  width: 51.5%;
 }
 
 .signin-form input {
@@ -73,20 +83,9 @@ h1#title {
   font-size: 19px;
 }
 
-.signin-form button {
-  padding: 15px 25px;
-  position: relative;
-  left: 180px;
-  background-color: #424242;
-  font-size: 20px;
-  color: white;
-  border-radius: 3px;
-  margin-left: 10%;
-  margin-bottom: 50px;
-}
 
 .signin-form button:hover {
-  background-color: #616161;
+  background-color: #196F7A;
 }
 
 .signup-form {
