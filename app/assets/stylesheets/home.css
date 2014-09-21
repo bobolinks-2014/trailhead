@@ -226,6 +226,14 @@ div.home-description {
   height: 100%;
 }
 
+.trail-form h2 {
+  margin-bottom: 0.2em;
+}
+
+.trail-form-signin-message {
+  color: red;
+}
+
 .trail-form input{
   width: 100%;
   border: 3px solid #cccccc;
