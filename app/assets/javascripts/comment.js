@@ -9,7 +9,7 @@ $(document).ready(function() {
     function initializeCommentForm() {      
       $(".comment-form .fa").css("color", "gray");
 
-      var levelDescription = ["children and elderly, trails are generally in good condition, under 300 foot elevation gain, under 4 miles round trip", "someone in good hiking condition, trails are generally in good condition, between 300 and 1000 foot increase in elevation, between 4 and 10 miles in length", "someone in excellent hiking condition, trails are not always in good condition, over 1000 foot increase in elevation, over 10 miles in length"];
+      var levelDescription = ["Children and elderly, trails are generally in good condition, under 300 foot elevation gain, under 4 miles round trip.", "Someone in good hiking condition, trails are generally in good condition, between 300 and 1000 foot increase in elevation, between 4 and 10 miles in length.", "Someone in excellent hiking condition, trails are not always in good condition, over 1000 foot increase in elevation, over 10 miles in length."];
 
       var rangeHash = {0: "Easy:", 1: "Moderate:", 2: "Hard:"};
       var range = 1.5;
