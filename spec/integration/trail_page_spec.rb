@@ -45,7 +45,7 @@ feature 'trail page view' do
 		end
 
 		it "should see the trailhead icon" do
-			expect(page).should have_xpath("//img[@src='/assets/icon.png']")
+			expect(page).should have_xpath("//img[@src='/assets/nav_bar_logo.png']")
 		end
 
 		it "should have the ability to post comments" do
