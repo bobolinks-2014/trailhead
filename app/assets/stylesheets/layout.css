@@ -35,10 +35,11 @@ h1#title {
 
 .signin-form{
   border-radius: 4px;
-  border: 1px solid black;
   display: none;
-  background-color: #FCFCFC;
+  background-image: url(signup-image.jpg);
+  background-size: 100% 100%; 
   width: 50%;
+  border: 1px solid black;
   vertical-align: middle;
   margin-top: 0px;
 }
