@@ -9,7 +9,7 @@
 }
 .home-footer {
   background-color: #133813;
-  height: 8%;
+  height: 50px;
   z-index: 5;
   position: fixed;
   width: 100%;
@@ -160,8 +160,8 @@ div.home-description {
   margin: 0px;
   opacity: .85;
   height: calc(92% - 70px);
-  /*width: 350px;*/
-  width: 26%;
+  width: 350px;
+  /*width: 26%;*/
   z-index: 3;
   background-color: white;
 }
