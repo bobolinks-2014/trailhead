@@ -20,7 +20,7 @@ function initializeHome() {
 
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-  var marker = []
+  var marker = [];
 
   var markerCollection = new MarkerCollection(map)
   markerCollection.fetch().done(function() {
