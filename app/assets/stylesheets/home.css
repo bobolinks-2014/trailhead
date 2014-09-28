@@ -160,8 +160,8 @@ div.home-description {
   margin: 0px;
   opacity: .85;
   height: calc(92% - 70px);
-  /*width: 350px;*/
-  width: 26%;
+  width: 350px;
+  /*width: 26%;*/
   z-index: 3;
   background-color: white;
 }
